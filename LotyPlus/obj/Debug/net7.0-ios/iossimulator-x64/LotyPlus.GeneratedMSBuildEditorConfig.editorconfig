@@ -8,34 +8,52 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LotyPlus
-build_property.ProjectDir = /Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/
+build_property.ProjectDir = D:\Xamarin Work\Orders\Working\GitHub_Clone\LotyPlus\LotyPlus\
 
-[/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/App.xaml]
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/AppShell.xaml]
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/MainPage.xaml]
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/Resources/Styles/Colors.xaml]
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/Resources/Styles/Styles.xaml]
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/Views/OnBoardingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.OnBoardingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\OnBoardingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\OnBoardingPage.xaml
+
+[D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/Views/TabViewPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabViewPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TabViewPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TabViewPage.xaml

@@ -50,9 +50,113 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
+	  <None Remove="Resources\Images\alreadypurchasedicon.png" />
+	  <None Remove="Resources\Images\barbershop.png" />
+	  <None Remove="Resources\Images\barbershopflip.png" />
+	  <None Remove="Resources\Images\bellicon.png" />
+	  <None Remove="Resources\Images\bigwin.png" />
+	  <None Remove="Resources\Images\btnbg.png" />
+	  <None Remove="Resources\Images\cameralayoutimg.png" />
+	  <None Remove="Resources\Images\cardbg.png" />
+	  <None Remove="Resources\Images\carservicing.png" />
+	  <None Remove="Resources\Images\clothes.png" />
+	  <None Remove="Resources\Images\clothstore.png" />
+	  <None Remove="Resources\Images\coderedeemimg.png" />
+	  <None Remove="Resources\Images\colombia.png" />
+	  <None Remove="Resources\Images\costarica.png" />
+	  <None Remove="Resources\Images\couponshape.png" />
+	  <None Remove="Resources\Images\creditcardbg1.png" />
+	  <None Remove="Resources\Images\creditcardbg2.png" />
+	  <None Remove="Resources\Images\discountcodeimg1.png" />
+	  <None Remove="Resources\Images\discountcodeimg2.png" />
+	  <None Remove="Resources\Images\elsalvador.png" />
+	  <None Remove="Resources\Images\email.png" />
+	  <None Remove="Resources\Images\facebook.png" />
+	  <None Remove="Resources\Images\food.png" />
+	  <None Remove="Resources\Images\gasstation.png" />
+	  <None Remove="Resources\Images\google.png" />
+	  <None Remove="Resources\Images\greatImg.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\homeservices.png" />
+	  <None Remove="Resources\Images\home_selected.png" />
+	  <None Remove="Resources\Images\icon1.png" />
+	  <None Remove="Resources\Images\icon2.png" />
+	  <None Remove="Resources\Images\icon3.png" />
+	  <None Remove="Resources\Images\icon4.png" />
+	  <None Remove="Resources\Images\icon5.png" />
+	  <None Remove="Resources\Images\icon6.png" />
+	  <None Remove="Resources\Images\icon7.png" />
+	  <None Remove="Resources\Images\limitedcouponimg.png" />
+	  <None Remove="Resources\Images\lock.png" />
+	  <None Remove="Resources\Images\lockedserviceicon.png" />
+	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\logo2.png" />
+	  <None Remove="Resources\Images\menuicon.png" />
+	  <None Remove="Resources\Images\offerexpiredicon.png" />
+	  <None Remove="Resources\Images\onboardingImg1.png" />
+	  <None Remove="Resources\Images\onboardingImg2.png" />
+	  <None Remove="Resources\Images\onboardingImg3.png" />
+	  <None Remove="Resources\Images\onboardingImg4.png" />
+	  <None Remove="Resources\Images\onboardingImg5.png" />
+	  <None Remove="Resources\Images\onboardingImg6.png" />
+	  <None Remove="Resources\Images\panama.png" />
+	  <None Remove="Resources\Images\petshop.png" />
+	  <None Remove="Resources\Images\phone.png" />
+	  <None Remove="Resources\Images\profile.png" />
+	  <None Remove="Resources\Images\profilebannerbg.png" />
+	  <None Remove="Resources\Images\profile_selected.png" />
+	  <None Remove="Resources\Images\promo1.png" />
+	  <None Remove="Resources\Images\promo2.png" />
+	  <None Remove="Resources\Images\puertorico.png" />
+	  <None Remove="Resources\Images\pumpstations.png" />
+	  <None Remove="Resources\Images\qrcodeblack.png" />
+	  <None Remove="Resources\Images\qrcodewhite.png" />
+	  <None Remove="Resources\Images\restuarant.png" />
+	  <None Remove="Resources\Images\rewardicon.png" />
+	  <None Remove="Resources\Images\rewardicondisabled.png" />
+	  <None Remove="Resources\Images\scancode.png" />
+	  <None Remove="Resources\Images\scancodeimg.png" />
+	  <None Remove="Resources\Images\scancode_selected.png" />
+	  <None Remove="Resources\Images\search.png" />
+	  <None Remove="Resources\Images\successicon.png" />
+	  <None Remove="Resources\Images\tabview.png" />
+	  <None Remove="Resources\Images\tacobellbanner.png" />
+	  <None Remove="Resources\Images\twitter.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon1.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon2.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon3.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon4.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon5.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon6.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon7.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon8.png" />
+	  <None Remove="Resources\Images\unlockedserviceicon9.png" />
+	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Images\venezuela.png" />
+	  <None Remove="Resources\Images\welcomeImg.png" />
+	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\OnBoardingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TabViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
