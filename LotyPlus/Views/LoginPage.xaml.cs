@@ -42,7 +42,7 @@ public partial class LoginPage : ContentPage
 
     private async void SignUp_Tapped(object sender, EventArgs e)
     {
-       // await Navigation.PushAsync(new WelcomePage());
+        await Navigation.PushAsync(new WelcomePage());
     }
 
     private void Login_Tapped(object sender, EventArgs e)

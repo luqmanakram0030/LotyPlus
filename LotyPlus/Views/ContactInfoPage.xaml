@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+             x:Class="LotyPlus.Views.ContactInfoPage"
+             Title="ContactInfoPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20,30,20,0" >
+            <Label Text="Your contact info?" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,10,10,0"/>
+
+            <ContentView x:Name="InfoSection">
+                <StackLayout>
+                    <pancakeview:PancakeView HeightRequest="120" WidthRequest="120" CornerRadius="60" HorizontalOptions="Center" Margin="0,20,0,40" BackgroundColor="{StaticResource LightPrimaryColor}">
+                        <pancakeview:PancakeView.Border>
+                            <pancakeview:Border Color="{StaticResource PrimaryColor}" Thickness="6" />
+                        </pancakeview:PancakeView.Border>
+                        <Image Source="https://randomuser.me/api/portraits/women/71.jpg" Aspect="AspectFill"/>
+                    </pancakeview:PancakeView>
+
+                    <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" Spacing="10">
+                            <Image Source="phone.png" HeightRequest="20" VerticalOptions="Center"/>
+                            <Image Source="costarica.png" HeightRequest="18" VerticalOptions="Center"/>
+                            <Label Text="+506" FontSize="Body" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" VerticalOptions="Center"/>
+                            <Entry PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Telephone" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal">
+                            <Image Source="email.png" HeightRequest="18" VerticalOptions="Center"/>
+                            <Entry Placeholder="Email" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Email" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Label Text="You need to confirm your email." FontSize="Body" Margin="20,0,20,0"/>
+
+                </StackLayout>
+
+            </ContentView>
+
+            <ContentView x:Name="OTPSection" IsVisible="False">
+                <StackLayout>
+                    <Label Text="Please, write the code we just send to you to confirm your number." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,50"/>
+
+                    <Grid HorizontalOptions="Center" RowDefinitions="auto,*" ColumnDefinitions="45,45,45,45" ColumnSpacing="8.5" VerticalOptions="StartAndExpand">
+                        <Frame Padding="0" HeightRequest="85" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+                        <Frame Grid.Column="1" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+                        <Frame Grid.Column="2" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+                        <Frame Grid.Column="3" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+
+                        <Grid Grid.ColumnSpan="4" Padding="{OnPlatform Android='20,0,0,0', iOS='35,0,0,0'}" Margin="{OnPlatform Android='-30,0,-30,0', iOS='-20,0,-20,0'}">
+                            <Entry x:Name="OTPEntry" TextColor="{StaticResource TextColor}" FontFamily="Medium" FontSize="Large" CharacterSpacing="{OnPlatform Android='30.5', iOS='44.5'}" MaxLength="4" Keyboard="Numeric"/>
+                        </Grid>
+                    </Grid>
+
+                    <StackLayout Orientation="Horizontal" Spacing="2" Margin="20,40,0,0">
+                        <Label Text="Didn't receive?"/>
+                        <Label Text="Send again" TextColor="{StaticResource PrimaryColor}" FontFamily="SemiBold" Padding="5,0,5,0" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+            
+                <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Grid>
+                        <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                        <Label x:Name="btnText" Text="Continue" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Continue_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

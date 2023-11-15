@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.LoginPage"
@@ -17,14 +17,14 @@
                 <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
                     <StackLayout VerticalOptions="Center" Orientation="Horizontal">
                         <Image Source="user.png" HeightRequest="20" VerticalOptions="Center"/>
-                        <Entry Placeholder="Email or Phone" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Email" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        <Entry Placeholder="Email or Phone" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,10,0,-7', iOS='0'}" Keyboard="Email" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
                     </StackLayout>
                 </Frame>
 
                 <Frame HasShadow="False" Padding="{OnPlatform Android='20,4,20,4', iOS='20,9,20,9'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,0">
                     <StackLayout VerticalOptions="Center" Orientation="Horizontal">
                         <Image Source="lock.png" HeightRequest="22" VerticalOptions="Center"/>
-                        <Entry x:Name="pswrdField" IsPassword="True" Placeholder="Password" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        <Entry x:Name="pswrdField" IsPassword="True" Placeholder="Password" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,10,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
                         <Button HeightRequest="24" WidthRequest="24" Padding="0" CornerRadius="3" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource ColorOnDarkBackground}" Clicked="ViewPassword_Clicked">
                             <Button.ImageSource>
                                 <FontImageSource FontFamily="FontIcons" Glyph="&#xf06d1;" Color="{StaticResource GreyColor}" Size="20"/>
@@ -82,7 +82,7 @@
                 </StackLayout>
 
                 <Label Text="By signing up, you are agreeing with" FontSize="Caption" HorizontalOptions="Center" VerticalOptions="{OnPlatform Android='EndAndExpand', iOS='Center'}"/>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="2" Margin="0,-8,0,30">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="2" Margin="0,-0,0,30">
                     <Label Text="our" FontSize="Caption"/>
                     <Button Text="Terms &amp; Conditions" TextColor="{StaticResource PrimaryColor}" BackgroundColor="White" HeightRequest="20" FontSize="Caption" FontFamily="SemiBold" Padding="5,0,5,0"/>
                 </StackLayout>

@@ -1,0 +1,38 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/ContactInfoPage.xaml">
+    <Files>
+      <File FileName="LotyPlus/Views/IdNumberPage.xaml" Line="16" Column="82" />
+      <File FileName="LotyPlus/Views/IdNumberPage.xaml.cs" Line="18" Column="1" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" Line="1" Column="1" />
+      <File FileName="LotyPlus/App.xaml.cs" Line="15" Column="55" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LotyPlus">
+            <Node name="LotyPlus">
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views">
+                <Node name="ContactInfoPage.xaml" selected="True" />
+                <Node name="IdNumberPage.xaml" expanded="True" />
+                <Node name="LoginPage.xaml" expanded="True" />
+                <Node name="NamePage.xaml" expanded="True" />
+                <Node name="SelectCountryPage.xaml" expanded="True" />
+                <Node name="WelcomePage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
+</Properties>

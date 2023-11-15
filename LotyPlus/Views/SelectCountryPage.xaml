@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.SelectCountryPage"
+             Title="SelectCountryPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20,30,20,0" >
+            <Label Text="Select your country" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,10,10,0"/>
+
+            <StackLayout x:Name="countries" VerticalOptions="CenterAndExpand" Margin="0,20,0,20" BindableLayout.ItemsSource="{Binding CountryList}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15,0,15,0" BackgroundColor="{Binding FrameColor}" HasShadow="False" HeightRequest="50" WidthRequest="240" HorizontalOptions="Center" VerticalOptions="Start" CornerRadius="25">
+                            <Grid Margin="4" ColumnDefinitions="20,*">
+                                <Grid HeightRequest="20" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="20">
+                                    <Ellipse Fill="White" HeightRequest="18" HorizontalOptions="Center" Stroke="#140D38" StrokeThickness="1" VerticalOptions="Center" WidthRequest="18" />
+                                    <Ellipse BackgroundColor="Transparent" Fill="{Binding RadioColor}" HeightRequest="10" HorizontalOptions="Center" Stroke="#00E4B4" StrokeThickness="0" VerticalOptions="Center" WidthRequest="10" />
+                                </Grid>
+                                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                                    <Image Source="{Binding FlagImage}" HeightRequest="32" WidthRequest="50" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                    <Label Text="{Binding CountryName}" FontSize="Default" FontFamily="SemiBold" VerticalOptions="Center" TextColor="{StaticResource TextColor}" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}"/>
+                                </StackLayout>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCountry_Tapped" Command="{Binding BindingContext.CountryTappedCommand, Source={x:Reference countries}}" CommandParameter="{Binding}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>            
+            
+                <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Grid>
+                        <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                        <Label x:Name="btnText" Text="Continue" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Continue_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+         
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
