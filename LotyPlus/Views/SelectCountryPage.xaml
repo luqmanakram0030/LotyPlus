@@ -30,8 +30,9 @@
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </StackLayout>            
-            
-                <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+            <StackLayout>
+
+                  <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
                     <Frame.Background>
                         <!-- StartPoint defaults to (0,0) -->
                         <LinearGradientBrush EndPoint="1,0">
@@ -47,7 +48,14 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Continue_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
-         
+          <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+          </StackLayout.Shadow>
+            </StackLayout>
+              
         </StackLayout>
 
     </ContentPage.Content>
