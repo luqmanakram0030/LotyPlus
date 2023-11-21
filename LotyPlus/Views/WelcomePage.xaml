@@ -15,7 +15,7 @@
             </StackLayout>
             <StackLayout VerticalOptions="FillAndExpand" Spacing="50" Padding="40">
 
-                  <Frame HasShadow="False"   BorderColor="Transparent" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+                  <Frame HasShadow="False"  Padding="0" BorderColor="Transparent" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
                     <Frame.Background>
                          
                         <LinearGradientBrush EndPoint="1,0">

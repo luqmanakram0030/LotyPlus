@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.SelectCountryPage"
-             Title="SelectCountryPage">
+             Title="SelectCountryPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource ColorOnDarkBackground}">
     <ContentPage.Content>
         <StackLayout Padding="20,30,20,0" >
             <Label Text="Select your country" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,10,10,0"/>

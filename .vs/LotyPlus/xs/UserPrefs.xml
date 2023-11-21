@@ -1,38 +1,51 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/ContactInfoPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/ViewModels/OnBoardingViewModel.cs">
     <Files>
-      <File FileName="LotyPlus/Views/IdNumberPage.xaml" Line="16" Column="82" />
-      <File FileName="LotyPlus/Views/IdNumberPage.xaml.cs" Line="18" Column="1" />
-      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" Line="1" Column="1" />
-      <File FileName="LotyPlus/App.xaml.cs" Line="15" Column="55" />
+      <File FileName="LotyPlus/Views/IdNumberPage.xaml" />
+      <File FileName="LotyPlus/Views/IdNumberPage.xaml.cs" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" />
+      <File FileName="LotyPlus/App.xaml.cs" />
+      <File FileName="LotyPlus/Views/OnBoardingPage.xaml" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml.cs" />
+      <File FileName="LotyPlus/Views/LetsStartPage.xaml" />
+      <File FileName="LotyPlus/Views/LetsStartPage.xaml.cs" />
+      <File FileName="LotyPlus/App.xaml" />
+      <File FileName="LotyPlus/AppShell.xaml" />
+      <File FileName="LotyPlus/AppShell.xaml.cs" />
+      <File FileName="LotyPlus/Views/TabViewPage.xaml" />
+      <File FileName="LotyPlus/Views/TabViewPage.xaml.cs" />
+      <File FileName="../../../.nuget/packages/communitytoolkit.maui/6.1.0/readme.txt" />
+      <File FileName="LotyPlus/Views/TabPages/HomePage.xaml" />
+      <File FileName="LotyPlus/Views/WelcomePage.xaml" />
+      <File FileName="LotyPlus/Views/WelcomePage.xaml.cs" />
+      <File FileName="LotyPlus/Views/LoginPage.xaml" />
+      <File FileName="LotyPlus/Views/SelectCountryPage.xaml.cs" Line="20" Column="7" />
+      <File FileName="LotyPlus/ViewModels/OnBoardingViewModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LotyPlus">
-            <Node name="LotyPlus">
-              <Node name="Models" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views">
-                <Node name="ContactInfoPage.xaml" selected="True" />
-                <Node name="IdNumberPage.xaml" expanded="True" />
-                <Node name="LoginPage.xaml" expanded="True" />
-                <Node name="NamePage.xaml" expanded="True" />
-                <Node name="SelectCountryPage.xaml" expanded="True" />
-                <Node name="WelcomePage.xaml" expanded="True" />
+          <Node name="LotyPlus" expanded="True">
+            <Node name="LotyPlus" expanded="True">
+              <Node name="ViewModels" expanded="True">
+                <Node name="OnBoardingViewModel.cs" selected="True" />
               </Node>
-              <Node name="App.xaml" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="SelectCountryPage.xaml" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

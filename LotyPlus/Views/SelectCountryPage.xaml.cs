@@ -1,6 +1,6 @@
 ﻿using LotyPlus.ViewModels;
 using Microsoft.Maui.Controls.Shapes;
-using static Android.Net.LocalSocketAddress;
+
 
 namespace LotyPlus.Views;
 
@@ -17,7 +17,7 @@ public partial class SelectCountryPage : ContentPage
     }
     private async void Continue_Tapped(object sender, EventArgs e)
     {
-      //  await Navigation.PushAsync(new NamePage());
+        await Navigation.PushAsync(new NamePage());
     }
     private void OnCountry_Tapped(object sender, EventArgs e)
     {

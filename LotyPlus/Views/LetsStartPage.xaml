@@ -2,11 +2,37 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.LetsStartPage"
-             Title="LetsStartPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="LetsStartPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource ColorOnDarkBackground}">
+   <ContentPage.Content>
+        <StackLayout Padding="20,30,20,0" >
+
+            <Label Text="Great!!!" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,10,10,0"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image Source="greatImg.png"/>
+                <Label Text="You're ready to go!" FontSize="Body" HorizontalTextAlignment="Center" Margin="20,20,20,0"/>
+
+            </StackLayout>
+
+                <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50">
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Grid>
+                        <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                        <Label x:Name="btnText" Text="Let's Start" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Start_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+           
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

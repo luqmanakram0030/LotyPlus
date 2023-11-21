@@ -86,6 +86,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.SelectCount
 build_metadata.AdditionalFiles.TargetPath = Views/SelectCountryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/SelectCountryPage.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabPages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/TabPages/HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/TabPages/HomePage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabViewPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabViewPage.xaml

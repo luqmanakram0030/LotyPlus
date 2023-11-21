@@ -17,14 +17,14 @@
                 <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
                     <StackLayout VerticalOptions="Center" Orientation="Horizontal">
                         <Image Source="user.png" HeightRequest="20" VerticalOptions="Center"/>
-                        <Entry Placeholder="Email or Phone" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,10,0,-7', iOS='0'}" Keyboard="Email" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        <Entry Placeholder="Email or Phone" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='10,0,0,-7', iOS='0'}" Keyboard="Email" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
                     </StackLayout>
                 </Frame>
 
                 <Frame HasShadow="False" Padding="{OnPlatform Android='20,4,20,4', iOS='20,9,20,9'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,0">
                     <StackLayout VerticalOptions="Center" Orientation="Horizontal">
                         <Image Source="lock.png" HeightRequest="22" VerticalOptions="Center"/>
-                        <Entry x:Name="pswrdField" IsPassword="True" Placeholder="Password" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,10,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        <Entry x:Name="pswrdField" IsPassword="True" Placeholder="Password" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='10,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
                         <Button HeightRequest="24" WidthRequest="24" Padding="0" CornerRadius="3" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource ColorOnDarkBackground}" Clicked="ViewPassword_Clicked">
                             <Button.ImageSource>
                                 <FontImageSource FontFamily="FontIcons" Glyph="&#xf06d1;" Color="{StaticResource GreyColor}" Size="20"/>
@@ -34,7 +34,7 @@
                 </Frame>
                 <Button Text="Forgot password?" FontSize="Small" FontFamily="Regular" HorizontalOptions="End" Padding="10,3" Margin="0,8,0,0" HeightRequest="20" BackgroundColor="White"/>
 
-                <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,0">
+                <Frame HasShadow="True" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,0">
                     <Frame.Background>
                         <!-- StartPoint defaults to (0,0) -->
                         <LinearGradientBrush EndPoint="1,0">
@@ -42,6 +42,7 @@
                             <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
                         </LinearGradientBrush>
                     </Frame.Background>
+                   
                     <Grid>
                         <Label Text="Login" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
                         <Label Text="Login" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
@@ -49,6 +50,14 @@
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Login_Tapped"/>
                     </Frame.GestureRecognizers>
+                     <!--Shades="{sh:SingleShade Offset='0, 10', Opacity=0.3, Color={StaticResource SecondoryColor},BlurRadius=20}">-->
+                          
+                    <Frame.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </Frame.Shadow>
                 </Frame>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="2" Margin="0,20,0,0">

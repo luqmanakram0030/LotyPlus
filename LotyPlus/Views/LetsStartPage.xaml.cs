@@ -6,4 +6,8 @@ public partial class LetsStartPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void Start_Tapped(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new AppShell();
+    }
 }
