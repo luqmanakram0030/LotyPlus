@@ -1,4 +1,4 @@
-﻿using Android.Content;
+﻿
 
 namespace LotyPlus.Views;
 

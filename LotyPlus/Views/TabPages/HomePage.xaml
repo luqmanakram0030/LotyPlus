@@ -4,6 +4,7 @@
              x:Class="LotyPlus.Views.TabPages.HomePage"
              Title="HomePage"
               NavigationPage.HasNavigationBar="False"
+              Shell.TabBarIsVisible="True"
              BackgroundColor="{StaticResource ColorOnDarkBackground}">
     <VerticalStackLayout>
         <Label 

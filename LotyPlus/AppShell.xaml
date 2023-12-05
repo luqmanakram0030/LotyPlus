@@ -26,42 +26,53 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
-        <ShellContent  Title="Home" ContentTemplate="{DataTemplate local:HomePage}">
-            <ShellContent.Icon>
-                <FontImageSource Glyph="&#xf02dc;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
-            </ShellContent.Icon>
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" >
+        <ShellContent  Title="Home" Icon="home.png" ContentTemplate="{DataTemplate local:HomePage}">
+            
+        </ShellContent>
+     <ShellContent  Title="Scan" Icon="scancode.png" ContentTemplate="{DataTemplate local:ScanPage}">
+            
+        </ShellContent>
+     <ShellContent  Title="profile" Icon="profile.png" ContentTemplate="{DataTemplate local:ProfilePage}">
+            
         </ShellContent>
     </FlyoutItem>
 
+
+   
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
 
-    <MenuItem ClassId="0" Text="My Giveaways" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem ClassId="0" Text="Home" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+        <MenuItem.IconImageSource>
+          <FontImageSource Glyph="&#xf02dc;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+         </MenuItem.IconImageSource>
+    </MenuItem>
+     <MenuItem ClassId="1" Text="My Giveaways" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
         <MenuItem.IconImageSource>
             <FontImageSource Glyph="&#xf0e44;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
         </MenuItem.IconImageSource>
     </MenuItem>
-    <MenuItem ClassId="1" Text="Notifications" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem ClassId="2" Text="Notifications" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
         <MenuItem.IconImageSource>
             <FontImageSource Glyph="&#xf009a;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
         </MenuItem.IconImageSource>
     </MenuItem>
-    <MenuItem ClassId="2" Text="Settings" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem ClassId="3" Text="Settings" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
         <MenuItem.IconImageSource>
             <FontImageSource Glyph="&#xf0493;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
         </MenuItem.IconImageSource>
     </MenuItem>
-    <MenuItem ClassId="3" Text="Reward Shop" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem ClassId="4" Text="Reward Shop" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
         <MenuItem.IconImageSource>
             <FontImageSource Glyph="&#xf04dc;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
         </MenuItem.IconImageSource>
     </MenuItem>
-    <MenuItem ClassId="4" Text="My Cart" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem ClassId="5" Text="My Cart" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
         <MenuItem.IconImageSource>
             <FontImageSource Glyph="&#xf0110;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
         </MenuItem.IconImageSource>
     </MenuItem>
-    <MenuItem ClassId="5" Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem ClassId="6" Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
         <MenuItem.IconImageSource>
             <FontImageSource Glyph="&#xf0343;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
         </MenuItem.IconImageSource>
@@ -137,7 +148,7 @@
                 <Grid RowDefinitions="auto,10" ColumnDefinitions="30,*" Padding="60,10,0,0" RowSpacing="0">
                     <Image HeightRequest="28" Source="{Binding Icon}" VerticalOptions="Center"/>
                     <Label Grid.Column="1" Text="{Binding Title}" TextColor="{StaticResource ColorOnLightBackground}" FontSize="16" FontFamily="SemiBold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10,5,0,0"/>
-                    <BoxView Grid.Row="1" HeightRequest="1" VerticalOptions="EndAndExpand" Grid.ColumnSpan="2" BackgroundColor="{StaticResource GreyColor}" Margin="-60,0,0,0" Opacity="0.8"/>
+                    <BoxView Grid.Row="1"  HeightRequest="0.1" VerticalOptions="EndAndExpand" Grid.ColumnSpan="2" BackgroundColor="{StaticResource GreyColor}" Margin="-60,0,0,0" Opacity="0.8"/>
                 </Grid>
             </ContentView>
         </DataTemplate>

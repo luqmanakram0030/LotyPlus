@@ -40,11 +40,47 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Resources.Styles.
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/CartPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.CartPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CartPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CartPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/ChangePaymentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.ChangePaymentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ChangePaymentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ChangePaymentPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/CheckoutPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.CheckoutPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CheckoutPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CheckoutPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/CodeRedeemPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.CodeRedeemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CodeRedeemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CodeRedeemPage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/ContactInfoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.ContactInfoPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/ContactInfoPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/ContactInfoPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/CouponHistoryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.CouponHistoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CouponHistoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CouponHistoryPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/EditProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.EditProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EditProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EditProfilePage.xaml
 
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/IdNumberPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -58,11 +94,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.LetsStartPa
 build_metadata.AdditionalFiles.TargetPath = Views/LetsStartPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/LetsStartPage.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/LimitedCouponPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.LimitedCouponPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/LimitedCouponPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/LimitedCouponPage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/LoginPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/MyWalletPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.MyWalletPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/MyWalletPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/MyWalletPage.xaml
 
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/NamePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -76,11 +124,47 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.OnBoardingP
 build_metadata.AdditionalFiles.TargetPath = Views/OnBoardingPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/OnBoardingPage.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/RewardClaimPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.RewardClaimPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/RewardClaimPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/RewardClaimPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/RewardShopPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.RewardShopPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/RewardShopPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/RewardShopPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/RunningCouponPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.RunningCouponPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/RunningCouponPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/RunningCouponPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/ScanCodePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.ScanCodePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ScanCodePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ScanCodePage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/SearchShopPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.SearchShopPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SearchShopPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SearchShopPage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/SelectCountryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.SelectCountryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/SelectCountryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/SelectCountryPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/ShopEntryScanPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.ShopEntryScanPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ShopEntryScanPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ShopEntryScanPage.xaml
 
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -88,11 +172,29 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabPages.Ho
 build_metadata.AdditionalFiles.TargetPath = Views/TabPages/HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/TabPages/HomePage.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabPages.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/TabPages/ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/TabPages/ProfilePage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/ScanPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabPages.ScanPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/TabPages/ScanPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/TabPages/ScanPage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabViewPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.TabViewPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/TabViewPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/TabViewPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/UpdateDetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.UpdateDetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/UpdateDetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/UpdateDetailsPage.xaml
 
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

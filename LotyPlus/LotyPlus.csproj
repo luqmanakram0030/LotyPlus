@@ -141,11 +141,14 @@
 	  <None Remove="Resources\Images\venezuela.png" />
 	  <None Remove="Resources\Images\welcomeImg.png" />
 	  <None Remove="Views\TabPages\" />
+	  <None Remove="Converters\" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
+		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -168,5 +171,6 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\TabPages\" />
+	  <Folder Include="Converters\" />
 	</ItemGroup>
 </Project>

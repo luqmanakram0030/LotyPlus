@@ -14,6 +14,6 @@ public partial class TabViewPage : ContentPage
 
     private async void Cart_Tapped(object sender, EventArgs e)
     {
-        //await Shell.Current.GoToAsync(nameof(CartPage));
+        await Shell.Current.GoToAsync(nameof(CartPage));
     }
 }

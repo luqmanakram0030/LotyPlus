@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:LotyPlus.ViewModels" xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" xmlns:models="clr-namespace:LotyPlus.Models"
+             x:Class="LotyPlus.Views.RewardClaimPage"
+             NavigationPage.HasNavigationBar="False" Shell.NavBarIsVisible="False"
+             Title="RewardClaimPage">
+    <ContentPage.BindingContext>
+        <vm:RewardClaimPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Start" HorizontalOptions="Start" Margin="8,5,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Welcome To The Barbershop" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,8,0,0"/>
+
+            </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout>
+                    <Label Text="9 Unlocked and One More Service Needed, To Get A Reward" FontSize="20" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="35,20,35,30"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="0" Margin="20,0">
+                        <StackLayout Orientation="Horizontal" Spacing="0" BindableLayout.ItemsSource="{Binding ServicesList}">
+
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="models:Service">
+                                    <Grid ColumnDefinitions="25,*" ColumnSpacing="0">
+                                        <Ellipse WidthRequest="25" HeightRequest="25" Fill="{Binding IndicatorColor}" VerticalOptions="Start" HorizontalOptions="Start"/>
+                                        <Line Grid.Column="1" X1="0" Y1="0" X2="200" Y2="0" Stroke="{Binding IndicatorColor}" StrokeDashArray="1,1" StrokeDashOffset="6" StrokeThickness="3" VerticalOptions="Center" HorizontalOptions="Start" Aspect="UniformToFill"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+
+                        </StackLayout>
+                        <Grid Margin="-2,-5,0,0" RowDefinitions="32" ColumnDefinitions="32">
+                            <Image Source="rewardicondisabled.png" HeightRequest="32" VerticalOptions="Center"/>
+                            <Image Source="rewardicon.png" HeightRequest="32" VerticalOptions="Center" IsVisible="{Binding IsRewardUnlocked}"/>
+                        </Grid>
+                    </StackLayout>
+
+                    <CollectionView x:Name="RewardCollection" ItemsSource="{Binding ServicesList}" Margin="30,30,30,0">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Service">
+                                <Grid RowDefinitions="*" ColumnDefinitions="*">
+                                    <Image HorizontalOptions="Center" Source="{Binding UnlockedIcon}" IsVisible="{Binding IsLocked, Converter={StaticResource InvertedBoolConverter}}"/>
+                                    <Image HorizontalOptions="Center" Source="{Binding LockedIcon}" IsVisible="{Binding IsLocked}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="3"/>
+                        </CollectionView.ItemsLayout>
+                    </CollectionView>
+
+                    <StackLayout >
+                        <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="20,-10,20,0" >
+                            <Frame.Background>
+                                <!-- StartPoint defaults to (0,0) -->
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                                    <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                                <Label x:Name="btnText" Text="Scan Code" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ScanCode_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                         <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+                    </StackLayout>
+
+                    <StackLayout >
+                        <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="20,15,20,40"  BackgroundColor="{StaticResource GreyColor}">
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText2}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor3}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                                <Label x:Name="btnText2" Text="Claim Reward" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnLightBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ClaimReward_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                         <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
