@@ -3176,7 +3176,6 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Extensions.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.Formatters.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Xml.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/lp/169/jl/files.cache
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/lp/170/jl/files.cache
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/lp/171/jl/files.cache
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/lp/172/jl/files.cache
@@ -3202,3 +3201,5 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/src/mono/androidx/camera/core/impl/SessionConfig_ErrorListenerImplementor.java
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/src/mono/androidx/camera/core/SurfaceRequest_TransformationInfoListenerImplementor.java
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/src/mono/androidx/camera/view/RotationProvider_ListenerImplementor.java
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/logowhite.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/lp/173/jl/files.cache

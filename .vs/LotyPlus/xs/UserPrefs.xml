@@ -1,28 +1,47 @@
-﻿<Properties StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default" GitUserInfo="UsingGIT">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.LotyPlus.HideInfoBar="True" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DD07E96E-A2A9-448E-AC63-838FE7B62E7C" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/TabPages/ProfilePage.xaml.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/ViewModels/SearchViewModel.cs" relfile="LotyPlus/ViewModels/SearchViewModel.cs" line="25" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml.cs" relfile="LotyPlus/Views/TabPages/HomePage.xaml.cs" line="28" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/App.xaml.cs">
     <Files>
-      <File FileName="LotyPlus/Views/ContactInfoPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="LotyPlus/Views/TabPages/ProfilePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="LotyPlus/App.xaml.cs" Line="14" Column="60" />
+      <File FileName="LotyPlus/App.xaml" Line="1" Column="1" />
+      <File FileName="LotyPlus/AppShell.xaml" Line="101" Column="49" />
+      <File FileName="LotyPlus/Views/TabViewPage.xaml" Line="1" Column="1" />
+      <File FileName="LotyPlus/Views/TabPages/HomePage.xaml" Line="44" Column="1" />
+      <File FileName="LotyPlus/AppShell.xaml.cs" Line="28" Column="6" />
+      <File FileName="LotyPlus/ViewModels/SearchViewModel.cs" Line="27" Column="59" />
+      <File FileName="LotyPlus/Models/SearchCategory.cs" Line="10" Column="6" />
+      <File FileName="LotyPlus/ViewModels/RunningCouponPageViewModel.cs" Line="1" Column="1" />
+      <File FileName="LotyPlus/Views/TabPages/HomePage.xaml.cs" Line="22" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LotyPlus">
+          <Node name="LotyPlus" expanded="True" selected="True">
             <Node name="LotyPlus">
+              <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="TabPages" expanded="True">
+                  <Node name="HomePage.xaml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DD07E96E-A2A9-448E-AC63-838FE7B62E7C" />
 </Properties>

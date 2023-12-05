@@ -2,14 +2,293 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.TabPages.HomePage"
-             Title="HomePage"
+             Title="HomePage" xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels"
+             xmlns:converters="clr-namespace:LotyPlus.Converters" xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
               NavigationPage.HasNavigationBar="False"
               Shell.TabBarIsVisible="True"
+              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource ColorOnDarkBackground}">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:GreaterThanZeroConverter x:Key="GreaterThanZeroConverter" />
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+     <ContentPage.Content>
+        <Grid RowDefinitions="auto,*">
+            <StackLayout Grid.Row="0">
+                <Grid ColumnDefinitions="50,*,50" BackgroundColor="{StaticResource LightBackgroundColor}" Padding="20,10,20,0">
+                <Frame HasShadow="False" BorderColor="Transparent" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image Source="menuicon.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="22"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Image Grid.Column="1" HeightRequest="25" Source="logo2.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,10,0,10"/>
+
+                <Frame Grid.Column="2" BorderColor="Transparent" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Grid>
+                        <Image Source="bellicon.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="22"/>
+                        <pancakeview:PancakeView HeightRequest="11" WidthRequest="11" CornerRadius="5.5" BackgroundColor="{StaticResource SecondoryColor}" VerticalOptions="Start" HorizontalOptions="End" Margin="0,8,7,0">
+                            <pancakeview:PancakeView.Border>
+                                <pancakeview:Border Color="{StaticResource ColorOnDarkBackground}" Thickness="{OnPlatform Android='4', iOS='2'}" />
+                            </pancakeview:PancakeView.Border>
+                        </pancakeview:PancakeView>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Cart_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+                <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='16,0,10,0', iOS='16,0,16,0'}" HeightRequest="50" Margin="20,15,20,0" CornerRadius="16">
+                    <Grid ColumnDefinitions="30,*,2,auto">
+                        <Image Source="search.png" VerticalOptions="Center" HeightRequest="24"/>
+                        <SearchBar x:Name="Search" Grid.Column="1" Placeholder="Search here" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Small" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" />
+                        <BoxView Grid.Column="2" BackgroundColor="{StaticResource ColorOnLightBackground}" Opacity="0.5" WidthRequest="1" HorizontalOptions="Center" VerticalOptions="Fill" Margin="0,15,0,15"/>
+                        <Button x:Name="CancelBtn" Grid.Column="3" Text="Search" TextTransform="None" TextColor="{StaticResource PrimaryColor}" FontSize="Default" FontFamily="SemiBold" Margin="0" WidthRequest="80" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='0,5,0,0', iOS='0'}"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+<StackLayout  x:Name="PrimaryContentView" Opacity="1">
+                
+                <ScrollView>
+                    <StackLayout Spacing="20">
+
+                        <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="12" Margin="20,10,20,0" CornerRadius="22">
+                            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="auto,50" ColumnSpacing="8" RowSpacing="15">
+                                <pancakeview:PancakeView HorizontalOptions="Fill" CornerRadius="12" HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#EFFBF0">
+                                    <FlexLayout Direction="Column" JustifyContent="Center" >
+                                        <Image Source="gasstation.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
+                                        <Label Text="Gas Station" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    </FlexLayout>
+                                </pancakeview:PancakeView>
+
+                                <pancakeview:PancakeView Grid.Column="1" HorizontalOptions="Fill" CornerRadius="12" HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#EFF4FB">
+                                    <FlexLayout Direction="Column" JustifyContent="Center" >
+                                        <Image Source="food.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
+                                        <Label Text="Food" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    </FlexLayout>
+                                </pancakeview:PancakeView>
+
+                                <pancakeview:PancakeView Grid.Column="2" HorizontalOptions="Fill" CornerRadius="12" HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#FBEFEF">
+                                    <FlexLayout Direction="Column" JustifyContent="Center" >
+                                        <Image Source="clothes.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
+                                        <Label Text="Clothes" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    </FlexLayout>
+                                </pancakeview:PancakeView>
+
+                                <pancakeview:PancakeView Grid.Column="3" HorizontalOptions="Fill" CornerRadius="12" HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#FBEFF7">
+                                    <FlexLayout Direction="Column" JustifyContent="Center" >
+                                        <Image Source="restuarant.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
+                                        <Label Text="Restuarant" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    </FlexLayout>
+                                </pancakeview:PancakeView>
+
+                                <Button Grid.Row="1" Grid.ColumnSpan="4" Text="View all" TextTransform="None" FontSize="Body" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" CornerRadius="12" Padding="{OnPlatform Android='0,0,0,-6', iOS='0'}" BackgroundColor="{StaticResource LightSecondoryColor}" Clicked="ViewAll_Clicked"/>
+                            </Grid>
+                        </Frame>
+
+                        <pancakeview:PancakeView HeightRequest="130" CornerRadius="22" BackgroundColor="{StaticResource GreyColor}" Margin="20,5,20,0">
+                            <Grid>
+                                <Image Source="tacobellbanner.png" Aspect="AspectFill"/>
+                                <StackLayout VerticalOptions="EndAndExpand" Margin="20,0,0,15">
+                                    <Label Text="30% Discount Code" FontSize="Large" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}"/>
+                                    <Label Text="On Taco bell" FontSize="Medium" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" Margin="0,-10,0,0"/>
+                                </StackLayout>
+                            </Grid>
+                        </pancakeview:PancakeView>
+
+                        <Label Text="Big Promos" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+
+                        <CollectionView HeightRequest="155" HorizontalScrollBarVisibility="Never" Margin="0,-5,0,0">
+                            <CollectionView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>promo1.png</x:String>
+                                    <x:String>promo2.png</x:String>
+                                </x:Array>
+                            </CollectionView.ItemsSource>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid  Padding="20,0,0,0">
+                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" WidthRequest="310" HeightRequest="155" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Start" HorizontalOptions="Start">
+                                            <Image Source="{Binding .}" Aspect="AspectFill"/>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.Footer>
+                                <BoxView WidthRequest="10"/>
+                            </CollectionView.Footer>
+                        </CollectionView>
+
+                        <Label Text="Discounts Codes" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+
+                        <CarouselView HorizontalScrollBarVisibility="Never" Loop="False" PeekAreaInsets="20" VerticalOptions="StartAndExpand" HeightRequest="380">
+                            <CarouselView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>discountcodeimg1.png</x:String>
+                                    <x:String>discountcodeimg1.png</x:String>
+                                    <x:String>discountcodeimg1.png</x:String>
+                                    <x:String>discountcodeimg1.png</x:String>
+                                </x:Array>
+                            </CarouselView.ItemsSource>
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid RowDefinitions="370">
+                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
+                                            <Grid RowDefinitions="4.6*,5.4*">
+                                                <pancakeview:PancakeView CornerRadius="22,22,0,0" BackgroundColor="{StaticResource LightBackgroundColor}">
+                                                    <Image x:Name="img" Source="{Binding .}" Aspect="AspectFill" Margin="-18,-5,0,0" />
+                                                </pancakeview:PancakeView>
+
+                                                <Grid Grid.Row="1" RowDefinitions="*,auto" ColumnDefinitions="6*,4*" Padding="20,10,20,20">
+                                                    <Label Grid.ColumnSpan="2" Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo" FontFamily="SemiBold" FontSize="16"/>
+
+                                                    <StackLayout Grid.Row="1" Spacing="2" VerticalOptions="Center">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                                <Image.Source>
+                                                                    <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                </Image.Source>
+                                                            </Image>
+                                                            <Label Text="Manuel Antonio, Quepos" FontSize="10" FontFamily="SemiBold"/>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                                <Image.Source>
+                                                                    <FontImageSource Glyph="&#xf0c44;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                </Image.Source>
+                                                            </Image>
+                                                            <Label Text="Expires: 10 days " FontSize="10" FontFamily="SemiBold"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+
+                                                    <Frame Grid.Row="1" Grid.Column="1" HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="8" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource PrimaryColor}" >
+                                                        <Grid>
+                                                            <Image Source="btnbg.png" Aspect="AspectFill"/>
+                                                            <Label Text="Show Code" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" Margin="{OnPlatform Android='10,3,10,0', iOS='10,0,10,0'}"/>
+                                                        </Grid>
+                                                    </Frame>
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+
+
+
+                        <Label Text="Loty Reward Shop" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+
+                        <CollectionView HeightRequest="155" HorizontalScrollBarVisibility="Never" Margin="0,-5,0,0" ItemsSource="{Binding RewardShopList}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid RowDefinitions="150">
+                                        <Grid RowDefinitions="115" ColumnDefinitions="6.5*,3.5*" VerticalOptions="End" Margin="25,0,0,0">
+                                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                                <Frame.Background>
+                                                    <LinearGradientBrush EndPoint="0,1">
+                                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                                    </LinearGradientBrush>
+                                                </Frame.Background>
+                                            </Frame>
+
+                                            <Image Grid.Column="1" Source="{Binding ShopImg}" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                                            <Grid>
+                                                <Label Text="{Binding ShopName}" FontSize="26" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                                <Label Text="{Binding ShopName}" FontSize="18" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                            </Grid>
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="RewardShop_Tapped"/>
+                                            </Grid.GestureRecognizers>
+                                        </Grid>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.Footer>
+                                <BoxView WidthRequest="40"/>
+                            </CollectionView.Footer>
+                        </CollectionView>
+
+
+
+                        <Label Text="Recently Viewed" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+
+                        <CarouselView HorizontalScrollBarVisibility="Never" Margin="0,0,0,40" Loop="False" PeekAreaInsets="20" VerticalOptions="StartAndExpand" HeightRequest="380">
+                            <CarouselView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>discountcodeimg2.png</x:String>
+                                    <x:String>discountcodeimg2.png</x:String>
+                                    <x:String>discountcodeimg2.png</x:String>
+                                    <x:String>discountcodeimg2.png</x:String>
+                                    <x:String>discountcodeimg2.png</x:String>
+                                </x:Array>
+                            </CarouselView.ItemsSource>
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid RowDefinitions="370">
+                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
+                                            <Grid RowDefinitions="4.6*,5.4*">
+                                                <pancakeview:PancakeView CornerRadius="22,22,0,0" BackgroundColor="{StaticResource LightBackgroundColor}">
+                                                    <Image x:Name="img" Source="{Binding .}" Aspect="AspectFill" Margin="-18,-5,0,0" />
+                                                </pancakeview:PancakeView>
+
+                                                <Grid Grid.Row="1" RowDefinitions="*,auto" ColumnDefinitions="6*,4*" Padding="20,10,20,20">
+                                                    <Label Grid.ColumnSpan="2" Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo" FontFamily="SemiBold" FontSize="16"/>
+
+                                                    <StackLayout Grid.Row="1" Spacing="2" VerticalOptions="Center">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                                <Image.Source>
+                                                                    <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                </Image.Source>
+                                                            </Image>
+                                                            <Label Text="Manuel Antonio, Quepos" FontSize="10" FontFamily="SemiBold"/>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                                <Image.Source>
+                                                                    <FontImageSource Glyph="&#xf0c44;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                </Image.Source>
+                                                            </Image>
+                                                            <Label Text="Expires: 10 days " FontSize="10" FontFamily="SemiBold"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+
+                                                    <Frame Grid.Row="1" Grid.Column="1" HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="8" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource PrimaryColor}" >
+                                                        <Grid>
+                                                            <Image Source="btnbg.png" Aspect="AspectFill"/>
+                                                            <Label Text="Show Code" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" Margin="{OnPlatform Android='10,3,10,0', iOS='10,0,10,0'}"/>
+                                                        </Grid>
+                                                    </Frame>
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+
+            </ScrollView>
+               
+          
+            </Grid>
+     </ContentPage.Content>
+
 </ContentPage>
