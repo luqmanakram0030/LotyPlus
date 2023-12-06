@@ -9,10 +9,10 @@
         <StackLayout Padding="20,30,20,0" >
             <Label Text="Select your country" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,10,10,0"/>
 
-            <StackLayout x:Name="countries" VerticalOptions="CenterAndExpand" Margin="0,20,0,20" BindableLayout.ItemsSource="{Binding CountryList}">
+            <StackLayout Spacing="10" x:Name="countries" VerticalOptions="CenterAndExpand" Margin="10,50,10,60" BindableLayout.ItemsSource="{Binding CountryList, Mode=TwoWay}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="15,0,15,0" BackgroundColor="{Binding FrameColor}" HasShadow="False" HeightRequest="50" WidthRequest="240" HorizontalOptions="Center" VerticalOptions="Start" CornerRadius="25">
+                        <Frame BorderColor="Transparent" Padding="15,10,15,10" BackgroundColor="{Binding FrameColor}" HasShadow="False" HeightRequest="50" WidthRequest="240" HorizontalOptions="Center" VerticalOptions="Start" CornerRadius="25">
                             <Grid Margin="4" ColumnDefinitions="20,*">
                                 <Grid HeightRequest="20" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="20">
                                     <Ellipse Fill="White" HeightRequest="18" HorizontalOptions="Center" Stroke="#140D38" StrokeThickness="1" VerticalOptions="Center" WidthRequest="18" />

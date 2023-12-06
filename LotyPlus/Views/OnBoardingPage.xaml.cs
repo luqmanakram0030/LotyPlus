@@ -8,7 +8,7 @@ public partial class OnBoardingPage : ContentPage
     public OnBoardingPage()
 	{
 		InitializeComponent();
-
+        OnBoardingCarousal.IsSwipeEnabled = false;
         BindingContext = viewModel= new OnBoardingViewModel(); 
     }
     private void SkipBtn_Clicked_1(object sender, EventArgs e)
@@ -45,9 +45,11 @@ public partial class OnBoardingPage : ContentPage
     private void StartBtn_Clicked(object sender, EventArgs e)
     {
         StartBtn.IsVisible = false;
-        OnBoardingCarousal.Position += 1;
-        //viewModel.position = viewModel.position + 1;
         OnBoardingCarousal.IsSwipeEnabled = true;
+       // OnBoardingCarousal.Position += 1;
+        viewModel.position = viewModel.position + 1;
+        
+       
         SkiptBtn.IsVisible = true;
         NextBtn.IsVisible = true;
     }

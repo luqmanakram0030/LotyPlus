@@ -82,6 +82,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.EditProfile
 build_metadata.AdditionalFiles.TargetPath = Views/EditProfilePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/EditProfilePage.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/forgetPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.forgetPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/forgetPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/forgetPasswordPage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/IdNumberPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.IdNumberPage.xaml

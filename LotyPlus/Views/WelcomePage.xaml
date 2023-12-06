@@ -13,7 +13,7 @@
                 <Image Source="welcomeImg.png" HorizontalOptions="Center"/>
                 <Label Text="Control your giveaways from your phone. Apply the codes directly on the app and in seconds you are participating." FontSize="Body" HorizontalTextAlignment="Center"/>
             </StackLayout>
-            <StackLayout VerticalOptions="FillAndExpand" Spacing="50" Padding="40">
+            <StackLayout VerticalOptions="EndAndExpand" Spacing="50" Padding="0">
 
                   <Frame HasShadow="True"  Padding="0" BorderColor="Transparent" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
                     <Frame.Background>

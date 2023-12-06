@@ -58,6 +58,7 @@
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/lockedserviceicon.png
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/logo.png
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/logo2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/logowhite.png
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/menuicon.png
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/offerexpiredicon.png
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/onboardingimg1.png
@@ -301,7 +302,13 @@
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/System.Xml.XPath.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/System.Xml.XPath.XDocument.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/WindowsBase.stamp
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/zxing.stamp
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/ZXing.Net.MAUI.Controls.stamp
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resourcestamps/ZXing.Net.MAUI.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/LotyPlus.GeneratedMSBuildEditorConfig.editorconfig
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/LotyPlus.AssemblyInfoInputs.cache
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/LotyPlus.AssemblyInfo.cs
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/LotyPlus.csproj.CoreCompileInputs.cache
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/LotyPlus.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/refint/LotyPlus.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/LotyPlus.pdb

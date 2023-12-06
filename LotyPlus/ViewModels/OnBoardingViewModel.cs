@@ -15,7 +15,9 @@ namespace LotyPlus.ViewModels
         public List<OnBoardingItem> OnBoardingList
         {
             get { return onBoardingList; }
-            set { this.onBoardingList = value; }
+            set { this.onBoardingList = value;
+                OnPropertyChanged();
+            }
         }
         private int _position;
 
