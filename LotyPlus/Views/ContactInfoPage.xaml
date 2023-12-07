@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat" xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="LotyPlus.Views.ContactInfoPage"
              Title="ContactInfoPage"
               NavigationPage.HasNavigationBar="False"
@@ -11,13 +11,15 @@
 
             <ContentView x:Name="InfoSection">
                 <StackLayout>
-                    <pancakeview:PancakeView HeightRequest="120" WidthRequest="120" CornerRadius="60" HorizontalOptions="Center" Margin="0,20,0,40" BackgroundColor="{StaticResource LightPrimaryColor}">
-                        <pancakeview:PancakeView.Border>
-                            <pancakeview:Border Color="{StaticResource PrimaryColor}" Thickness="6" />
-                        </pancakeview:PancakeView.Border>
-                        <Image Source="https://randomuser.me/api/portraits/women/71.jpg" Aspect="AspectFill"/>
-                    </pancakeview:PancakeView>
-
+                    <toolkit:AvatarView Margin="20,20"
+                        ImageSource="https://randomuser.me/api/portraits/women/71.jpg" CornerRadius="60"
+                        HeightRequest="120"
+                        Text="CR"
+                        WidthRequest="120"
+                        BorderColor="{StaticResource PrimaryColor}"
+                        BorderWidth="5"
+                        />
+                  
                     <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
                         <StackLayout VerticalOptions="Center" Orientation="Horizontal" Spacing="10">
                             <Image Source="phone.png" HeightRequest="20" VerticalOptions="Center"/>
@@ -65,7 +67,9 @@
                     </StackLayout>
                 </StackLayout>
             </ContentView>
-            <StackLayout>
+
+
+            <StackLayout VerticalOptions="EndAndExpand">
 
                  <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
                     <Frame.Background>

@@ -9,7 +9,7 @@
         <StackLayout Padding="20,30,20,0" >
             <Label Text="What's your name?" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,30,10,0"/>
 
-            <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="StartAndExpand" Margin="0,50">
                 <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
                     <StackLayout VerticalOptions="Center" Orientation="Horizontal">
                         <Image Source="user.png" HeightRequest="20" VerticalOptions="Center"/>
@@ -25,7 +25,7 @@
                 </Frame>
             </StackLayout>
 
-            <Label Text="Some giveaways requires your national id or address, in cause we need it we well ask you." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,0"/>
+            <Label VerticalOptions="StartAndExpand" Text="Some giveaways requires your national id or address, in cause we need it we well ask you." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,0"/>
             <StackLayout>
 
                  <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >

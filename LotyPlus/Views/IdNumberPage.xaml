@@ -10,7 +10,7 @@
 
             <Label Text="Your id is important to avoid scams when you participate on any sweepstakes. Business needs this information to make valid any promotion on your behalf." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,0"/>
 
-            <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="StartAndExpand" Margin="0,50">
                 <Label Text="Enter your ID here:" FontSize="Caption" Margin="20,0,0,0"/>
 
                 <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,5">
