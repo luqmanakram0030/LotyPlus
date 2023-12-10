@@ -38,6 +38,7 @@ namespace LotyPlus
             handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
 #endif
             });
+         
         }
     }
 }

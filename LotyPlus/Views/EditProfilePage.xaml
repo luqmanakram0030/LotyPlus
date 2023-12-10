@@ -4,11 +4,11 @@
              x:Class="LotyPlus.Views.EditProfilePage"
              Title="EditProfilePage" NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
-             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat">
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
     <ContentPage.Content>
         <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
 
-            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,0,0">
                 <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
                     <Grid>
                         <Image x:Name="EditBtn" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
@@ -27,20 +27,23 @@
             </Grid>
 
             <ScrollView Grid.Row="1">
-                <StackLayout Padding="20,20,20,0" Spacing="0">
-                    <pancakeview:PancakeView HeightRequest="90" WidthRequest="90" CornerRadius="45" HorizontalOptions="Center" Margin="0,10,0,10" BackgroundColor="{StaticResource ColorOnDarkBackground}" >
-                        <pancakeview:PancakeView.Border>
-                            <pancakeview:Border Color="{StaticResource GreyColor}" Thickness="3" />
-                        </pancakeview:PancakeView.Border>
-                        <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="45">
-                            <Image.Source>
-                                <FontImageSource Glyph="&#xf0100;" FontFamily="FontIcons" Size="45" Color="{StaticResource GreyColor}"/>
-                            </Image.Source>
-                        </Image>
-                        <pancakeview:PancakeView.GestureRecognizers>
+                <StackLayout Padding="20,20,10,0" Spacing="0">
+                     <toolkit:AvatarView Margin="20,20"
+                        ImageSource="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADpCAMAAABx2AnXAAAApVBMVEX///+Hh4cREiQAAADa2tuCgoJ/f3+9vb2EhIS5ubl9fX3z8/MODyLBwcH39/f4+Pjt7e3T09Pk5OSTk5MAABcAABqMjIyurq6lpaXW1tYAABgAABTAwMCcnJyfn5/g4OCCgoqUlJofIC9qanMAAA6bnKF5eYFZWmMpKjhBQUwAAB9ycnpgYGk6OkcvMT4sLDhKSlQZGiypqa+GiJJNUFlvcHZTUl8ULk89AAAHbUlEQVR4nO2ci3aiOhRABYQBDcpDfJRaCSjqIFaL7f9/2g2VIFQLwTuDma6zu6ZVpAzbJCc5MWmnAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAz8UwdY0B3TQefadNGOp2T5FVBmSlZ+vDR98vK7OxogrMqMp49ug7ZkPrsVud6WmPvmcWJkpTL0FQJo++6yvMZ/3Ms3k+oN/hRcz0x2pcMVdkSu/zXbca18MzPevRKiWMYvGM0+g2bxA2iqjzR7uUMOSi2IAU2F0VMUXhqsjKYqTEtDsLjBQZV/GjXxIz+n37fjG7X+aB3XZffyl7qHdrnX+7iGBP9f5DtAYTtckA4w5RWZ0M2vcy/65V5qaYbXvd1w83p+2euy2vts3uHV/cQ6tjkvujenNUuz0vs3FFVGVZUXqKQoaWde+J2iOnFg+0GECaDQiJ1PhFM7uWYVhdU3sZV8qpU9J7zUpHWhtGlsYbtVqK/WyVRhFD69n+tq9Qp5/nWMXX5bY66i57TVR7k5tt35r0bqvJ2emTwstKtyUxnbXEVHn67Zvdn96ukIPr/0NuK+L/YhST7UXVZRb2jeuo2XRcMU2Qf7Vh1WEW69UmIpPr7lB+/nxlOC4e40tMZojS5vWVPn9tUIq7XImpailoGKY2ndv2fKqVp36t60xHsbVJ+ShfYgWvvm7LSppipSmXItvPhYhiXUcQ9assT2IFr8FEKZ9POuzJRe2G2Vc4ElMuk9b6raguFyL4rLZX5EdMyaeshy/f3Lbyko9GtDozbsQu43Fj/G1FU8d5FKnLFbgRo8OijiFUjXYFambVXY8TMZVWxEGVV2pGp2pqZiN5EZPp/dZlN3k+Mqi5IB9ieYH9qg13ynN2anWRcSKmZH2UwdCNy1kz61e+B3yIqS/ZWVOGNDtLKzudl6qT+RCjMxQG00RWLyuyylkUPsTUrCZOmOZF6Gcsff5LLIt0pYSqgnE2AJnzLkaLYME4L6JkSXZVAXMhRpsY8/RBdtNVjYwLMTkrAZaYmELj4qLqmjyI0ckY1klwOmA2eK+KWVBkjR159KgKi3yInQeKA1YvOpE4ALFHiZ2r4oC9Kp7F+K+K5+AxZA8e5zbGffCg2XPlqLYolo2Zq7JoLsRoB826RIdmb9x30PRG6yfVsjdiVv9G8CGWVa0+m5cgZMlAVdXlQiz/gIttTEVHVJXdAx9i9OPHBVuimQ0tKz8k5UMsX55nM3jlU6uVaSkfYoKcpY4sGRnNxobVV+REjH7eMKlNyWQ6l1P9qTYnYsI4O41hvEinVqsHYLyI5UVWt0A4XwZcswyBF7G8b6pZmpQvJarr87gRk/PlAlVmlyVSdY2RGzGhl9+zJXxzrirkH+aadT0eP2L5nDyJINObhaZM89W+9XP8HInRLCule7XpSlXGl9VRDJkbR2Ils85srip0iYNKHs4L+8VYMlKexMpmHcOc2GNVltWxPSmtYGHKtLkSI2Zfdl8O0u0PX9bRG0wzCHyJkUpXu0Nxxra1gjOxdPlb5UaHwY3Fb48VY16IKY8rVsCZY+bLtLUQs8Ei7m/V2LVaXMZtNFidTqK7Zn3ZMTW0tEb7fZTWNoE3209A+uOpvjA+29vAWOjTRtukW91RwNzI8nuTsx46Xa/YdJdFa02M1KWGt/Y/aXHvX+2A/A/Sa3UL2bRpZbybfF7kh5m17XXPn0q4h0f8eYXrPOtPU8rb2mQ2FWTlryEL08f9nY+htej+JRZfxysAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8KP5Wzv2Hk1H+qF0xB8KiP1rZGIo+ycWfoqi44jo8ow8Qs7lKeecxVCMRLQ5nh/v6Wuj9dp9janK8YDQZr3/V8zOYk6wc0bJyB2JT66UHB3XfXJc6Y0QrSRXkpAjSXtTkuJky7fY5e6yEvMT1/dC7Ekhjjy8xzg8rE7dkyQFxhrPzM222z3o29lmG7cphkhDQPT7Z7M4P0sFsuNp4yDfHISO6Rnp46KY6GIxeI9GURRIkvcbi1IUrZdbc+G9440p7d70WNoYs/T3W/RyAj90fXfj752Ng8Iw9sWj45/iIxI35IiPfDcIcIxPG7zGhwAHuzDch95TUczZrZM13gXh1nETtFqOAu/gLKXf3RAfNCnWzOXy1TL9dushOgUefiNvtheGQRKE4c5LPsLoLV7ijyTykpUX7xyMcBxEuwgfTloUhKdtWQyht9BP0GaDkb/bBTsRrz+c1TvW4+6+G+kh1sKteeguWxUTXe0Vr73dR5i8e4c1joIkCaIoWaO3eBWsTkT0uDqs30PvDeFtslx55EWcNRbajznvvvMqhM4miZaBFCT+fo9O2Hty14ffeOcuSZV8l6KWQwfyEdout8e9sxWPfjza+6+j7Ubc+36MYnKE/Niu/e2Te/T35NwjeYpOH2UxMW2ET6T5jRyRfI3Slum4T+QbQi5pj45LWmXrvRjKwsTnAxouiqQ9K7pEmXMwKYv9NEDsX+PHiv0HJbOwVX5Xl6AAAAAASUVORK5CYII="
+                        CornerRadius="60"
+                        HeightRequest="120"
+                        Text="CR"
+                        WidthRequest="120"
+                        BorderColor="{StaticResource Gray200}"
+                        BorderWidth="3"
+                        >
+                       
+                         <toolkit:AvatarView.GestureRecognizers>
                             <TapGestureRecognizer Tapped="EditPicture_Tapped"/>
-                        </pancakeview:PancakeView.GestureRecognizers>
-                    </pancakeview:PancakeView>
+                        </toolkit:AvatarView.GestureRecognizers>
+                        </toolkit:AvatarView>
+                       
+                 
 
                     <Label Text="Upload Profile Picture" FontSize="15" HorizontalOptions="Center" Margin="0,0,0,40"/>
 

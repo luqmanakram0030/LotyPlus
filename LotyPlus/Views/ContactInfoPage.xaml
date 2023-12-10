@@ -46,7 +46,36 @@
                 <StackLayout>
                     <Label Text="Please, write the code we just send to you to confirm your number." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,50"/>
 
-                    <Grid HorizontalOptions="Center" RowDefinitions="auto,*" ColumnDefinitions="45,45,45,45" ColumnSpacing="8.5" VerticalOptions="StartAndExpand">
+                    <StackLayout Orientation="Horizontal" Spacing="10" Margin="40">
+
+                     <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0" Padding="0">
+                             <Entry Unfocused="Entry1_Unfocused" TextChanged="Entry1_TextChanged" x:Name="Entry1" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>
+                     <Frame  Style="{StaticResource EntryFrame}" Margin="0,0,0,0">
+                             <Entry  x:Name="Entry2" TextChanged="Entry_TextChanged" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>
+                     <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0">
+                             <Entry TextChanged="Entry3_TextChanged" x:Name="Entry3" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>
+                     <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0">
+                             <Entry TextChanged="Entry4_TextChanged" x:Name="Entry4" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>   
+                    </StackLayout>
+
+
+                    <!--<Grid HorizontalOptions="Center" RowDefinitions="auto,*" ColumnDefinitions="45,45,45,45" ColumnSpacing="8.5" VerticalOptions="StartAndExpand">
                         <Frame Padding="0" HeightRequest="85" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
                         <Frame Grid.Column="1" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
                         <Frame Grid.Column="2" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
@@ -55,7 +84,7 @@
                         <Grid Grid.ColumnSpan="4" Padding="{OnPlatform Android='20,0,0,0', iOS='35,0,0,0'}" Margin="{OnPlatform Android='-30,0,-30,0', iOS='-20,0,-20,0'}">
                             <Entry x:Name="OTPEntry" TextColor="{StaticResource TextColor}" FontFamily="Medium" FontSize="Large" CharacterSpacing="{OnPlatform Android='30.5', iOS='44.5'}" MaxLength="4" Keyboard="Numeric"/>
                         </Grid>
-                    </Grid>
+                    </Grid>-->
 
                     <StackLayout Orientation="Horizontal" Spacing="2" Margin="20,40,0,0">
                         <Label Text="Didn't receive?"/>
@@ -64,6 +93,9 @@
                                 <TapGestureRecognizer NumberOfTapsRequired="1" />
                             </Label.GestureRecognizers>
                         </Label>
+                    
+             
+                         
                     </StackLayout>
                 </StackLayout>
             </ContentView>

@@ -1,31 +1,14 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.LotyPlus Xamarin.HotReload.DebuggerTimeoutException.LotyPlus.HideInfoBar="True" PreferredExecutionTarget="Android.pixel_6_-_api_33" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/ViewModels/SearchViewModel.cs" relfile="LotyPlus/ViewModels/SearchViewModel.cs" line="25" column="1" />
-      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml.cs" relfile="LotyPlus/Views/TabPages/HomePage.xaml.cs" line="28" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+﻿<Properties StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default" GitUserInfo="UsingGIT">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.LotyPlus.HideInfoBar="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/ContactInfoPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/ContactInfoPage.xaml.cs">
     <Files>
-      <File FileName="LotyPlus/App.xaml.cs" />
-      <File FileName="LotyPlus/Views/OnBoardingPage.xaml" />
       <File FileName="LotyPlus/Views/OnBoardingPage.xaml.cs" />
-      <File FileName="LotyPlus/ViewModels/OnBoardingViewModel.cs" />
-      <File FileName="LotyPlus/Views/LoginPage.xaml" />
-      <File FileName="LotyPlus/Views/LoginPage.xaml.cs" />
-      <File FileName="LotyPlus/Views/forgetPasswordPage.xaml" />
-      <File FileName="LotyPlus/Views/WelcomePage.xaml" />
-      <File FileName="LotyPlus/Views/SelectCountryPage.xaml" />
-      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" Line="20" Column="39" />
-      <File FileName="LotyPlus/Views/SelectCountryPage.xaml.cs" />
-      <File FileName="LotyPlus/Views/NamePage.xaml" />
-      <File FileName="LotyPlus/Views/NamePage.xaml.cs" />
-      <File FileName="LotyPlus/Views/IdNumberPage.xaml" />
-      <File FileName="LotyPlus/Views/IdNumberPage.xaml.cs" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" />
+      <File FileName="LotyPlus/App.xaml" />
+      <File FileName="LotyPlus/App.xaml.cs" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml.cs" Line="53" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,19 +16,23 @@
           <Node name="LotyPlus" expanded="True">
             <Node name="LotyPlus" expanded="True">
               <Node name="Views" expanded="True">
-                <Node name="ContactInfoPage.xaml" selected="True" />
-                <Node name="IdNumberPage.xaml" expanded="True" />
-                <Node name="NamePage.xaml" expanded="True" />
+                <Node name="ContactInfoPage.xaml" expanded="True" />
                 <Node name="OnBoardingPage.xaml" expanded="True" />
                 <Node name="SelectCountryPage.xaml" expanded="True" />
               </Node>
-              <Node name="App.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/ViewModels/SearchViewModel.cs" relfile="LotyPlus/ViewModels/SearchViewModel.cs" line="25" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml.cs" relfile="LotyPlus/Views/TabPages/HomePage.xaml.cs" line="28" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

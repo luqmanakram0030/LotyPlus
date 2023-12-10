@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.CartPage"
              Shell.NavBarIsVisible="False"
-             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+             
              Title="CartPage" BackgroundColor="{StaticResource ColorOnDarkBackground}"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
@@ -37,14 +37,14 @@
                         </BindableLayout.ItemsSource>
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="15,15,15,5" Margin="25,10,25,0" CornerRadius="6">
+                                <Frame BorderColor="Transparent" HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="15,15,15,5" Margin="25,10,25,0" CornerRadius="6">
                                     <Grid ColumnDefinitions="50,*,80" RowDefinitions="auto,auto,50" >
                                         <Image Grid.RowSpan="2" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Start" Source="https://assets.stickpng.com/images/5842eff2a6515b1e0ad75b0e.png" />
                                         <Label Grid.Column="1" Text="{Binding .}" FontSize="14" FontFamily="Medium" Margin="10,0,0,0"/>
                                         <Label Grid.Row="1" Grid.Column="1" Text="RETAILERS" FontSize="14" TextColor="{StaticResource PrimaryColor}" Margin="10,-5,0,0"/>
 
                                         <!--Delete btn-->
-                                        <Frame Grid.Column="2" HasShadow="False" HeightRequest="30" WidthRequest="30" Padding="0" VerticalOptions="Center" HorizontalOptions="End" Margin="8,0,-5,0" CornerRadius="15" >
+                                        <Frame Grid.Column="2" BorderColor="Transparent" HasShadow="False" HeightRequest="30" WidthRequest="30" Padding="0" VerticalOptions="Center" HorizontalOptions="End" Margin="8,0,-5,0" CornerRadius="15" >
                                             <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="25">
                                                 <Image.Source>
                                                     <FontImageSource Glyph="&#xf09e7;" FontFamily="FontIcons" Size="30" Color="{StaticResource SecondoryColor}"/>
@@ -58,13 +58,13 @@
                                         <Label Grid.Row="2" Text="Qty" FontSize="16" FontFamily="Bold" VerticalOptions="Center"/>
 
                                         <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-                                            <Button BackgroundColor="#F7F9F9" HeightRequest="35" Padding="0" VerticalOptions="Center" WidthRequest="45" Clicked="Decrease_Clicked">
+                                            <Button BorderColor="Transparent" BackgroundColor="#F7F9F9" HeightRequest="35" Padding="0" VerticalOptions="Center" WidthRequest="45" Clicked="Decrease_Clicked">
                                                 <Button.ImageSource>
                                                     <FontImageSource Glyph="&#xf0374;" FontFamily="FontIcons" Size="34" Color="{StaticResource GreyColor}"/>
                                                 </Button.ImageSource>
                                             </Button>
                                             <Label Text="1" FontSize="22" FontFamily="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="40"/>
-                                            <Button BackgroundColor="{StaticResource GreyColor}" HeightRequest="35" Padding="0" VerticalOptions="Center" WidthRequest="45" Clicked="Increase_Clicked">
+                                            <Button BorderColor="Transparent" BackgroundColor="{StaticResource GreyColor}" HeightRequest="35" Padding="0" VerticalOptions="Center" WidthRequest="45" Clicked="Increase_Clicked">
                                                 <Button.ImageSource>
                                                     <FontImageSource Glyph="&#xf0415;" FontFamily="FontIcons" Size="30" Color="{StaticResource ColorOnLightBackground}"/>
                                                 </Button.ImageSource>
@@ -78,7 +78,7 @@
                         </BindableLayout.ItemTemplate>
                     </StackLayout>
 
-                    <Frame Grid.Row="2" HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="15" Margin="25,15,25,0" CornerRadius="6" VerticalOptions="Start">
+                    <Frame Grid.Row="2" BorderColor="Transparent" HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="15" Margin="25,15,25,0" CornerRadius="6" VerticalOptions="Start">
                         <Grid RowDefinitions="auto,*" ColumnDefinitions="*,70">
                             <Label Text="Add Voucher" FontSize="14" FontFamily="Bold"/>
                             <Frame Grid.Row="1" HasShadow="False" Padding="20,0,20,0" VerticalOptions="Start" CornerRadius="5" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
@@ -89,10 +89,13 @@
                         </Grid>
                     </Frame>
 
-                    <pancakeview:PancakeView Grid.Row="4" BackgroundColor="{StaticResource ColorOnDarkBackground}" CornerRadius="30,30,0,0" Margin="0,20,0,0"  >
+                  <Border Stroke="Transparent"  Grid.Row="4" BackgroundColor="{StaticResource ColorOnDarkBackground}"  Margin="0,20,0,0"  >
+                         <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30,30,0,0"/>
+            </Border.StrokeShape>
                         <StackLayout Padding="30,30,30,20" Spacing="-6">
 
-                            <Frame HasShadow="False" BackgroundColor="#F7F9F9" Margin="10">
+                            <Frame BorderColor="Transparent" HasShadow="False" BackgroundColor="#F7F9F9" Margin="10">
                                 <Grid RowDefinitions="auto,auto,auto,auto" ColumnDefinitions="*,auto">
                                     <Label Text="Subtotal" FontSize="14" />
                                     <Label Grid.Column="1" Text="$16.5" FontSize="14" FontFamily="Bold" HorizontalTextAlignment="End"/>
@@ -133,7 +136,7 @@
                     </StackLayout.Shadow>
                             </StackLayout>
                         </StackLayout>
-                    </pancakeview:PancakeView>
+                    </Border>
 
                 </Grid>
             </ScrollView>
