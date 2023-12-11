@@ -143,6 +143,8 @@
 	  <None Remove="Views\TabPages\" />
 	  <None Remove="Converters\" />
 	  <None Remove="Resources\Images\logowhite.png" />
+	  <None Remove="CustomControls\" />
+	  <None Remove="Platforms\Android\CustomRenderers\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -173,6 +175,8 @@
 	<ItemGroup>
 	  <Folder Include="Views\TabPages\" />
 	  <Folder Include="Converters\" />
+	  <Folder Include="CustomControls\" />
+	  <Folder Include="Platforms\Android\CustomRenderers\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\logowhite.png" />

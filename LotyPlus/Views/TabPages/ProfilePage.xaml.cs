@@ -17,7 +17,14 @@ public partial class ProfilePage : ContentPage
         double length = cardView.Width;
         cardView.HeightRequest = length / 1.85;
     }
-
+    private async void Cart_Tapped(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(CartPage));
+    }
+    private void Menu_Tapped(object sender, EventArgs e)
+    {
+        Shell.Current.FlyoutIsPresented = true;
+    }
     private void Item_Tapped(object sender, EventArgs e)
     {
         Frame frame = sender as Frame;

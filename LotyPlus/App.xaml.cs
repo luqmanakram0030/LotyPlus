@@ -13,8 +13,8 @@ public partial class App : Application
         //else
         //    MainPage = new NavigationPage(new LoginPage());
 
-        // MainPage = new AppShell();
-         MainPage =new NavigationPage( new SearchShopPage());
+         MainPage = new AppShell();
+        // MainPage =new NavigationPage( new SearchShopPage());
     }
 }
 

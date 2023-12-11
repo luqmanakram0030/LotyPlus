@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LotyPlus.Views.SearchShopPage" xmlns:converters="clr-namespace:LotyPlus.Converters" xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels"
-             Title="SearchShopPage"> 
-      <ContentPage.Resources>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:customcontrols="clr-namespace:LotyPlus.CustomControls"
+
+             x:Class="LotyPlus.Views.SearchShopPage" xmlns:converters="clr-namespace:LotyPlus.Converters" xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels" xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="SearchShopPage"
+             > 
+      
+   <ContentPage.Resources>
         <ResourceDictionary>
             <converters:GreaterThanZeroConverter x:Key="GreaterThanZeroConverter" />
            
         </ResourceDictionary>
     </ContentPage.Resources>
-   <ContentPage.Content>
+
+    <ContentPage.Content>
         <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
 
             <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
@@ -33,23 +37,41 @@
                     <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='16,0,10,0', iOS='16,0,16,0'}" HeightRequest="50" Margin="20,15,20,0" CornerRadius="16">
                         <Grid ColumnDefinitions="30,*,2,auto">
                             <Image Source="search.png" VerticalOptions="Center" HeightRequest="24"/>
-                            <SearchBar  x:Name="Search" Grid.Column="1" Placeholder="Search here" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Small" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" />
-                            <BoxView Grid.Column="2" BackgroundColor="{StaticResource ColorOnLightBackground}" Opacity="0.5" WidthRequest="1" HorizontalOptions="Center" VerticalOptions="Fill" Margin="0,15,0,15"/>
-                            <Button x:Name="CancelBtn" Grid.Column="3" Text="Search" TextTransform="None" TextColor="{StaticResource PrimaryColor}" FontSize="Default" FontFamily="SemiBold" Margin="0" WidthRequest="80" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='0,5,0,0', iOS='0'}"/>
+                             <Entry  VerticalOptions="Center" x:Name="Search" Focused="Search_Focused" Unfocused="Search_Unfocused" Grid.Column="1" Placeholder="Search here" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Small" FontFamily="Regular" Margin="{OnPlatform Android='10,0,0,-7', iOS='0'}" >
+                                 
+                                 <Entry.Behaviors SoftKeyboardBehavior="false">
+
+
+                                </Entry.Behaviors>
+
+                            </Entry>
+                            <Entry IsVisible="false" VerticalOptions="Center" x:Name="Search1" Focused="Search_Focused" Unfocused="Search_Unfocused" Grid.Column="1" Placeholder="Search here" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Small" FontFamily="Regular" Margin="{OnPlatform Android='10,0,0,-7', iOS='0'}" >
+                                 
+                                 <Entry.Behaviors SoftKeyboardBehavior="false">
+
+
+                                </Entry.Behaviors>
+
+                            </Entry>
+                           <BoxView Grid.Column="2" BackgroundColor="{StaticResource ColorOnLightBackground}" Opacity="0.5" WidthRequest="1" HorizontalOptions="Center" VerticalOptions="Fill" Margin="0,15,0,15"/>
+                            <Button Clicked="CancelBtn_Clicked" x:Name="CancelBtn" Grid.Column="3" Text="Search" TextTransform="None" TextColor="{StaticResource PrimaryColor}" FontSize="Default" FontFamily="SemiBold" Margin="0" WidthRequest="80" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='0,5,0,0', iOS='0,0,0,0'}"/>
                         </Grid>
                     </Frame>
                 </StackLayout>
 
-                <StackLayout Grid.Row="1" x:Name="PrimaryContentView" Opacity="1">
-                    <StackLayout.Triggers>
+                 <ContentView Grid.Row="1" x:Name="PrimaryContentView" Opacity="1">
+                    <ContentView.Triggers>
                         <DataTrigger
-                        TargetType="StackLayout"
+                        TargetType="ContentView"
                         Binding="{Binding Source={x:Reference Search}, Path=IsFocused}"
                         Value="False">
-                            
+                            <DataTrigger.EnterActions>
+                                </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                             </DataTrigger.ExitActions>
                         </DataTrigger>
                         <Trigger
-                        TargetType="StackLayout"
+                        TargetType="ContentView"
                         Property="Opacity"
                         Value="0">
                             <Setter Property="IsVisible" Value="False" />
@@ -60,12 +82,46 @@
                         Value="True">
                             <Setter Property="IsVisible" Value="True" />
                         </DataTrigger>
-                    </StackLayout.Triggers>
+                    </ContentView.Triggers>
                     <ScrollView>
                         <StackLayout Spacing="10">
                             <Label Text="Most Popular" FontSize="20" FontFamily="SemiBold" TextColor="{StaticResource DarkTextColor2}" Margin="30,25,0,0"/>
 
-                            <FlexLayout Direction="Row" FlowDirection="LeftToRight" JustifyContent="Start" Wrap="Wrap" Margin="30,0,30,0">
+                            <FlexLayout BackgroundColor="Transparent" Direction="Row" FlowDirection="LeftToRight" JustifyContent="Start" Wrap="Wrap" Margin="30,0,30,0">
+                                <BindableLayout.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Barber Shop</x:String>
+                                        <x:String>Car Services</x:String>
+                                        <x:String>Gas Pump</x:String>
+                                        <x:String>Home Decore</x:String>
+                                        <x:String>Cloth Store</x:String>
+                                        <x:String>Mall</x:String>
+                                    </x:Array>
+                                </BindableLayout.ItemsSource>
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,0,10,10" HeightRequest="40">
+                                            <Frame BorderColor="Transparent" HasShadow="False" Padding="10,5,10,2" CornerRadius="5" BackgroundColor="{StaticResource ColorOnDarkBackground}"  VerticalOptions="Start">
+                                                <Label Text="{Binding .}" FontSize="16" TextColor="{StaticResource DarkTextColor2}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                            </Frame>
+                                        </Grid>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </ContentView>
+
+               
+                        <StackLayout Grid.Row="1" IsVisible="false" x:Name="ResultsContentView" Padding="30,30,30,0" Spacing="15" >
+                            <Label Text="You can add the search results here..." FontSize="16" TextColor="{StaticResource DarkTextColor2}" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        </StackLayout>
+                   
+                    <!--<ScrollView Grid.Row="1"  x:Name="PrimaryContentView" IsVisible="true">
+                        <StackLayout Spacing="10">
+                            <Label Text="Most Popular" FontSize="20" FontFamily="SemiBold" TextColor="{StaticResource DarkTextColor2}" Margin="30,25,0,0"/>
+
+                            <FlexLayout x:Name="List" Direction="Row" FlowDirection="LeftToRight" JustifyContent="Start" Wrap="Wrap" Margin="30,0,30,0">
                                 <BindableLayout.ItemsSource>
                                     <x:Array Type="{x:Type x:String}">
                                         <x:String>Barber Shop</x:String>
@@ -88,9 +144,16 @@
                             </FlexLayout>
                         </StackLayout>
                     </ScrollView>
-                </StackLayout>
+              
 
               
+                   
+                        <StackLayout Grid.Row="1" x:Name="ResultsContentView" Padding="30,30,30,0" Spacing="15" >
+                            <Label Text="You can add the search results here..." FontSize="16" TextColor="{StaticResource DarkTextColor2}" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        </StackLayout>-->
+                  
+              
+
             </Grid>
         </Grid>
     </ContentPage.Content>

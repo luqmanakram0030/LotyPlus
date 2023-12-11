@@ -5,13 +5,43 @@ namespace LotyPlus.Views.TabPages;
 
 public partial class HomePage : ContentPage
 {
-    RunningCouponPageViewModel viewModel = new RunningCouponPageViewModel();
+    RunningCouponPageViewModel viewModel ;
     public HomePage()
     {
         InitializeComponent();
-       // BindingContext = viewModel;
+        PrimaryContentView.IsVisible = true;
+        ResultsContentView.IsVisible = false;
+        BindingContext = viewModel = new RunningCouponPageViewModel();
+    }
+    void Search_Focused(System.Object sender, Microsoft.Maui.Controls.FocusEventArgs e)
+    {
+
+
+        PrimaryContentView.IsVisible = false;
+        ResultsContentView.IsVisible = true;
     }
 
+    void Search_Unfocused(System.Object sender, Microsoft.Maui.Controls.FocusEventArgs e)
+
+    {
+        PrimaryContentView.IsVisible = true;
+        ResultsContentView.IsVisible = false;
+
+    }
+
+    void CancelBtn_Clicked(System.Object sender, System.EventArgs e)
+    {
+        Search.Unfocused += Unfocused();
+       
+    }
+
+    private EventHandler<FocusEventArgs> Unfocused()
+    {
+
+        PrimaryContentView.IsVisible = true;
+        ResultsContentView.IsVisible = false;
+        return null;
+    }
     private void ViewAll_Clicked(object sender, EventArgs e)
     {
 

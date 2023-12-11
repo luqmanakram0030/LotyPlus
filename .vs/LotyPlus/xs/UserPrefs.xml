@@ -1,38 +1,57 @@
-﻿<Properties StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default" GitUserInfo="UsingGIT">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.LotyPlus.HideInfoBar="True" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/ContactInfoPage.xaml.cs">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/OnBoardingPage.xaml">
     <Files>
-      <File FileName="LotyPlus/Views/OnBoardingPage.xaml.cs" />
-      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" />
-      <File FileName="LotyPlus/App.xaml" />
-      <File FileName="LotyPlus/App.xaml.cs" />
-      <File FileName="LotyPlus/Views/ContactInfoPage.xaml.cs" Line="53" Column="15" />
+      <File FileName="LotyPlus/Views/SearchShopPage.xaml" Line="39" Column="127" />
+      <File FileName="LotyPlus/Views/SearchShopPage.xaml.cs" Line="25" Column="9" />
+      <File FileName="LotyPlus/Converters/GreaterThanZeroConverter.cs" Line="33" Column="1" />
+      <File FileName="LotyPlus/CustomControls/CustomSearch.cs" Line="2" Column="19" />
+      <File FileName="LotyPlus/Platforms/Android/CustomRenderers/CustomSearchRenderer.cs" Line="13" Column="16" />
+      <File FileName="LotyPlus/FormHandler.cs" Line="12" Column="19" />
+      <File FileName="LotyPlus/App.xaml.cs" Line="16" Column="9" />
+      <File FileName="LotyPlus/Views/OnBoardingPage.xaml" Line="46" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LotyPlus" expanded="True">
-            <Node name="LotyPlus" expanded="True">
+          <Node name="LotyPlus">
+            <Node name="LotyPlus">
+              <Node name="CustomControls" expanded="True" />
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True">
+                  <Node name="CustomRenderers" expanded="True" />
+                </Node>
+              </Node>
               <Node name="Views" expanded="True">
+                <Node name="TabPages" expanded="True">
+                  <Node name="HomePage.xaml" expanded="True" />
+                </Node>
+                <Node name="ChangePaymentPage.xaml" expanded="True" />
+                <Node name="CheckoutPage.xaml" expanded="True" />
+                <Node name="CodeRedeemPage.xaml" expanded="True" />
                 <Node name="ContactInfoPage.xaml" expanded="True" />
-                <Node name="OnBoardingPage.xaml" expanded="True" />
+                <Node name="MyWalletPage.xaml" expanded="True" />
+                <Node name="OnBoardingPage.xaml" expanded="True" selected="True" />
+                <Node name="RunningCouponPage.xaml" expanded="True" />
+                <Node name="SearchShopPage.xaml" expanded="True" />
                 <Node name="SelectCountryPage.xaml" expanded="True" />
               </Node>
+              <Node name="App.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LotyPlus PreferredExecutionTarget="Android.pixel_6_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.LotyPlus.HideInfoBar="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/ViewModels/SearchViewModel.cs" relfile="LotyPlus/ViewModels/SearchViewModel.cs" line="25" column="1" />
       <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml.cs" relfile="LotyPlus/Views/TabPages/HomePage.xaml.cs" line="28" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/SearchShopPage.xaml.cs" relfile="LotyPlus/Views/SearchShopPage.xaml.cs" line="12" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

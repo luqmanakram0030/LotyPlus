@@ -3203,3 +3203,4 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/stamp/_GenerateJavaStubs.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/stamp/_ResolveLibraryProjectImports.stamp
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/src/crc649a049e97de140cd7/CustomSearchRenderer.java
