@@ -92,6 +92,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.forgetPassw
 build_metadata.AdditionalFiles.TargetPath = Views/forgetPasswordPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/forgetPasswordPage.xaml
 
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/ForgotOTPPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.ForgotOTPPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ForgotOTPPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ForgotOTPPage.xaml
+
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/IdNumberPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.IdNumberPage.xaml
@@ -169,6 +175,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.SelectCountryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/SelectCountryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/SelectCountryPage.xaml
+
+[/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/SetNewPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = LotyPlus.Views.SetNewPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SetNewPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SetNewPasswordPage.xaml
 
 [/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/ShopEntryScanPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

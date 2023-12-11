@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.ForgotOTPPage"
+             Title="ForgotOTPPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+         <StackLayout Padding="20,30,10,0">
+                <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="70"/>
+
+                <Label Text="Verification" FontSize="26" FontFamily="Bold" Margin="10,30,10,0"/>
+                <Label Text="we’ve sent OTO to your mobile number at ********080. Please enter 4 digits code you receive." FontSize="Default" Margin="10,0,10,30"/>
+
+
+            
+
+            <ContentView x:Name="OTPSection" IsVisible="False">
+                <StackLayout>
+                   
+                    <StackLayout Orientation="Horizontal" Spacing="10" Margin="40">
+
+                     <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0" Padding="0">
+                             <Entry Unfocused="Entry1_Unfocused" TextChanged="Entry1_TextChanged" x:Name="Entry1" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>
+                     <Frame  Style="{StaticResource EntryFrame}" Margin="0,0,0,0">
+                             <Entry  x:Name="Entry2" TextChanged="Entry_TextChanged" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>
+                     <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0">
+                             <Entry TextChanged="Entry3_TextChanged" x:Name="Entry3" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>
+                     <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0">
+                             <Entry TextChanged="Entry4_TextChanged" x:Name="Entry4" Style="{StaticResource EntryStyle}" 
+                  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   Text="{Binding userModel.name, Mode=TwoWay}" />
+
+                        </Frame>   
+                    </StackLayout>
+
+
+                    <!--<Grid HorizontalOptions="Center" RowDefinitions="auto,*" ColumnDefinitions="45,45,45,45" ColumnSpacing="8.5" VerticalOptions="StartAndExpand">
+                        <Frame Padding="0" HeightRequest="85" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+                        <Frame Grid.Column="1" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+                        <Frame Grid.Column="2" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+                        <Frame Grid.Column="3" Padding="0" HeightRequest="70" HasShadow="False" BorderColor="{StaticResource GreyColor}" CornerRadius="8"/>
+
+                        <Grid Grid.ColumnSpan="4" Padding="{OnPlatform Android='20,0,0,0', iOS='35,0,0,0'}" Margin="{OnPlatform Android='-30,0,-30,0', iOS='-20,0,-20,0'}">
+                            <Entry x:Name="OTPEntry" TextColor="{StaticResource TextColor}" FontFamily="Medium" FontSize="Large" CharacterSpacing="{OnPlatform Android='30.5', iOS='44.5'}" MaxLength="4" Keyboard="Numeric"/>
+                        </Grid>
+                    </Grid>-->
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Spacing="2" Margin="20,40,0,0">
+                        <Label Text="Didn't receive?" HorizontalTextAlignment="Center"/>
+                        <Label Text="Resend in 32s" HorizontalTextAlignment="Center"/>
+                        <Label Text="Send again" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryColor}" FontFamily="SemiBold" Padding="5,0,5,0" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    
+             
+                         
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+
+
+            <StackLayout VerticalOptions="EndAndExpand">
+
+                 <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Grid>
+                        <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                        <Label x:Name="btnText" Text="Continue" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Continue_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                   <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+          </StackLayout.Shadow>
+            </StackLayout>
+               
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
