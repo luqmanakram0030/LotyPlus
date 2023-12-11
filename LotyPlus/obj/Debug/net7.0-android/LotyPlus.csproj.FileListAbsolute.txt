@@ -2355,12 +2355,10 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/Mono.Android.Export.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/Mono.Android.Export.pdb
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/Mono.Android.pdb
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/mscorlib.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/netstandard.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/PancakeViewCompat.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.AppContext.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Buffers.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Collections.Concurrent.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Collections.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Collections.Immutable.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Collections.NonGeneric.dll
@@ -2374,20 +2372,15 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Configuration.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Console.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Core.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Data.Common.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Data.DataSetExtensions.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Data.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.Contracts.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.Debug.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.DiagnosticSource.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.FileVersionInfo.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.Process.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.StackTrace.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.TextWriterTraceListener.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.Tools.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.TraceSource.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.Tracing.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Drawing.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Drawing.Primitives.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Dynamic.Runtime.dll
@@ -2438,9 +2431,7 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Numerics.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Numerics.Vectors.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.ObjectModel.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.CoreLib.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.DataContractSerialization.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.Uri.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.Xml.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.Xml.Linq.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Reflection.DispatchProxy.dll
@@ -2457,8 +2448,6 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Resources.Writer.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.CompilerServices.Unsafe.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.CompilerServices.VisualC.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Extensions.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Handles.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.InteropServices.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.InteropServices.JavaScript.dll
@@ -2467,7 +2456,6 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Loader.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Numerics.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.Formatters.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.Json.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.Primitives.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.Xml.dll
@@ -2509,7 +2497,6 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Web.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Web.HttpUtility.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Windows.dll
-/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Xml.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Xml.Linq.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Xml.ReaderWriter.dll
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Xml.Serialization.dll
@@ -3204,3 +3191,40 @@ D:/Xamarin Work/Orders/Working/GitHub_Clone/LotyPlus/LotyPlus/obj/Debug/net7.0-a
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/stamp/_ResolveLibraryProjectImports.stamp
 /Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/src/crc649a049e97de140cd7/CustomSearchRenderer.java
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/sp/drawable-v31/maui_splash_image 2.xml
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/sp/drawable/maui_splash_image 2.xml
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/sp/values/maui_colors 2.xml
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/colombia 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/colombia 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/email 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/email 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/facebook 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/facebook 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/lock 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/lock 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/menuicon 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/menuicon 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/phone 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/phone 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/scancode 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/search 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/user 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/drawable/user 3.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon 2.xml
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon_round 2.xml
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/mipmap-hdpi/appicon_background 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/mipmap-mdpi/appicon_background 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/resizetizer/r/mipmap-xhdpi/appicon_background 2.png
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/mscorlib.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Collections.Concurrent.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Data.Common.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Data.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.StackTrace.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Diagnostics.TraceSource.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.CoreLib.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Private.Uri.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Extensions.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Runtime.Serialization.Formatters.dll
+/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-android/android/assets/System.Xml.dll
