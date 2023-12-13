@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "net7.0-android33.0": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -195,6 +224,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -500,6 +554,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -829,10 +987,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -1762,6 +1920,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -1923,10 +2094,88 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
         }
       }
     },
     "net7.0-android33.0/android-arm": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -2120,6 +2369,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -2425,6 +2699,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -2754,10 +3132,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -3687,6 +4065,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -3848,10 +4239,88 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
         }
       }
     },
     "net7.0-android33.0/android-arm64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -4045,6 +4514,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -4350,6 +4844,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -4679,10 +5277,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -5612,6 +6210,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -5773,10 +6384,88 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
         }
       }
     },
     "net7.0-android33.0/android-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -5970,6 +6659,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -6275,6 +6989,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -6604,10 +7422,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -7537,6 +8355,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -7698,10 +8529,88 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
         }
       }
     },
     "net7.0-android33.0/android-x86": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -7895,6 +8804,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -8200,6 +9134,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -8529,10 +9567,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -9462,6 +10500,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -9623,10 +10674,88 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
         }
       }
     },
     "net7.0-android33.0/iossimulator-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -9820,6 +10949,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -10125,6 +11279,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -10454,10 +11712,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -11387,6 +12645,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -11548,10 +12819,88 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
         }
       }
     },
     "net7.0-android33.0/maccatalyst-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "GoogleGson/2.9.1.1": {
         "type": "package",
         "compile": {
@@ -11745,6 +13094,31 @@
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/PancakeViewCompat.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -12050,6 +13424,110 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Browser.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.ExifInterface": "1.3.3.6",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.AndroidX.Lifecycle.LiveData": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9",
+          "Xamarin.Kotlin.StdLib": "1.7.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.0",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Camera.View/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.4.0",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.2.0.2",
+          "Xamarin.AndroidX.AppCompat": "1.4.2.1",
+          "Xamarin.AndroidX.Camera.Core": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Concurrent.Futures": "1.1.0.9",
+          "Xamarin.AndroidX.Core": "1.8.0.1",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.5.1",
+          "Xamarin.Google.AutoValue.Annotations": "1.9.0.2",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0.9"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets": {}
         }
       },
       "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -12379,10 +13857,10 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Emoji2.ViewsHelper.targets": {}
         }
       },
-      "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
+      "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.3.0.3"
+          "Xamarin.AndroidX.Annotation": "1.3.0.4"
         },
         "compile": {
           "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll": {
@@ -13312,6 +14790,19 @@
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Android.Material.targets": {}
         }
       },
+      "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
         "type": "package",
         "dependencies": {
@@ -13474,9 +14965,87 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Camera.Camera2": "1.1.0",
+          "Xamarin.AndroidX.Camera.Lifecycle": "1.1.0",
+          "Xamarin.AndroidX.Camera.View": "1.1.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll": {
+            "related": ".aar;.xml"
+          }
+        }
       }
     },
     "net7.0-ios16.1": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -13657,10 +15226,137 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-ios16.1/android-arm": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -13841,10 +15537,186 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "runtime.native.System/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-ios16.1/android-arm64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14025,10 +15897,186 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "runtime.native.System/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-ios16.1/android-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14209,10 +16257,186 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "runtime.native.System/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-ios16.1/android-x86": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14393,10 +16617,186 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "runtime.native.System/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-ios16.1/iossimulator-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14577,10 +16977,186 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "runtime.native.System/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-ios16.1/maccatalyst-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14761,10 +17337,186 @@
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "PancakeViewCompat/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/PancakeViewCompat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.dll": {}
+        }
+      },
+      "runtime.native.System/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14945,10 +17697,77 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1/android-arm": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15129,10 +17948,77 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1/android-arm64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15313,10 +18199,77 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1/android-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15497,10 +18450,77 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1/android-x86": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15681,10 +18701,77 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1/iossimulator-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15865,10 +18952,77 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     },
     "net7.0-maccatalyst16.1/maccatalyst-x64": {
+      "CommunityToolkit.Maui/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "6.1.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/6.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -16049,11 +19203,104 @@
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ZXing.Net.Maui/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll": {}
+        }
+      },
+      "ZXing.Net.Maui.Controls/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ZXing.Net": "0.16.9",
+          "ZXing.Net.Maui": "0.4.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "CommunityToolkit.Maui/6.1.0": {
+      "sha512": "TB26N0SuIhGxrZXEz637LlIZoTjz6Qoc1osSm2vpw8zIj9ZiziJauXS+bN26T1ve+MXq777Gm4Il0p5rHXUKRQ==",
+      "type": "package",
+      "path": "communitytoolkit.maui/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
+        "communitytoolkit.maui.6.1.0.nupkg.sha512",
+        "communitytoolkit.maui.nuspec",
+        "icon.png",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.aar",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.dll",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.xml",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.xml",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.xml",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.dll",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.xml",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.xml",
+        "lib/net7.0/CommunityToolkit.Maui.dll",
+        "lib/net7.0/CommunityToolkit.Maui.xml"
+      ]
+    },
+    "CommunityToolkit.Maui.Core/6.1.0": {
+      "sha512": "Sby05Q2+LscL1pRprKsqFmCw+lOhhxlpMKb3Xb5FlIiTC1tYyHvIKhDJAfoKCJpoYi/6sFb0WlQAI7oLai8ulg==",
+      "type": "package",
+      "path": "communitytoolkit.maui.core/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "communitytoolkit.maui.core.6.1.0.nupkg.sha512",
+        "communitytoolkit.maui.core.nuspec",
+        "icon.png",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.aar",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0/CommunityToolkit.Maui.Core.xml"
+      ]
+    },
     "GoogleGson/2.9.1.1": {
       "sha512": "OreKEL2Yx2u8YhRqv0e+j45cEzoe+fyMEzGN+M/vfBDPsIXQcA6lGdHXO07bTrGn6NNwxY67dyIfbyXx3A7cDA==",
       "type": "package",
@@ -16409,6 +19656,273 @@
         "microsoft.maui.graphics.nuspec"
       ]
     },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "type": "package",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.targets.1.1.0.nupkg.sha512",
+        "microsoft.netcore.targets.nuspec",
+        "runtime.json"
+      ]
+    },
+    "PancakeViewCompat/7.0.0": {
+      "sha512": "peWXcv0Crr9vVuNMfTreG40tDgXwIFUuhKUt+a90ZcPrCD2lIQtKjAT5i95Dd4DL1TYfszfZgs8fVXBqZ6Jvbg==",
+      "type": "package",
+      "path": "pancakeviewcompat/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net7.0-android33.0/PancakeViewCompat.aar",
+        "lib/net7.0-android33.0/PancakeViewCompat.dll",
+        "lib/net7.0-android33.0/PancakeViewCompat.xml",
+        "lib/net7.0-ios16.1/PancakeViewCompat.dll",
+        "lib/net7.0-ios16.1/PancakeViewCompat.xml",
+        "pancakeviewcompat.7.0.0.nupkg.sha512",
+        "pancakeviewcompat.nuspec"
+      ]
+    },
+    "runtime.any.System.Runtime/4.3.0": {
+      "sha512": "fRS7zJgaG9NkifaAxGGclDDoRn9HC7hXACl52Or06a/fxdzDajWb5wov3c6a+gVSlekRoexfjwQSK9sh5um5LQ==",
+      "type": "package",
+      "path": "runtime.any.system.runtime/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.dll",
+        "lib/netstandard1.5/System.Runtime.dll",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/netstandard/_._",
+        "runtime.any.system.runtime.4.3.0.nupkg.sha512",
+        "runtime.any.system.runtime.nuspec",
+        "runtimes/aot/lib/netcore50/_._"
+      ]
+    },
+    "runtime.native.System/4.3.0": {
+      "sha512": "c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
+      "type": "package",
+      "path": "runtime.native.system/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "runtime.native.system.4.3.0.nupkg.sha512",
+        "runtime.native.system.nuspec"
+      ]
+    },
+    "runtime.unix.System.Private.Uri/4.3.0": {
+      "sha512": "ooWzobr5RAq34r9uan1r/WPXJYG1XWy9KanrxNvEnBzbFdQbMG7Y3bVi4QxR7xZMNLOxLLTAyXvnSkfj5boZSg==",
+      "type": "package",
+      "path": "runtime.unix.system.private.uri/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/netstandard/_._",
+        "runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
+        "runtime.unix.system.private.uri.nuspec",
+        "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll"
+      ]
+    },
+    "System.ComponentModel/4.3.0": {
+      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "type": "package",
+      "path": "system.componentmodel/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ComponentModel.dll",
+        "lib/netstandard1.3/System.ComponentModel.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ComponentModel.dll",
+        "ref/netcore50/System.ComponentModel.xml",
+        "ref/netcore50/de/System.ComponentModel.xml",
+        "ref/netcore50/es/System.ComponentModel.xml",
+        "ref/netcore50/fr/System.ComponentModel.xml",
+        "ref/netcore50/it/System.ComponentModel.xml",
+        "ref/netcore50/ja/System.ComponentModel.xml",
+        "ref/netcore50/ko/System.ComponentModel.xml",
+        "ref/netcore50/ru/System.ComponentModel.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.xml",
+        "ref/netstandard1.0/System.ComponentModel.dll",
+        "ref/netstandard1.0/System.ComponentModel.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.4.3.0.nupkg.sha512",
+        "system.componentmodel.nuspec"
+      ]
+    },
+    "System.Private.Uri/4.3.0": {
+      "sha512": "I4SwANiUGho1esj4V4oSlPllXjzCZDE+5XXso2P03LW2vOda2Enzh8DWOxwN6hnrJyp314c7KuVu31QYhRzOGg==",
+      "type": "package",
+      "path": "system.private.uri/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/netstandard/_._",
+        "system.private.uri.4.3.0.nupkg.sha512",
+        "system.private.uri.nuspec"
+      ]
+    },
+    "System.Runtime/4.3.0": {
+      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "type": "package",
+      "path": "system.runtime/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.dll",
+        "lib/portable-net45+win8+wp80+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.xml",
+        "ref/netcore50/de/System.Runtime.xml",
+        "ref/netcore50/es/System.Runtime.xml",
+        "ref/netcore50/fr/System.Runtime.xml",
+        "ref/netcore50/it/System.Runtime.xml",
+        "ref/netcore50/ja/System.Runtime.xml",
+        "ref/netcore50/ko/System.Runtime.xml",
+        "ref/netcore50/ru/System.Runtime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.0/System.Runtime.dll",
+        "ref/netstandard1.0/System.Runtime.xml",
+        "ref/netstandard1.0/de/System.Runtime.xml",
+        "ref/netstandard1.0/es/System.Runtime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.xml",
+        "ref/netstandard1.0/it/System.Runtime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.2/System.Runtime.dll",
+        "ref/netstandard1.2/System.Runtime.xml",
+        "ref/netstandard1.2/de/System.Runtime.xml",
+        "ref/netstandard1.2/es/System.Runtime.xml",
+        "ref/netstandard1.2/fr/System.Runtime.xml",
+        "ref/netstandard1.2/it/System.Runtime.xml",
+        "ref/netstandard1.2/ja/System.Runtime.xml",
+        "ref/netstandard1.2/ko/System.Runtime.xml",
+        "ref/netstandard1.2/ru/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.3/System.Runtime.dll",
+        "ref/netstandard1.3/System.Runtime.xml",
+        "ref/netstandard1.3/de/System.Runtime.xml",
+        "ref/netstandard1.3/es/System.Runtime.xml",
+        "ref/netstandard1.3/fr/System.Runtime.xml",
+        "ref/netstandard1.3/it/System.Runtime.xml",
+        "ref/netstandard1.3/ja/System.Runtime.xml",
+        "ref/netstandard1.3/ko/System.Runtime.xml",
+        "ref/netstandard1.3/ru/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.5/System.Runtime.dll",
+        "ref/netstandard1.5/System.Runtime.xml",
+        "ref/netstandard1.5/de/System.Runtime.xml",
+        "ref/netstandard1.5/es/System.Runtime.xml",
+        "ref/netstandard1.5/fr/System.Runtime.xml",
+        "ref/netstandard1.5/it/System.Runtime.xml",
+        "ref/netstandard1.5/ja/System.Runtime.xml",
+        "ref/netstandard1.5/ko/System.Runtime.xml",
+        "ref/netstandard1.5/ru/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.xml",
+        "ref/portable-net45+win8+wp80+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.nuspec"
+      ]
+    },
     "Xamarin.Android.Glide/4.13.2.2": {
       "sha512": "Z//Q0sKJ97g8wxuJ3z1kka76sSUHA7WGV7yUPGS7IwwciHrPxpEwEju5cxBAbwqYd2+Ug1ecvW3X+q5/tUh6cw==",
       "type": "package",
@@ -16746,6 +20260,107 @@
         "lib/net6.0-android31.0/Xamarin.AndroidX.Browser.xml",
         "xamarin.androidx.browser.1.4.0.3.nupkg.sha512",
         "xamarin.androidx.browser.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Camera.Camera2/1.1.0": {
+      "sha512": "8mM3wU8PF/nb4+aEz2gd3i96+mOxEIIKUyqxeYXaEcZoaRKPwA0KPJ6JJJYxPg9bJdvijHf/SkhrjAQgrnUCWg==",
+      "type": "package",
+      "path": "xamarin.androidx.camera.camera2/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.camera.camera-camera2.aar",
+        "build/monoandroid12.0/Xamarin.AndroidX.Camera.Camera2.targets",
+        "build/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.AndroidX.Camera.Camera2.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.targets",
+        "icon.png",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Camera2.dll",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Camera2.pdb",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Camera2.xml",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.dll",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.pdb",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Camera2.xml",
+        "proguard/proguard.txt",
+        "xamarin.androidx.camera.camera2.1.1.0.nupkg.sha512",
+        "xamarin.androidx.camera.camera2.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Camera.Core/1.1.0": {
+      "sha512": "ILOxBbNsIK4My8BpMm6oMrUYtHcssw77bjTUTMqVPr29dwuRLWppD7yI1SoE5yDTyNk8ppbzJzGqsqErfkUFTQ==",
+      "type": "package",
+      "path": "xamarin.androidx.camera.core/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.camera.camera-core.aar",
+        "build/monoandroid12.0/Xamarin.AndroidX.Camera.Core.targets",
+        "build/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.AndroidX.Camera.Core.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.targets",
+        "icon.png",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Core.dll",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Core.pdb",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Core.xml",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.dll",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.pdb",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Core.xml",
+        "xamarin.androidx.camera.core.1.1.0.nupkg.sha512",
+        "xamarin.androidx.camera.core.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Camera.Lifecycle/1.1.0": {
+      "sha512": "l8vmBKMIwhN44Ela2qlpM0jEtbVl+dtfEd0dqq7ssAz8CYBszApVG7qFOLGuDWmzZPRrxWWCn9v0KZOwyi6h0w==",
+      "type": "package",
+      "path": "xamarin.androidx.camera.lifecycle/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.camera.camera-lifecycle.aar",
+        "build/monoandroid12.0/Xamarin.AndroidX.Camera.Lifecycle.targets",
+        "build/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.AndroidX.Camera.Lifecycle.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.targets",
+        "icon.png",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Lifecycle.dll",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Lifecycle.pdb",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.Lifecycle.xml",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.dll",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.pdb",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.Lifecycle.xml",
+        "xamarin.androidx.camera.lifecycle.1.1.0.nupkg.sha512",
+        "xamarin.androidx.camera.lifecycle.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Camera.View/1.1.0": {
+      "sha512": "VOkA9E+lJeuzC5axC0A5+oGu2JJxgya9jPPVoYiz1S0rXv4Ug21iyKLM3kMlafghB5l1GfvbCg8rbGfs4hzwew==",
+      "type": "package",
+      "path": "xamarin.androidx.camera.view/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.camera.camera-view.aar",
+        "build/monoandroid12.0/Xamarin.AndroidX.Camera.View.targets",
+        "build/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets",
+        "buildTransitive/monoandroid12.0/Xamarin.AndroidX.Camera.View.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Camera.View.targets",
+        "icon.png",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.View.dll",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.View.pdb",
+        "lib/monoandroid12.0/Xamarin.AndroidX.Camera.View.xml",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.dll",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.pdb",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.Camera.View.xml",
+        "xamarin.androidx.camera.view.1.1.0.nupkg.sha512",
+        "xamarin.androidx.camera.view.nuspec"
       ]
     },
     "Xamarin.AndroidX.CardView/1.0.0.16": {
@@ -17150,26 +20765,28 @@
         "xamarin.androidx.emoji2.viewshelper.nuspec"
       ]
     },
-    "Xamarin.AndroidX.ExifInterface/1.3.3.5": {
-      "sha512": "Fd5DFNzJ145HBkywhEcumz1nLP+c+tpcPa1Ad2sn3uJV/sGpfvkWD/itKv/vSFL9bSc2e/KV5vp9vruLfaAbEQ==",
+    "Xamarin.AndroidX.ExifInterface/1.3.3.6": {
+      "sha512": "wbRGqfGZitZWdXHj3LCDKjx3AWSjN0W2z91Lz9XTztY3A8zUK9JY4oqvE1GD+MUYJ91c7x0T6qa0blxmXaHuTg==",
       "type": "package",
-      "path": "xamarin.androidx.exifinterface/1.3.3.5",
+      "path": "xamarin.androidx.exifinterface/1.3.3.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
         "aar/androidx.exifinterface.exifinterface.aar",
         "build/monoandroid12.0/Xamarin.AndroidX.ExifInterface.targets",
         "build/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.targets",
         "buildTransitive/monoandroid12.0/Xamarin.AndroidX.ExifInterface.targets",
         "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.targets",
+        "icon.png",
         "lib/monoandroid12.0/Xamarin.AndroidX.ExifInterface.dll",
         "lib/monoandroid12.0/Xamarin.AndroidX.ExifInterface.pdb",
         "lib/monoandroid12.0/Xamarin.AndroidX.ExifInterface.xml",
         "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.dll",
         "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.pdb",
         "lib/net6.0-android31.0/Xamarin.AndroidX.ExifInterface.xml",
-        "xamarin.androidx.exifinterface.1.3.3.5.nupkg.sha512",
+        "xamarin.androidx.exifinterface.1.3.3.6.nupkg.sha512",
         "xamarin.androidx.exifinterface.nuspec"
       ]
     },
@@ -18212,6 +21829,24 @@
         "xamarin.google.android.material.nuspec"
       ]
     },
+    "Xamarin.Google.AutoValue.Annotations/1.9.0.2": {
+      "sha512": "SB0P3hw7NrrkpcxkK2eUjY4iJP50FMD0tkwwUwbasoEkQYFbz1Y4k2ljhFZyK1CFxMAcT5hkiQozJQ06mi0HIw==",
+      "type": "package",
+      "path": "xamarin.google.autovalue.annotations/1.9.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid12.0/Xamarin.Google.AutoValue.Annotations.dll",
+        "lib/monoandroid12.0/Xamarin.Google.AutoValue.Annotations.xml",
+        "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.aar",
+        "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.dll",
+        "lib/net6.0-android31.0/Xamarin.Google.AutoValue.Annotations.xml",
+        "xamarin.google.autovalue.annotations.1.9.0.2.nupkg.sha512",
+        "xamarin.google.autovalue.annotations.nuspec"
+      ]
+    },
     "Xamarin.Google.Crypto.Tink.Android/1.7.0.1": {
       "sha512": "Qaf1949Xy/GSOlDZojifaEp/gqJUteWmP8tPg9n925CBOdmxxtGVhy9V+z0tTxA5KP3Gr2Ak5VqcBKCYbozLtw==",
       "type": "package",
@@ -18405,15 +22040,136 @@
         "xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
         "xamarin.kotlinx.coroutines.core.jvm.nuspec"
       ]
+    },
+    "ZXing.Net/0.16.9": {
+      "sha512": "7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
+      "type": "package",
+      "path": "zxing.net/0.16.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/native/zxing.XML",
+        "lib/native/zxing.pri",
+        "lib/native/zxing.winmd",
+        "lib/net20-cf/zxing.ce2.0.dll",
+        "lib/net20-cf/zxing.ce2.0.xml",
+        "lib/net20/zxing.XML",
+        "lib/net20/zxing.dll",
+        "lib/net35-cf/zxing.ce3.5.dll",
+        "lib/net35-cf/zxing.ce3.5.xml",
+        "lib/net35/zxing.XML",
+        "lib/net35/zxing.dll",
+        "lib/net40/zxing.XML",
+        "lib/net40/zxing.dll",
+        "lib/net40/zxing.presentation.XML",
+        "lib/net40/zxing.presentation.dll",
+        "lib/net45/zxing.XML",
+        "lib/net45/zxing.dll",
+        "lib/net45/zxing.presentation.XML",
+        "lib/net45/zxing.presentation.dll",
+        "lib/net461/zxing.XML",
+        "lib/net461/zxing.dll",
+        "lib/net461/zxing.presentation.XML",
+        "lib/net461/zxing.presentation.dll",
+        "lib/net47/zxing.XML",
+        "lib/net47/zxing.dll",
+        "lib/net47/zxing.presentation.XML",
+        "lib/net47/zxing.presentation.dll",
+        "lib/net48/zxing.XML",
+        "lib/net48/zxing.dll",
+        "lib/net48/zxing.presentation.XML",
+        "lib/net48/zxing.presentation.dll",
+        "lib/net5.0/zxing.XML",
+        "lib/net5.0/zxing.dll",
+        "lib/net6.0/zxing.XML",
+        "lib/net6.0/zxing.dll",
+        "lib/net7.0/zxing.XML",
+        "lib/net7.0/zxing.dll",
+        "lib/netcoreapp3.0/zxing.dll",
+        "lib/netcoreapp3.0/zxing.xml",
+        "lib/netcoreapp3.1/zxing.dll",
+        "lib/netcoreapp3.1/zxing.xml",
+        "lib/netstandard1.0/zxing.dll",
+        "lib/netstandard1.0/zxing.xml",
+        "lib/netstandard1.1/zxing.dll",
+        "lib/netstandard1.1/zxing.xml",
+        "lib/netstandard1.3/zxing.dll",
+        "lib/netstandard1.3/zxing.xml",
+        "lib/netstandard2.0/zxing.dll",
+        "lib/netstandard2.0/zxing.xml",
+        "lib/netstandard2.1/zxing.dll",
+        "lib/netstandard2.1/zxing.xml",
+        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.XML",
+        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.dll",
+        "lib/sl3-wp/zxing.wp7.0.XML",
+        "lib/sl3-wp/zxing.wp7.0.dll",
+        "lib/sl4-wp71/zxing.wp7.1.XML",
+        "lib/sl4-wp71/zxing.wp7.1.dll",
+        "lib/sl4/zxing.sl4.XML",
+        "lib/sl4/zxing.sl4.dll",
+        "lib/sl5/zxing.sl5.XML",
+        "lib/sl5/zxing.sl5.dll",
+        "lib/uap10/zxing.dll",
+        "lib/uap10/zxing.pri",
+        "lib/uap10/zxing.xml",
+        "lib/windows8-managed/zxing.winrt.XML",
+        "lib/windows8-managed/zxing.winrt.dll",
+        "lib/windows8/zxing.XML",
+        "lib/windows8/zxing.pri",
+        "lib/windows8/zxing.winmd",
+        "lib/wp8/zxing.wp8.0.XML",
+        "lib/wp8/zxing.wp8.0.dll",
+        "logo.jpg",
+        "zxing.net.0.16.9.nupkg.sha512",
+        "zxing.net.nuspec"
+      ]
+    },
+    "ZXing.Net.Maui/0.4.0": {
+      "sha512": "1VfHUKYLFZhvOD3We35aSaz6g32ccjKR4DtwJmq8n0eDLpTSEkASG3PcjE8rw7A5tIOs+Wpgbv75Y0hMsF8clQ==",
+      "type": "package",
+      "path": "zxing.net.maui/0.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net7.0-android33.0/ZXing.Net.MAUI.aar",
+        "lib/net7.0-android33.0/ZXing.Net.MAUI.dll",
+        "lib/net7.0-android33.0/ZXing.Net.MAUI.xml",
+        "lib/net7.0-ios16.1/ZXing.Net.MAUI.dll",
+        "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.dll",
+        "lib/net7.0-windows10.0.19041/ZXing.Net.MAUI.dll",
+        "lib/net7.0/ZXing.Net.MAUI.dll",
+        "zxing.net.maui.0.4.0.nupkg.sha512",
+        "zxing.net.maui.nuspec"
+      ]
+    },
+    "ZXing.Net.Maui.Controls/0.4.0": {
+      "sha512": "FwCgnoUT76cId+Z7LJrmAGxH8x/7UhVMP0lPKatyBMS622fu5ukuKGFXUJ5yhQElwNlr0YwwqLe8YPRE17Nl6Q==",
+      "type": "package",
+      "path": "zxing.net.maui.controls/0.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.aar",
+        "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.dll",
+        "lib/net7.0-android33.0/ZXing.Net.MAUI.Controls.xml",
+        "lib/net7.0-ios16.1/ZXing.Net.MAUI.Controls.dll",
+        "lib/net7.0-maccatalyst16.1/ZXing.Net.MAUI.Controls.dll",
+        "lib/net7.0-windows10.0.19041/ZXing.Net.MAUI.Controls.dll",
+        "lib/net7.0/ZXing.Net.MAUI.Controls.dll",
+        "zxing.net.maui.controls.0.4.0.nupkg.sha512",
+        "zxing.net.maui.controls.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
+      "CommunityToolkit.Maui >= 6.1.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.101",
+      "PancakeViewCompat >= 7.0.0",
       "Xamarin.Android.Glide >= 4.13.2.2",
       "Xamarin.AndroidX.Browser >= 1.4.0.3",
       "Xamarin.AndroidX.Legacy.Support.V4 >= 1.0.0.15",
@@ -18424,21 +22180,30 @@
       "Xamarin.AndroidX.Navigation.UI >= 2.5.2.1",
       "Xamarin.AndroidX.Security.SecurityCrypto >= 1.1.0-alpha03",
       "Xamarin.Google.Android.Material >= 1.7.0",
-      "Xamarin.Google.Crypto.Tink.Android >= 1.7.0.1"
+      "Xamarin.Google.Crypto.Tink.Android >= 1.7.0.1",
+      "ZXing.Net.Maui >= 0.4.0",
+      "ZXing.Net.Maui.Controls >= 0.4.0"
     ],
     "net7.0-ios16.1": [
+      "CommunityToolkit.Maui >= 6.1.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
-      "Microsoft.Maui.Graphics >= 7.0.101"
+      "Microsoft.Maui.Graphics >= 7.0.101",
+      "PancakeViewCompat >= 7.0.0",
+      "ZXing.Net.Maui >= 0.4.0",
+      "ZXing.Net.Maui.Controls >= 0.4.0"
     ],
     "net7.0-maccatalyst16.1": [
+      "CommunityToolkit.Maui >= 6.1.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
-      "Microsoft.Maui.Graphics >= 7.0.101"
+      "Microsoft.Maui.Graphics >= 7.0.101",
+      "ZXing.Net.Maui >= 0.4.0",
+      "ZXing.Net.Maui.Controls >= 0.4.0"
     ]
   },
   "packageFolders": {
@@ -18447,11 +22212,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/LotyPlus.csproj",
+      "projectUniqueName": "/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/LotyPlus.csproj",
       "projectName": "LotyPlus",
-      "projectPath": "/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/LotyPlus.csproj",
+      "projectPath": "/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/LotyPlus.csproj",
       "packagesPath": "/Users/luqmanakram/.nuget/packages/",
-      "outputPath": "/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/obj/",
+      "outputPath": "/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
@@ -18490,6 +22255,10 @@
       "net7.0-android33.0": {
         "targetAlias": "net7.0-android",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -18513,6 +22282,10 @@
             "target": "Package",
             "version": "[7.0.101, )",
             "autoReferenced": true
+          },
+          "PancakeViewCompat": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Xamarin.Android.Glide": {
             "target": "Package",
@@ -18568,6 +22341,14 @@
             "target": "Package",
             "version": "[1.7.0.1, )",
             "autoReferenced": true
+          },
+          "ZXing.Net.Maui": {
+            "target": "Package",
+            "version": "[0.4.0, )"
+          },
+          "ZXing.Net.Maui.Controls": {
+            "target": "Package",
+            "version": "[0.4.0, )"
           }
         },
         "imports": [
@@ -18598,11 +22379,15 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
       },
       "net7.0-ios16.1": {
         "targetAlias": "net7.0-ios",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -18626,6 +22411,18 @@
             "target": "Package",
             "version": "[7.0.101, )",
             "autoReferenced": true
+          },
+          "PancakeViewCompat": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "ZXing.Net.Maui": {
+            "target": "Package",
+            "version": "[0.4.0, )"
+          },
+          "ZXing.Net.Maui.Controls": {
+            "target": "Package",
+            "version": "[0.4.0, )"
           }
         },
         "imports": [
@@ -18656,11 +22453,15 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
       },
       "net7.0-maccatalyst16.1": {
         "targetAlias": "net7.0-maccatalyst",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -18684,6 +22485,14 @@
             "target": "Package",
             "version": "[7.0.101, )",
             "autoReferenced": true
+          },
+          "ZXing.Net.Maui": {
+            "target": "Package",
+            "version": "[0.4.0, )"
+          },
+          "ZXing.Net.Maui.Controls": {
+            "target": "Package",
+            "version": "[0.4.0, )"
           }
         },
         "imports": [
@@ -18715,7 +22524,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

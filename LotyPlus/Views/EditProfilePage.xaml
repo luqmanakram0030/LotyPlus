@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.EditProfilePage"
+             Title="EditProfilePage" NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat">
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Grid>
+                        <Image x:Name="EditBtn" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                            </Image.Source>
+                        </Image>
+                        <Image x:Name="ProfilePicture" Aspect="AspectFill"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Edit Profile" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+            </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Padding="20,20,20,0" Spacing="0">
+                    <pancakeview:PancakeView HeightRequest="90" WidthRequest="90" CornerRadius="45" HorizontalOptions="Center" Margin="0,10,0,10" BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                        <pancakeview:PancakeView.Border>
+                            <pancakeview:Border Color="{StaticResource GreyColor}" Thickness="3" />
+                        </pancakeview:PancakeView.Border>
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="45">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0100;" FontFamily="FontIcons" Size="45" Color="{StaticResource GreyColor}"/>
+                            </Image.Source>
+                        </Image>
+                        <pancakeview:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EditPicture_Tapped"/>
+                        </pancakeview:PancakeView.GestureRecognizers>
+                    </pancakeview:PancakeView>
+
+                    <Label Text="Upload Profile Picture" FontSize="15" HorizontalOptions="Center" Margin="0,0,0,40"/>
+
+                    <Frame HasShadow="False" Padding="20,8,20,8" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                        <StackLayout>
+                            <Entry ClassId="1" Text="Shoaib Opu" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="False" Padding="20,8,20,8" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                        <StackLayout>
+                            <Entry ClassId="2" Text="shoaibopu@gmail.com" Keyboard="Email" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="False" Padding="20,8,20,8" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" Spacing="10">
+                            <Image Source="costarica.png" HeightRequest="18" VerticalOptions="Center"/>
+                            <Label Text="+506" FontSize="Body" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" VerticalOptions="Center" TextColor="{StaticResource PrimaryColor}"/>
+                            <Entry ClassId="3" Text="123456789" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Telephone" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="False" Padding="20,8,20,8" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="datePickerEntry" ClassId="4" Placeholder="Date of Birth" PlaceholderColor="{StaticResource ColorOnLightBackground}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                            <DatePicker x:Name="datePicker" IsVisible="False" DateSelected="datePicker_DateSelected"/>
+                            <Image VerticalOptions="Center" HorizontalOptions="End" HeightRequest="28">
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xf00f3;" FontFamily="FontIcons" Size="28" Color="{StaticResource PrimaryColor}"/>
+                                </Image.Source>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="False" Padding="20,8,20,8" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="genderPickerEntry" ClassId="5" Text="Male" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                            <Picker x:Name="genderPicker" IsVisible="False" SelectedIndexChanged="genderPicker_SelectedIndexChanged">
+                                <Picker.Items>
+                                    <x:String>Male</x:String>
+                                    <x:String>Female</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Image VerticalOptions="Center" HorizontalOptions="End" HeightRequest="28">
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xf0140;" FontFamily="FontIcons" Size="28" Color="{StaticResource PrimaryColor}"/>
+                                </Image.Source>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <StackLayout VerticalOptions="EndAndExpand">
+                        <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+                            <Frame.Background>
+                                <!-- StartPoint defaults to (0,0) -->
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                                    <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                                <Label x:Name="btnText" Text="Update Profile" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Update_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

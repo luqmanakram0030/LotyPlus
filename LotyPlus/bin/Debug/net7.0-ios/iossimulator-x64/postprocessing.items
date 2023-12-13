@@ -7,9 +7,9 @@
       <dSYMSourcePathExists>false</dSYMSourcePathExists>
       <NoSymbolStrip>true</NoSymbolStrip>
       <dSYMInfoPlistRelativePath>LotyPlus.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
-      <SymbolFile>/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <SymbolFile>/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
       <DSymName>LotyPlus.app.dSYM</DSymName>
-      <SourceProjectPath>/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus</SourceProjectPath>
+      <SourceProjectPath>/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>

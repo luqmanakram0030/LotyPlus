@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.IdNumberPage"
+             Title="IdNumberPage" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource ColorOnDarkBackground}">
+    <ContentPage.Content>
+        <StackLayout Padding="20,30,20,0" >
+            <Label Text="Your Id Number" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,30,10,0"/>
+
+            <Label Text="Your id is important to avoid scams when you participate on any sweepstakes. Business needs this information to make valid any promotion on your behalf." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,0"/>
+
+            <StackLayout VerticalOptions="StartAndExpand" Margin="0,50">
+                <Label Text="Enter your ID here:" FontSize="Caption" Margin="20,0,0,0"/>
+
+                <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,5">
+                    <Entry Placeholder="" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" HorizontalTextAlignment="Center" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                </Frame>
+
+                <Label Text="Important: You can't change this id. If you want later, you need to contact us." FontSize="Caption" TextColor="{StaticResource DangerColor}" Margin="20,0,0,0"/>
+            </StackLayout>
+            <StackLayout>
+                 <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,30,10,50" >
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Grid>
+                        <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                        <Label x:Name="btnText" Text="Continue" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Continue_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+
+            </StackLayout>
+              
+           
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

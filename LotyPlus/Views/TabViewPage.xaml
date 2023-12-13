@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.TabViewPage"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource LightBackgroundColor}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+		        x:Key="TabItemTemplate">
+                <Grid RowDefinitions="28,auto" RowSpacing="0" VerticalOptions="Center" HorizontalOptions="Center" Margin="{OnPlatform iOS='0,0,0,0'}">
+
+                    <Label Grid.Row="1" Text="{TemplateBinding Text}" TextColor="{TemplateBinding CurrentTextColor}" FontSize="Caption" FontFamily="Medium" Margin="0,2,0,0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="28" HeightRequest="28" Margin="0" Source="{TemplateBinding CurrentIcon}" />
+
+                </Grid>
+            </ControlTemplate>
+
+            <ControlTemplate
+                x:Key="FabTabItemTemplate">
+                <Grid Padding="{OnPlatform Android='15,10,15,25', iOS='15,5,15,25'}" HorizontalOptions="Center" Margin="{OnPlatform iOS='0,0,0,0'}">
+                    <Border InputTransparent="True" Padding="0" Stroke="{StaticResource PrimaryColor}" StrokeThickness="{OnPlatform Android='5', iOS='2'}"  BackgroundColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='70', iOS='70'}" WidthRequest="{OnPlatform Android='70', iOS='70'}" >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="{OnPlatform Android='35', iOS='35'}" />
+                        </Border.StrokeShape>
+                        <Image Source="{TemplateBinding CurrentIcon}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="28"/>
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+
+            <!--<Style
+		        x:Key="CustomTabStyle"
+		        TargetType="xct:TabView">
+                <Setter
+			        Property="IsTabTransitionEnabled"
+			        Value="True" />
+                <Setter
+			        Property="TabStripHeight"
+			        Value="{OnPlatform Android='60', iOS='60'}" />
+                <Setter
+			        Property="TabContentBackgroundColor"
+			        Value="Transparent" />
+                <Setter
+			        Property="TabStripPlacement"
+			        Value="Bottom" />
+            </Style>-->
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*" >
+
+            <Grid ColumnDefinitions="50,*,50" BackgroundColor="{StaticResource LightBackgroundColor}" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BorderColor="Transparent" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20">
+                    <Image Source="menuicon.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="22"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Image Grid.Column="1" Source="logo2.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,10,0,10"/>
+
+                <Frame Grid.Column="2" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Grid>
+                        <Image Source="bellicon.png" VerticalOptions="Center"  HorizontalOptions="Center" HeightRequest="22"/>
+
+                        <Border InputTransparent="True"  Padding="0" Stroke="{StaticResource PrimaryColor}" StrokeThickness="{OnPlatform Android='5', iOS='2'}"  BackgroundColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='70', iOS='70'}" WidthRequest="{OnPlatform Android='70', iOS='70'}" >
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="{OnPlatform Android='35', iOS='35'}" />
+                            </Border.StrokeShape>
+                        </Border>
+                        <Border HeightRequest="11" WidthRequest="11" Stroke="{StaticResource ColorOnDarkBackground}" StrokeThickness="{OnPlatform Android='4', iOS='2'}" BackgroundColor="{StaticResource SecondoryColor}" VerticalOptions="Start" HorizontalOptions="End" Margin="0,8,7,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5.5"  />
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Cart_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <!--<xct:TabView Grid.Row="1" Style="{StaticResource CustomTabStyle}" IsSwipeEnabled="False" SelectionChanged="TabView_SelectionChanged">
+                <xct:TabView.TabStripBackgroundView>
+                    <shades:Shadows>
+                        <shades:Shadows.Shades>
+                            <shades:ImmutableShades>
+                                <shades:Shade BlurRadius="5" Opacity="0.1" Offset="0,-1" Color="{StaticResource SecondoryColor}" />
+                                <shades:Shade BlurRadius="5" Opacity="0.1" Offset="0,5" Color="{StaticResource SecondoryColor}" />
+                            </shades:ImmutableShades>
+                        </shades:Shadows.Shades>
+                        <Image Source="{OnPlatform Android='tabview.png', iOS='tabviewios.png'}" Aspect="AspectFill" Margin="{OnPlatform Android='-12,0,-12,-12', iOS='-20,0,-20,-50'}"/>
+                    </shades:Shadows>
+                </xct:TabView.TabStripBackgroundView>
+
+                <xct:TabViewItem 
+                    x:Name="MyTab1"   
+                    Padding="20,0,0,0"
+                    TabTapped="Tab1_TabTapped"  
+                    FontFamily="FontIcons"  
+                    Text="Home" 
+                    TextColor="LightGray"
+                    TextColorSelected="{StaticResource PrimaryColor}"
+                    ControlTemplate="{StaticResource TabItemTemplate}"
+                    Icon="home.png"
+                    IconSelected="home_selected.png">
+                    <tabpages:HomePage></tabpages:HomePage>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                    x:Name="Tab2"
+                    Padding="0,0,0,0"
+                    Icon="scancode.png"
+                    IconSelected="scancode_selected.png"
+                    ControlTemplate="{StaticResource FabTabItemTemplate}"
+                    TextColor="LightGray"
+                    TextColorSelected="{StaticResource PrimaryColor}"
+                    TabTapped="Tab2_TabTapped">
+                    <tabpages:ScanPage></tabpages:ScanPage>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem 
+                    Padding="0,0,20,0"
+                    Text="Me" 
+                    ControlTemplate="{StaticResource TabItemTemplate}"
+                    TextColor="LightGray"
+                    TextColorSelected="{StaticResource PrimaryColor}"
+                    TabTapped="Tab3_TabTapped"
+                    Icon="profile.png"
+                    IconSelected="profile_selected.png"
+                    >
+
+                    <tabpages:ProfilePage></tabpages:ProfilePage>
+                </xct:TabViewItem>
+            </xct:TabView>-->
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

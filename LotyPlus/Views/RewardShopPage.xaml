@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.RewardShopPage"
+             Title="RewardShopPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+     <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Reward Shop" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+
+                <Frame Grid.Column="2" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image Source="search.png" WidthRequest="26" VerticalOptions="Center"/>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Search_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout>
+                    <Grid RowDefinitions="30,70" RowSpacing="0" Margin="25,20,25,0" >
+                        <Frame Grid.Row="1" HasShadow="False" Padding="0" CornerRadius="15" BackgroundColor="{StaticResource PrimaryColor}">
+                            <Grid ColumnDefinitions="70,*" Margin="10,8,10,8" ColumnSpacing="15">
+                                <Ellipse Fill="{StaticResource SecondoryColor}" WidthRequest="70" HeightRequest="50" HorizontalOptions="Start"/>
+                                <Label Grid.Column="1" Text="You have a free Barber Shop coupon. Let's use this." VerticalOptions="Center" FontSize="16" TextColor="{StaticResource ColorOnDarkBackground}" Margin="0,3,0,0"/>
+                            </Grid>
+                        </Frame>
+                        <Image Source="barbershopflip.png" Grid.RowSpan="2" HorizontalOptions="Start" Margin="12,-10,0,8" />
+
+                    </Grid>
+
+                    <Label Text="Find Anything You Need For" FontFamily="SemiBold" TextColor="{StaticResource ColorOnLightBackground}" HorizontalTextAlignment="Center" FontSize="34" Margin="50,30,50,10"/>
+
+                    <CollectionView Margin="0,0,25,0" ItemsSource="{Binding RewardShopList}" HeightRequest="480">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowDefinitions="130">
+                                    <Grid RowDefinitions="105" ColumnDefinitions="6.5*,3.5*"  VerticalOptions="End" Margin="25,0,0,0">
+                                        <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                            <Frame.Background>
+                                                <LinearGradientBrush EndPoint="0,1">
+                                                    <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                                    <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                                </LinearGradientBrush>
+                                            </Frame.Background>
+                                        </Frame>
+
+                                        <Image Grid.Column="1" Source="{Binding ShopImg}" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                                        <Grid>
+                                            <Label Text="{Binding ShopName}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                            <Label Text="{Binding ShopName}" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                        </Grid>
+
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="0" VerticalItemSpacing="20"/>
+                        </CollectionView.ItemsLayout>
+                    </CollectionView>
+
+                    <!--<Grid ColumnDefinitions="*,*" RowDefinitions="105,105,105" ColumnSpacing="25" RowSpacing="40" Margin="25,0,25,0" Padding="0,0,0,60">
+
+                        <Grid ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
+                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText1}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/> --><!--Margin="0,0,60,-10"--><!--
+                                <Label x:Name="btnText1" Text="Barber&#x0a;Shop" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/> --><!--Margin="0,0,0,-12"--><!--
+                            </Grid>
+                            <Image Grid.Column="1" Source="barbershop.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                        </Grid>
+
+                        <Grid Grid.Column="1" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
+                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Image Grid.Column="1" Source="carservicing.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText2}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                --><!--Margin="0,0,60,-10"--><!--
+                                <Label x:Name="btnText2" Text="Car&#x0a;Servicing" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                --><!--Margin="0,0,0,-12"--><!--
+                            </Grid>
+
+                        </Grid>
+
+                        --><!--<Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
+                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Image Grid.Column="1" Source="pumpstations.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText3}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                --><!--Margin="0,0,60,-10"--><!--
+                                <Label x:Name="btnText3" Text="Pump&#x0a;Stations" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                --><!--Margin="0,0,0,-12"--><!--
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1" Grid.Column="1" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
+                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Image Grid.Column="1" Source="petshop.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText4}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                --><!--Margin="0,0,60,-10"--><!--
+                                <Label x:Name="btnText4" Text="Pet&#x0a;Shop" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                --><!--Margin="0,0,0,-12"--><!--
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2" Grid.Column="0" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
+                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Image Grid.Column="1" Source="clothstore.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText5}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                --><!--Margin="0,0,60,-10"--><!--
+                                <Label x:Name="btnText5" Text="Cloth&#x0a;Store" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                --><!--Margin="0,0,0,-12"--><!--
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
+                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                <Frame.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                            <Image Grid.Column="1" Source="homeservices.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText6}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
+                                --><!--Margin="0,0,60,-10"--><!--
+                                <Label x:Name="btnText6" Text="Home&#x0a;Services" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                --><!--Margin="0,0,0,-12"--><!--
+                            </Grid>
+
+                        </Grid>--><!--
+                    </Grid>-->
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

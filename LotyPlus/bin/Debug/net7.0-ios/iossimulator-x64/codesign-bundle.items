@@ -12,7 +12,7 @@
       <CodesignDisableTimestamp>true</CodesignDisableTimestamp>
       <CodesignKeychain></CodesignKeychain>
       <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
-      <SourceProjectPath>/Users/luqmanakram/Documents/new project/LotyPlus/LotyPlus</SourceProjectPath>
+      <SourceProjectPath>/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus</SourceProjectPath>
     </_CodesignBundle>
   </ItemGroup>
 </Project>
