@@ -37,7 +37,10 @@ namespace LotyPlus.ViewModels
                 new SearchCategory(){ Id = 3, Icon = "icon4.png", Title = "Gas Stations", Description = "4 availables" },
                 new SearchCategory(){ Id = 4, Icon = "icon5.png", Title = "Clothes", Description = "Zara added promos recently" },
                 new SearchCategory(){ Id = 5, Icon = "icon6.png", Title = "Restaurants", Description = "15% on Mcdonald" },
-                new SearchCategory(){ Id = 6, Icon = "icon7.png", Title = "Supermarkets", Description = "No promos availables" }
+                new SearchCategory(){ Id = 6, Icon = "icon7.png", Title = "Supermarkets", Description = "No promos availables" },
+                new SearchCategory(){ Id = 6, Icon = "icon7.png", Title = "Supermarkets", Description = "No promos availables" },
+                new SearchCategory(){ Id = 6, Icon = "icon7.png", Title = "Supermarkets", Description = "No promos availables" },
+                new SearchCategory(){ Id = 6, Icon = "icon7.png", Title = "Supermarkets", Description = "No promos availables" },
             };
         }
     }

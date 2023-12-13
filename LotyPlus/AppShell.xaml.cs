@@ -40,9 +40,9 @@ public partial class AppShell : Shell
                 // code block
                 break;
             case "3":
-                await Shell.Current.GoToAsync(nameof(RewardShopPage));
                 break;
             case "4":
+                await Shell.Current.GoToAsync(nameof(RewardShopPage));
                 // code block
                 break;
             case "5":

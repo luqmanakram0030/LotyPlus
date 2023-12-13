@@ -592,6 +592,7 @@
                                                IsClippedToBounds="True"
                                                Padding="0"
                                                CornerRadius="22"
+                                               BorderColor="Transparent"
                                                BackgroundColor="{StaticResource ColorOnDarkBackground}"
                                                VerticalOptions="Fill"
                                                Margin="0,0,20,0">
@@ -718,7 +719,7 @@
                     </DataTrigger>
                 </StackLayout.Triggers>
 
-                <ScrollView VerticalOptions="FillAndExpand">
+                <ScrollView VerticalOptions="StartAndExpand">
                     <StackLayout Padding="30,15,30,0"
                                  Spacing="15">
                         <Label Text="By Promo Type"
@@ -809,7 +810,6 @@
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
                         </StackLayout>
-                        <BoxView HeightRequest="250" />
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
