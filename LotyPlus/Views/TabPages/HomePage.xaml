@@ -10,7 +10,7 @@
              xmlns:animations="clr-namespace:AlohaKit.Animations;assembly=AlohaKit.Animations"
              NavigationPage.HasNavigationBar="False"
              Shell.TabBarIsVisible="True"
-             Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="False"             
              BackgroundColor="{StaticResource LightBackgroundColor}">
 
 
