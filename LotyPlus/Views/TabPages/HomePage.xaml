@@ -197,13 +197,13 @@
                         <Frame HasShadow="False"
                                BorderColor="Transparent"
                                BackgroundColor="{StaticResource ColorOnDarkBackground}"
-                               Padding="12,12,12,12"
+                               Padding="12"
                                Margin="20,10,20,0"
                                CornerRadius="22">
                             <Grid ColumnDefinitions="*,*,*,*"
                                   RowDefinitions="auto,50"
-                                  ColumnSpacing="8"
-                                  RowSpacing="15">
+                                  ColumnSpacing="1"
+                                  RowSpacing="10">
                                 <Border Stroke="Transparent"
                                         HorizontalOptions="Fill"
                                         HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}"
@@ -396,6 +396,7 @@
                                                IsClippedToBounds="True"
                                                Padding="0"
                                                CornerRadius="22"
+                                               BorderColor="Transparent"
                                                BackgroundColor="{StaticResource ColorOnDarkBackground}"
                                                VerticalOptions="Fill"
                                                Margin="0,0,20,0">
@@ -501,14 +502,15 @@
                                 <DataTemplate>
                                     <Grid RowDefinitions="150">
                                         <Grid RowDefinitions="115"
-                                              ColumnDefinitions="6.5*,3.5*"
+                                              ColumnDefinitions="2.5*,3.5*"
                                               VerticalOptions="End"
                                               Margin="25,0,0,0">
                                             <Frame Grid.ColumnSpan="2"
                                                    HasShadow="False"
                                                    CornerRadius="15"
                                                    Padding="0"
-                                                   HeightRequest="105">
+                                                   WidthRequest="240"
+                                                   HeightRequest="115">
                                                 <Frame.Background>
                                                     <LinearGradientBrush EndPoint="0,1">
                                                         <GradientStop Color="{StaticResource PrimaryColor}"
@@ -524,7 +526,7 @@
 
                                             <Image Grid.Column="1"
                                                    Source="{Binding ShopImg}"
-                                                   HorizontalOptions="Start"
+                                                   HorizontalOptions="End"
                                                    VerticalOptions="End"
                                                    Margin="-45,-30,0,0" />
 
