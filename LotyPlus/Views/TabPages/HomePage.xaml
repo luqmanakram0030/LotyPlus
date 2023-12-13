@@ -517,6 +517,9 @@
                                                                       Offset="1.0" />
                                                     </LinearGradientBrush>
                                                 </Frame.Background>
+                                                <Frame.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding RewardShopCommand}" />
+                                                </Frame.GestureRecognizers>
                                             </Frame>
 
                                             <Image Grid.Column="1"
@@ -544,10 +547,7 @@
                                                        HorizontalTextAlignment="Center"
                                                        VerticalOptions="Center"
                                                        Margin="0,0,0,0" />
-                                            </Grid>
-                                            <Grid.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="RewardShop_Tapped" />
-                                            </Grid.GestureRecognizers>
+                                            </Grid>                                            
                                         </Grid>
                                     </Grid>
                                 </DataTemplate>

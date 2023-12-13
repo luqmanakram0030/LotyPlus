@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 namespace LotyPlus.ViewModels
 {
     public class RunningCouponPageViewModel : BaseViewModel
@@ -55,6 +56,16 @@ namespace LotyPlus.ViewModels
         {
             public string ShopName { get; set; }
             public string ShopImg { get; set; }
+
+            public ICommand RewardShopCommand { private set; get; }
+
+            public RewardShop()
+            {
+                RewardShopCommand = new Command(execute: async () =>
+                {
+                    await Shell.Current.GoToAsync(nameof(Views.RewardClaimPage));
+                }, canExecute: () => true);
+            }
         }
     }
 }
