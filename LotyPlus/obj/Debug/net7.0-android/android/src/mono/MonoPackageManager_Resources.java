@@ -8,6 +8,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.Xaml.dll",
 		"Microsoft.Maui.Controls.dll",
 		"Microsoft.Maui.Essentials.dll",
+		"AlohaKit.Animations.dll",
 		"CommunityToolkit.Maui.dll",
 		"CommunityToolkit.Maui.Core.dll",
 		"GoogleGson.dll",

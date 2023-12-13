@@ -2,159 +2,343 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.TabPages.HomePage"
-             Title="HomePage" xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels"
-             xmlns:converters="clr-namespace:LotyPlus.Converters" xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
-              NavigationPage.HasNavigationBar="False"
-              Shell.TabBarIsVisible="True"
-              Shell.NavBarIsVisible="False" 
+             Title="HomePage"
+             xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels"
+             xmlns:converters="clr-namespace:LotyPlus.Converters"
+             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+             xmlns:animations="clr-namespace:AlohaKit.Animations;assembly=AlohaKit.Animations"
+             NavigationPage.HasNavigationBar="False"
+             Shell.TabBarIsVisible="True"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource LightBackgroundColor}">
-   
-    
+
+
     <ContentPage.BindingContext>
-                    <viewmodels:SearchViewModel/>
-                </ContentPage.BindingContext>
+        <viewmodels:RunningCouponPageViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:GreaterThanZeroConverter x:Key="GreaterThanZeroConverter" />
-            
+            <animations:FadeToAnimation x:Key="PrimaryFadeIn"
+                                        Duration="200"
+                                        Opacity="1"
+                                        Target="{x:Reference PrimaryContentView}" />
+
+            <animations:FadeToAnimation x:Key="PrimaryFadeOut"
+                                        Duration="200"
+                                        Opacity="0"
+                                        Target="{x:Reference PrimaryContentView}" />
+
+            <animations:FadeToAnimation x:Key="ResultsFadeIn"
+                                        Duration="200"
+                                        Opacity="1"
+                                        Target="{x:Reference ResultsContentView}" />
+
+            <animations:FadeToAnimation x:Key="ResultsFadeOut"
+                                        Duration="200"
+                                        Opacity="0"
+                                        Target="{x:Reference ResultsContentView}" />
         </ResourceDictionary>
     </ContentPage.Resources>
-     <ContentPage.Content>
+    <ContentPage.Content>
         <Grid RowDefinitions="auto,*">
-            <StackLayout >
-                 <Grid ColumnDefinitions="50,*,50" BackgroundColor="Transparent" Padding="20,10,20,0">
-                <Frame BorderColor="Transparent" BackgroundColor="Transparent" HasShadow="False"  HeightRequest="40" WidthRequest="40" Padding="0"  VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
-                    <Image  Source="menuicon.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="22"/>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu_Tapped"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
+            <StackLayout>
+                <Grid ColumnDefinitions="50,*,50"
+                      BackgroundColor="Transparent"
+                      Padding="20,10,20,0">
+                    <Frame BorderColor="Transparent"
+                           BackgroundColor="Transparent"
+                           HasShadow="False"
+                           HeightRequest="40"
+                           WidthRequest="40"
+                           Padding="0"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Margin="8,0,0,0"
+                           CornerRadius="20">
+                        <Image  Source="menuicon.png"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                HeightRequest="22" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  Tapped="Menu_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
 
-                <Image Grid.Column="1" HeightRequest="25" Source="logo2.png" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,10,0,10"/>
-                    
-                <Frame BorderColor="Transparent" Grid.Column="2"  HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
-                    <Grid>
-                        <Image Source="bellicon.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="22"/>
-                        <Border Stroke="Transparent" HeightRequest="11" WidthRequest="11"  BackgroundColor="{StaticResource SecondoryColor}" VerticalOptions="Start" HorizontalOptions="End" Margin="0,8,7,0">
-                           <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="5.5"/>
+                    <Image Grid.Column="1"
+                           HeightRequest="25"
+                           Source="logo2.png"
+                           VerticalOptions="Center"
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="0,10,0,10" />
+
+                    <Frame BorderColor="Transparent"
+                           Grid.Column="2"
+                           HasShadow="False"
+                           HeightRequest="40"
+                           WidthRequest="40"
+                           Padding="0"
+                           BackgroundColor="Transparent"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Margin="8,0,0,0"
+                           CornerRadius="20">
+                        <Grid>
+                            <Image Source="bellicon.png"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="22" />
+                            <Border Stroke="Transparent"
+                                    HeightRequest="11"
+                                    WidthRequest="11"
+                                    BackgroundColor="{StaticResource SecondoryColor}"
+                                    VerticalOptions="Start"
+                                    HorizontalOptions="End"
+                                    Margin="0,8,7,0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5.5" />
 
                                 </Border.StrokeShape>
-                          
-                        </Border>
-                    </Grid>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Cart_Tapped"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-            </Grid>
+
+                            </Border>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  Tapped="Cart_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
                 <StackLayout.Shadow>
-                    <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource GreyColor}"> 
-                         </Shadow>
+                    <Shadow Offset="0,10"
+                            Opacity="0.3"
+                            Radius="20"
+                            Brush="{StaticResource GreyColor}">
+                    </Shadow>
 
                 </StackLayout.Shadow>
-                <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='16,0,10,0', iOS='16,0,16,0'}" HeightRequest="50" Margin="20,15,20,0" CornerRadius="16">
+                <Frame HasShadow="False"
+                       BorderColor="Transparent"
+                       BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                       Padding="{OnPlatform Android='16,0,10,0', iOS='16,0,16,0'}"
+                       HeightRequest="50"
+                       Margin="20,15,20,10"
+                       CornerRadius="16">
                     <Grid ColumnDefinitions="30,*,2,auto">
-                        <Image Source="search.png" VerticalOptions="Center" HeightRequest="24"/>
-                        <Entry VerticalOptions="Center" Focused="Search_Focused" Unfocused="Search_Unfocused"  x:Name="Search" Grid.Column="1" Placeholder="Search here" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Small" FontFamily="Regular" Margin="{OnPlatform Android='20,0,0,-7', iOS='0'}" />
-                        <BoxView Grid.Column="2" BackgroundColor="{StaticResource ColorOnLightBackground}" Opacity="0.5" WidthRequest="1" HorizontalOptions="Center" VerticalOptions="Fill" Margin="0,15,0,15"/>
-                        <Button x:Name="CancelBtn" Clicked="CancelBtn_Clicked" Grid.Column="3" Text="Search" TextTransform="None" TextColor="{StaticResource PrimaryColor}" FontSize="Default" FontFamily="SemiBold" Margin="0" WidthRequest="80" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="{OnPlatform Android='0,5,0,0', iOS='0'}"/>
+                        <Image Source="search.png"
+                               VerticalOptions="Center"
+                               HeightRequest="24" />
+                        
+                        <Entry VerticalOptions="Center"
+                               x:Name="Search"
+                               Grid.Column="1"
+                               Placeholder="Search here"
+                               PlaceholderColor="{StaticResource GreyTextColor}"
+                               TextColor="{StaticResource TextColor}"
+                               FontSize="Small"
+                               FontFamily="Regular"
+                               Margin="{OnPlatform Android='20,0,0,-7', iOS='0'}" />
+                        
+                        <BoxView Grid.Column="2"
+                                 BackgroundColor="{StaticResource ColorOnLightBackground}"
+                                 Opacity="0.5"
+                                 WidthRequest="1"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Fill"
+                                 Margin="0,15,0,15" />
+                        <Button x:Name="CancelBtn"
+                                Grid.Column="3"
+                                Text="Search"
+                                TextTransform="None"
+                                TextColor="{StaticResource PrimaryColor}"
+                                FontSize="Default"
+                                FontFamily="SemiBold"
+                                Margin="0"
+                                WidthRequest="80"
+                                HeightRequest="45"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"
+                                BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                                Padding="{OnPlatform Android='0,5,0,0', iOS='0'}" />
                     </Grid>
                 </Frame>
             </StackLayout>
 
-            <ContentView Grid.Row="1" x:Name="PrimaryContentView" Opacity="1">
+            <ContentView Grid.Row="1"
+                         x:Name="PrimaryContentView"
+                         Opacity="1">
                 <ContentView.Triggers>
-                    <DataTrigger
-                        TargetType="ContentView"
-                        Binding="{Binding Source={x:Reference Search}, Path=IsFocused}"
-                        Value="False">
-                       
+                    <DataTrigger TargetType="ContentView"
+                                 Binding="{Binding Source={x:Reference Search}, Path=IsFocused}"
+                                 Value="False">
+                        <DataTrigger.EnterActions>
+                            <animations:BeginAnimation Animation="{StaticResource PrimaryFadeIn}" />
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <animations:BeginAnimation Animation="{StaticResource PrimaryFadeOut}" />
+                        </DataTrigger.ExitActions>
                     </DataTrigger>
-                    <Trigger
-                        TargetType="ContentView"
-                        Property="Opacity"
-                        Value="0">
-                        <Setter Property="IsVisible" Value="False" />
+                    <Trigger TargetType="ContentView"
+                             Property="Opacity"
+                             Value="0">
+                        <Setter Property="IsVisible"
+                                Value="False" />
                     </Trigger>
-                    <DataTrigger
-                        TargetType="ContentView"
-                        Binding="{Binding Source={x:Reference PrimaryContentView}, Path=Opacity, Converter={StaticResource GreaterThanZeroConverter}}"
-                        Value="True">
-                        <Setter Property="IsVisible" Value="True" />
+                    <DataTrigger TargetType="ContentView"
+                                 Binding="{Binding Source={x:Reference PrimaryContentView}, Path=Opacity, Converter={StaticResource GreaterThanZeroConverter}}"
+                                 Value="True">
+                        <Setter Property="IsVisible"
+                                Value="True" />
                     </DataTrigger>
                 </ContentView.Triggers>
-                <ScrollView>
+                <ScrollView VerticalOptions="FillAndExpand">
                     <StackLayout Spacing="20">
 
-                        <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="12" Margin="20,10,20,0" CornerRadius="22">
-                            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="auto,50" ColumnSpacing="8" RowSpacing="15">
-                                <Border Stroke="Transparent" HorizontalOptions="Fill"  HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#EFFBF0">
+                        <Frame HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                               Padding="12,12,12,12"
+                               Margin="20,10,20,0"
+                               CornerRadius="22">
+                            <Grid ColumnDefinitions="*,*,*,*"
+                                  RowDefinitions="auto,50"
+                                  ColumnSpacing="8"
+                                  RowSpacing="15">
+                                <Border Stroke="Transparent"
+                                        HorizontalOptions="Fill"
+                                        HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}"
+                                        BackgroundColor="#EFFBF0">
                                     <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="12"/>
+                                        <RoundRectangle CornerRadius="12" />
 
                                     </Border.StrokeShape>
-                                    <FlexLayout Direction="Column" JustifyContent="Center" >
-                                        <Image Source="gasstation.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
-                                        <Label Text="Gas Station" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    <FlexLayout Direction="Column"
+                                                JustifyContent="Center">
+                                        <Image Source="gasstation.png"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="{OnPlatform Android='40', iOS='30'}" />
+                                        <Label Text="Gas Station"
+                                               FontSize="{OnPlatform Android='Micro', iOS='9'}"
+                                               FontFamily="SemiBold"
+                                               HorizontalTextAlignment="Center"
+                                               Margin="0,5,0,0" />
                                     </FlexLayout>
                                 </Border>
 
-                                <Border Stroke="Transparent" Grid.Column="1" HorizontalOptions="Fill"  HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#EFF4FB">
+                                <Border Stroke="Transparent"
+                                        Grid.Column="1"
+                                        HorizontalOptions="Fill"
+                                        HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}"
+                                        BackgroundColor="#EFF4FB">
                                     <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="12"/>
+                                        <RoundRectangle CornerRadius="12" />
 
                                     </Border.StrokeShape>
-                                    <FlexLayout Direction="Column" JustifyContent="Center" >
-                                        <Image Source="food.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
-                                        <Label Text="Food" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    <FlexLayout Direction="Column"
+                                                JustifyContent="Center">
+                                        <Image Source="food.png"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="{OnPlatform Android='40', iOS='30'}" />
+                                        <Label Text="Food"
+                                               FontSize="{OnPlatform Android='Micro', iOS='9'}"
+                                               FontFamily="SemiBold"
+                                               HorizontalTextAlignment="Center"
+                                               Margin="0,5,0,0" />
                                     </FlexLayout>
                                 </Border>
 
-                                <Border Grid.Column="2" HorizontalOptions="Fill"  HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#FBEFEF">
+                                <Border Stroke="Transparent"
+                                        Grid.Column="2"
+                                        HorizontalOptions="Fill"
+                                        HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}"
+                                        BackgroundColor="#FBEFEF">
                                     <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="12"/>
+                                        <RoundRectangle CornerRadius="12" />
 
                                     </Border.StrokeShape>
-                                    <FlexLayout Direction="Column" JustifyContent="Center" >
-                                        <Image Source="clothes.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
-                                        <Label Text="Clothes" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    <FlexLayout Direction="Column"
+                                                JustifyContent="Center">
+                                        <Image Source="clothes.png"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="{OnPlatform Android='40', iOS='30'}" />
+                                        <Label Text="Clothes"
+                                               FontSize="{OnPlatform Android='Micro', iOS='9'}"
+                                               FontFamily="SemiBold"
+                                               HorizontalTextAlignment="Center"
+                                               Margin="0,5,0,0" />
                                     </FlexLayout>
                                 </Border>
 
-                                <Border Stroke="Transparent" Grid.Column="3" HorizontalOptions="Fill"  HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}" BackgroundColor="#FBEFF7">
+                                <Border Stroke="Transparent"
+                                        Grid.Column="3"
+                                        HorizontalOptions="Fill"
+                                        HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}"
+                                        BackgroundColor="#FBEFF7">
                                     <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="12"/>
+                                        <RoundRectangle CornerRadius="12" />
 
                                     </Border.StrokeShape>
-                                    <FlexLayout Direction="Column" JustifyContent="Center" >
-                                        <Image Source="restuarant.png" HorizontalOptions="Center" HeightRequest="{OnPlatform Android='40', iOS='30'}"/>
-                                        <Label Text="Restuarant" FontSize="{OnPlatform Android='Micro', iOS='9'}" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                    <FlexLayout Direction="Column"
+                                                JustifyContent="Center">
+                                        <Image Source="restuarant.png"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="{OnPlatform Android='40', iOS='30'}" />
+                                        <Label Text="Restuarant"
+                                               FontSize="{OnPlatform Android='Micro', iOS='9'}"
+                                               FontFamily="SemiBold"
+                                               HorizontalTextAlignment="Center"
+                                               Margin="0,5,0,0" />
                                     </FlexLayout>
                                 </Border>
 
-                                <Button Grid.Row="1" Grid.ColumnSpan="4" Text="View all" TextTransform="None" FontSize="Body" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" CornerRadius="12" Padding="{OnPlatform Android='0,0,0,-6', iOS='0'}" BackgroundColor="{StaticResource LightSecondoryColor}" Clicked="ViewAll_Clicked"/>
+                                <Button Grid.Row="1"
+                                        Grid.ColumnSpan="4"
+                                        Text="View all"
+                                        TextTransform="None"
+                                        FontSize="Body"
+                                        FontFamily="SemiBold"
+                                        TextColor="{StaticResource ColorOnDarkBackground}"
+                                        CornerRadius="12"
+                                        Padding="{OnPlatform Android='0,0,0,-6', iOS='0'}"
+                                        BackgroundColor="{StaticResource LightSecondoryColor}"
+                                        Clicked="ViewAll_Clicked" />
                             </Grid>
                         </Frame>
 
-                        <Border HeightRequest="130"  BackgroundColor="{StaticResource GreyColor}" Margin="20,5,20,0">
+                        <Border HeightRequest="130"
+                                BackgroundColor="{StaticResource GreyColor}"
+                                Margin="20,5,20,0">
 
                             <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="22"/>
+                                <RoundRectangle CornerRadius="22" />
 
-                                    </Border.StrokeShape>
+                            </Border.StrokeShape>
                             <Grid>
-                                <Image Source="tacobellbanner.png" Aspect="AspectFill"/>
-                                <StackLayout VerticalOptions="EndAndExpand" Margin="20,0,0,15">
-                                    <Label Text="30% Discount Code" FontSize="Large" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}"/>
-                                    <Label Text="On Taco bell" FontSize="Medium" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" Margin="0,-10,0,0"/>
+                                <Image Source="tacobellbanner.png"
+                                       Aspect="AspectFill" />
+                                <StackLayout VerticalOptions="EndAndExpand"
+                                             Margin="20,0,0,15">
+                                    <Label Text="30% Discount Code"
+                                           FontSize="Large"
+                                           FontFamily="Bold"
+                                           TextColor="{StaticResource ColorOnDarkBackground}" />
+                                    <Label Text="On Taco bell"
+                                           FontSize="Medium"
+                                           FontFamily="SemiBold"
+                                           TextColor="{StaticResource ColorOnDarkBackground}"
+                                           Margin="0,-10,0,0" />
                                 </StackLayout>
                             </Grid>
                         </Border>
 
-                        <Label Text="Big Promos" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+                        <Label Text="Big Promos"
+                               FontSize="20"
+                               FontFamily="Bold"
+                               Margin="24,10,0,0" />
 
-                        <CollectionView HeightRequest="155" HorizontalScrollBarVisibility="Never" Margin="0,-5,0,0">
+                        <CollectionView HeightRequest="155"
+                                        HorizontalScrollBarVisibility="Never"
+                                        Margin="0,-5,0,0">
                             <CollectionView.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>promo1.png</x:String>
@@ -164,8 +348,17 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid  Padding="20,0,0,0">
-                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" WidthRequest="310" HeightRequest="155" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Start" HorizontalOptions="Start">
-                                            <Image Source="{Binding .}" Aspect="AspectFill"/>
+                                        <Frame HasShadow="False"
+                                               IsClippedToBounds="True"
+                                               Padding="0"
+                                               CornerRadius="22"
+                                               WidthRequest="310"
+                                               HeightRequest="155"
+                                               BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="Start">
+                                            <Image Source="{Binding .}"
+                                                   Aspect="AspectFill" />
                                         </Frame>
                                     </Grid>
                                 </DataTemplate>
@@ -174,13 +367,20 @@
                                 <LinearItemsLayout Orientation="Horizontal" />
                             </CollectionView.ItemsLayout>
                             <CollectionView.Footer>
-                                <BoxView WidthRequest="0"/>
+                                <BoxView WidthRequest="0" />
                             </CollectionView.Footer>
                         </CollectionView>
 
-                        <Label Text="Discounts Codes" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+                        <Label Text="Discounts Codes"
+                               FontSize="20"
+                               FontFamily="Bold"
+                               Margin="24,10,0,0" />
 
-                        <CarouselView HorizontalScrollBarVisibility="Never" Loop="False" PeekAreaInsets="20" VerticalOptions="StartAndExpand" HeightRequest="380">
+                        <CarouselView HorizontalScrollBarVisibility="Never"
+                                      Loop="False"
+                                      PeekAreaInsets="20"
+                                      VerticalOptions="StartAndExpand"
+                                      HeightRequest="380">
                             <CarouselView.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>discountcodeimg1.png</x:String>
@@ -192,43 +392,90 @@
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid RowDefinitions="370">
-                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
+                                        <Frame HasShadow="False"
+                                               IsClippedToBounds="True"
+                                               Padding="0"
+                                               CornerRadius="22"
+                                               BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                                               VerticalOptions="Fill"
+                                               Margin="0,0,20,0">
                                             <Grid RowDefinitions="4.6*,5.4*">
                                                 <Border  BackgroundColor="{StaticResource LightBackgroundColor}">
 
                                                     <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="22,22,0,0"/>
+                                                        <RoundRectangle CornerRadius="22,22,0,0" />
 
-                                    </Border.StrokeShape>
-                                                    <Image x:Name="img" Source="{Binding .}" Aspect="AspectFill" Margin="-18,-5,0,0" />
+                                                    </Border.StrokeShape>
+                                                    <Image x:Name="img"
+                                                           Source="{Binding .}"
+                                                           Aspect="AspectFill"
+                                                           Margin="-18,-5,0,0" />
                                                 </Border>
 
-                                                <Grid Grid.Row="1" RowDefinitions="*,auto" ColumnDefinitions="6*,4*" Padding="20,10,20,20">
-                                                    <Label Grid.ColumnSpan="2" Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo" FontFamily="SemiBold" FontSize="16"/>
+                                                <Grid Grid.Row="1"
+                                                      RowDefinitions="*,auto"
+                                                      ColumnDefinitions="6*,4*"
+                                                      Padding="20,10,20,20">
+                                                    <Label Grid.ColumnSpan="2"
+                                                           Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo"
+                                                           FontFamily="SemiBold"
+                                                           FontSize="16" />
 
-                                                    <StackLayout Grid.Row="1" Spacing="2" VerticalOptions="Center">
+                                                    <StackLayout Grid.Row="1"
+                                                                 Spacing="2"
+                                                                 VerticalOptions="Center">
                                                         <StackLayout Orientation="Horizontal">
-                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                            <Image HeightRequest="17"
+                                                                   VerticalOptions="Center"
+                                                                   HorizontalOptions="Center">
                                                                 <Image.Source>
-                                                                    <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                    <FontImageSource Glyph="&#xf07d9;"
+                                                                                     FontFamily="FontIcons"
+                                                                                     Size="18"
+                                                                                     Color="{StaticResource PrimaryColor}" />
                                                                 </Image.Source>
                                                             </Image>
-                                                            <Label Text="Manuel Antonio, Quepos" FontSize="10" FontFamily="SemiBold"/>
+                                                            <Label Text="Manuel Antonio, Quepos"
+                                                                   FontSize="10"
+                                                                   FontFamily="SemiBold" />
                                                         </StackLayout>
                                                         <StackLayout Orientation="Horizontal">
-                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                            <Image HeightRequest="17"
+                                                                   VerticalOptions="Center"
+                                                                   HorizontalOptions="Center">
                                                                 <Image.Source>
-                                                                    <FontImageSource Glyph="&#xf0c44;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                    <FontImageSource Glyph="&#xf0c44;"
+                                                                                     FontFamily="FontIcons"
+                                                                                     Size="18"
+                                                                                     Color="{StaticResource PrimaryColor}" />
                                                                 </Image.Source>
                                                             </Image>
-                                                            <Label Text="Expires: 10 days " FontSize="10" FontFamily="SemiBold"/>
+                                                            <Label Text="Expires: 10 days "
+                                                                   FontSize="10"
+                                                                   FontFamily="SemiBold" />
                                                         </StackLayout>
                                                     </StackLayout>
 
-                                                    <Frame Grid.Row="1" Grid.Column="1" HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="8" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource PrimaryColor}" >
+                                                    <Frame Grid.Row="1"
+                                                           Grid.Column="1"
+                                                           HasShadow="False"
+                                                           IsClippedToBounds="True"
+                                                           Padding="0"
+                                                           CornerRadius="8"
+                                                           HeightRequest="30"
+                                                           VerticalOptions="Center"
+                                                           HorizontalOptions="End"
+                                                           BackgroundColor="{StaticResource PrimaryColor}">
                                                         <Grid>
-                                                            <Image Source="btnbg.png" Aspect="AspectFill"/>
-                                                            <Label Text="Show Code" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" Margin="{OnPlatform Android='10,3,10,0', iOS='10,0,10,0'}"/>
+                                                            <Image Source="btnbg.png"
+                                                                   Aspect="AspectFill" />
+                                                            <Label Text="Show Code"
+                                                                   VerticalTextAlignment="Center"
+                                                                   HorizontalTextAlignment="Center"
+                                                                   FontSize="12"
+                                                                   FontFamily="SemiBold"
+                                                                   TextColor="{StaticResource ColorOnDarkBackground}"
+                                                                   Margin="{OnPlatform Android='10,3,10,0', iOS='10,0,10,0'}" />
                                                         </Grid>
                                                     </Frame>
                                                 </Grid>
@@ -241,30 +488,65 @@
 
 
 
-                        <Label Text="Loty Reward Shop" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+                        <Label Text="Loty Reward Shop"
+                               FontSize="20"
+                               FontFamily="Bold"
+                               Margin="24,10,0,0" />
 
-                        <CollectionView HeightRequest="155" HorizontalScrollBarVisibility="Never" Margin="0,-5,0,0" ItemsSource="{Binding RewardShopList}">
+                        <CollectionView HeightRequest="155"
+                                        HorizontalScrollBarVisibility="Never"
+                                        Margin="0,-5,0,0"
+                                        ItemsSource="{Binding RewardShopList}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid RowDefinitions="150">
-                                        <Grid RowDefinitions="115" ColumnDefinitions="6.5*,3.5*" VerticalOptions="End" Margin="25,0,0,0">
-                                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
+                                        <Grid RowDefinitions="115"
+                                              ColumnDefinitions="6.5*,3.5*"
+                                              VerticalOptions="End"
+                                              Margin="25,0,0,0">
+                                            <Frame Grid.ColumnSpan="2"
+                                                   HasShadow="False"
+                                                   CornerRadius="15"
+                                                   Padding="0"
+                                                   HeightRequest="105">
                                                 <Frame.Background>
                                                     <LinearGradientBrush EndPoint="0,1">
-                                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                                        <GradientStop Color="{StaticResource PrimaryColor}"
+                                                                      Offset="0.4" />
+                                                        <GradientStop Color="{StaticResource SecondoryColor}"
+                                                                      Offset="1.0" />
                                                     </LinearGradientBrush>
                                                 </Frame.Background>
                                             </Frame>
 
-                                            <Image Grid.Column="1" Source="{Binding ShopImg}" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+                                            <Image Grid.Column="1"
+                                                   Source="{Binding ShopImg}"
+                                                   HorizontalOptions="Start"
+                                                   VerticalOptions="End"
+                                                   Margin="-45,-30,0,0" />
 
                                             <Grid>
-                                                <Label Text="{Binding ShopName}" FontSize="26" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                                <Label Text="{Binding ShopName}" FontSize="18" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
+                                                <Label Text="{Binding ShopName}"
+                                                       FontSize="26"
+                                                       FontFamily="Bold"
+                                                       TextColor="{StaticResource GreyColor}"
+                                                       HorizontalOptions="Center"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalOptions="Center"
+                                                       Margin="0,0,0,0"
+                                                       Opacity="0.16"
+                                                       LineHeight="1.2" />
+                                                <Label Text="{Binding ShopName}"
+                                                       FontSize="18"
+                                                       FontFamily="Bold"
+                                                       TextColor="{StaticResource ColorOnDarkBackground}"
+                                                       HorizontalOptions="Center"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalOptions="Center"
+                                                       Margin="0,0,0,0" />
                                             </Grid>
                                             <Grid.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="RewardShop_Tapped"/>
+                                                <TapGestureRecognizer Tapped="RewardShop_Tapped" />
                                             </Grid.GestureRecognizers>
                                         </Grid>
                                     </Grid>
@@ -274,15 +556,24 @@
                                 <LinearItemsLayout Orientation="Horizontal" />
                             </CollectionView.ItemsLayout>
                             <CollectionView.Footer>
-                                <BoxView WidthRequest="40" Color="Transparent"/>
+                                <BoxView WidthRequest="40"
+                                         Color="Transparent" />
                             </CollectionView.Footer>
                         </CollectionView>
 
 
 
-                        <Label Text="Recently Viewed" FontSize="20" FontFamily="Bold" Margin="24,10,0,0"/>
+                        <Label Text="Recently Viewed"
+                               FontSize="20"
+                               FontFamily="Bold"
+                               Margin="24,10,0,0" />
 
-                        <CarouselView HorizontalScrollBarVisibility="Never" Margin="0,0,0,40" Loop="False" PeekAreaInsets="20" VerticalOptions="StartAndExpand" HeightRequest="380">
+                        <CarouselView HorizontalScrollBarVisibility="Never"
+                                      Margin="0,0,0,40"
+                                      Loop="False"
+                                      PeekAreaInsets="20"
+                                      VerticalOptions="StartAndExpand"
+                                      HeightRequest="380">
                             <CarouselView.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>discountcodeimg2.png</x:String>
@@ -295,44 +586,91 @@
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid RowDefinitions="370">
-                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
+                                        <Frame HasShadow="False"
+                                               IsClippedToBounds="True"
+                                               Padding="0"
+                                               CornerRadius="22"
+                                               BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                                               VerticalOptions="Fill"
+                                               Margin="0,0,20,0">
                                             <Grid RowDefinitions="4.6*,5.4*">
                                                 <Border  BackgroundColor="{StaticResource LightBackgroundColor}">
-                                                     <Border.StrokeShape>
-                                         <RoundRectangle CornerRadius="22,22,0,0"/>
+                                                    <Border.StrokeShape>
+                                                        <RoundRectangle CornerRadius="22,22,0,0" />
 
-                                    </Border.StrokeShape>
+                                                    </Border.StrokeShape>
 
 
-                                                    <Image x:Name="img" Source="{Binding .}" Aspect="AspectFill" Margin="-18,-5,0,0" />
+                                                    <Image x:Name="img"
+                                                           Source="{Binding .}"
+                                                           Aspect="AspectFill"
+                                                           Margin="-18,-5,0,0" />
                                                 </Border>
 
-                                                <Grid Grid.Row="1" RowDefinitions="*,auto" ColumnDefinitions="6*,4*" Padding="20,10,20,20">
-                                                    <Label Grid.ColumnSpan="2" Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo" FontFamily="SemiBold" FontSize="16"/>
+                                                <Grid Grid.Row="1"
+                                                      RowDefinitions="*,auto"
+                                                      ColumnDefinitions="6*,4*"
+                                                      Padding="20,10,20,20">
+                                                    <Label Grid.ColumnSpan="2"
+                                                           Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo"
+                                                           FontFamily="SemiBold"
+                                                           FontSize="16" />
 
-                                                    <StackLayout Grid.Row="1" Spacing="2" VerticalOptions="Center">
+                                                    <StackLayout Grid.Row="1"
+                                                                 Spacing="2"
+                                                                 VerticalOptions="Center">
                                                         <StackLayout Orientation="Horizontal">
-                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                            <Image HeightRequest="17"
+                                                                   VerticalOptions="Center"
+                                                                   HorizontalOptions="Center">
                                                                 <Image.Source>
-                                                                    <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                    <FontImageSource Glyph="&#xf07d9;"
+                                                                                     FontFamily="FontIcons"
+                                                                                     Size="18"
+                                                                                     Color="{StaticResource PrimaryColor}" />
                                                                 </Image.Source>
                                                             </Image>
-                                                            <Label Text="Manuel Antonio, Quepos" FontSize="10" FontFamily="SemiBold"/>
+                                                            <Label Text="Manuel Antonio, Quepos"
+                                                                   FontSize="10"
+                                                                   FontFamily="SemiBold" />
                                                         </StackLayout>
                                                         <StackLayout Orientation="Horizontal">
-                                                            <Image HeightRequest="17" VerticalOptions="Center" HorizontalOptions="Center">
+                                                            <Image HeightRequest="17"
+                                                                   VerticalOptions="Center"
+                                                                   HorizontalOptions="Center">
                                                                 <Image.Source>
-                                                                    <FontImageSource Glyph="&#xf0c44;" FontFamily="FontIcons" Size="18" Color="{StaticResource PrimaryColor}"/>
+                                                                    <FontImageSource Glyph="&#xf0c44;"
+                                                                                     FontFamily="FontIcons"
+                                                                                     Size="18"
+                                                                                     Color="{StaticResource PrimaryColor}" />
                                                                 </Image.Source>
                                                             </Image>
-                                                            <Label Text="Expires: 10 days " FontSize="10" FontFamily="SemiBold"/>
+                                                            <Label Text="Expires: 10 days "
+                                                                   FontSize="10"
+                                                                   FontFamily="SemiBold" />
                                                         </StackLayout>
                                                     </StackLayout>
 
-                                                    <Frame Grid.Row="1" Grid.Column="1" HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="8" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{StaticResource PrimaryColor}" >
+                                                    <Frame Grid.Row="1"
+                                                           Grid.Column="1"
+                                                           HasShadow="False"
+                                                           IsClippedToBounds="True"
+                                                           Padding="0"
+                                                           CornerRadius="8"
+                                                           HeightRequest="30"
+                                                           VerticalOptions="Center"
+                                                           HorizontalOptions="End"
+                                                           BackgroundColor="{StaticResource PrimaryColor}">
                                                         <Grid>
-                                                            <Image Source="btnbg.png" Aspect="AspectFill"/>
-                                                            <Label Text="Show Code" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" Margin="{OnPlatform Android='10,3,10,0', iOS='10,0,10,0'}"/>
+                                                            <Image Source="btnbg.png"
+                                                                   Aspect="AspectFill" />
+                                                            <Label Text="Show Code"
+                                                                   VerticalTextAlignment="Center"
+                                                                   HorizontalTextAlignment="Center"
+                                                                   FontSize="12"
+                                                                   FontFamily="SemiBold"
+                                                                   TextColor="{StaticResource ColorOnDarkBackground}"
+                                                                   Margin="{OnPlatform Android='10,3,10,0', iOS='10,0,10,0'}" />
                                                         </Grid>
                                                     </Frame>
                                                 </Grid>
@@ -346,65 +684,130 @@
                 </ScrollView>
             </ContentView>
 
-            <StackLayout Grid.Row="1" x:Name="ResultsContentView" Opacity="0">
-               
-                
+            <StackLayout Grid.Row="1"
+                         x:Name="ResultsContentView"
+                         Opacity="0">
+                <StackLayout.BindingContext>
+                    <viewmodels:SearchViewModel />
+                </StackLayout.BindingContext>
+
                 <StackLayout.Triggers>
-                    
-                    <DataTrigger
-                        TargetType="StackLayout"
-                        Binding="{Binding Source={x:Reference ResultsContentView}, Path=Opacity, Converter={StaticResource GreaterThanZeroConverter}}"
-                        Value="True">
-                        <Setter Property="IsVisible" Value="True" />
+                    <DataTrigger TargetType="StackLayout"
+                                 Binding="{Binding Source={x:Reference Search}, Path=IsFocused}"
+                                 Value="True">
+                        <DataTrigger.EnterActions>
+                            <animations:BeginAnimation Animation="{StaticResource ResultsFadeIn}" />
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <animations:BeginAnimation Animation="{StaticResource ResultsFadeOut}" />
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                    <Trigger TargetType="StackLayout"
+                             Property="Opacity"
+                             Value="0">
+                        <Setter Property="IsVisible"
+                                Value="False" />
+                    </Trigger>
+                    <DataTrigger TargetType="StackLayout"
+                                 Binding="{Binding Source={x:Reference ResultsContentView}, Path=Opacity, Converter={StaticResource GreaterThanZeroConverter}}"
+                                 Value="True">
+                        <Setter Property="IsVisible"
+                                Value="True" />
                     </DataTrigger>
                 </StackLayout.Triggers>
 
-                <ScrollView>
-                    <StackLayout Padding="30,15,30,0" Spacing="15">
-                        <Label Text="By Promo Type" FontFamily="SemiBold" FontSize="16"/>
+                <ScrollView VerticalOptions="FillAndExpand">
+                    <StackLayout Padding="30,15,30,0"
+                                 Spacing="15">
+                        <Label Text="By Promo Type"
+                               FontFamily="SemiBold"
+                               FontSize="16" />
 
-                        <StackLayout BindableLayout.ItemsSource="{Binding PromoTypeList}" Spacing="15">
+                        <StackLayout BindableLayout.ItemsSource="{Binding PromoTypeList}"
+                                     Spacing="15">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid RowDefinitions="50" ColumnDefinitions="50,*" >
-                                        <Frame HasShadow="False" Padding="0" IsClippedToBounds="True" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" CornerRadius="25" BackgroundColor="{StaticResource LightBackgroundColor}">
-                                            <Image Source="{Binding Icon}" Aspect="AspectFill"/>
+                                    <Grid RowDefinitions="50"
+                                          ColumnDefinitions="50,*">
+                                        <Frame HasShadow="False"
+                                               Padding="0"
+                                               IsClippedToBounds="True"
+                                               HeightRequest="50"
+                                               WidthRequest="50"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Start"
+                                               CornerRadius="25"
+                                               BackgroundColor="{StaticResource LightBackgroundColor}">
+                                            <Image Source="{Binding Icon}"
+                                                   Aspect="AspectFill" />
                                         </Frame>
-                                        <FlexLayout Grid.Column="1" Direction="Column" JustifyContent="Center" Margin="15,0,0,0">
-                                            <Label Text="{Binding Title}" FontSize="14" FontFamily="SemiBold"/>
-                                            <Label Text="{Binding Description}" FontSize="12" TextColor="{StaticResource GreyTextColor}"/>
+                                        <FlexLayout Grid.Column="1"
+                                                    Direction="Column"
+                                                    JustifyContent="Center"
+                                                    Margin="15,0,0,0">
+                                            <Label Text="{Binding Title}"
+                                                   FontSize="14"
+                                                   FontFamily="SemiBold" />
+                                            <Label Text="{Binding Description}"
+                                                   FontSize="12"
+                                                   TextColor="{StaticResource GreyTextColor}" />
                                         </FlexLayout>
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnResult_Tapped"/>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                                  Tapped="OnResult_Tapped" />
                                         </Grid.GestureRecognizers>
                                     </Grid>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
                         </StackLayout>
 
-                        <BoxView HeightRequest="1" VerticalOptions="Center" BackgroundColor="{StaticResource GreyColor}" Margin="0,10,0,10"/>
+                        <BoxView HeightRequest="1"
+                                 VerticalOptions="Center"
+                                 BackgroundColor="{StaticResource GreyColor}"
+                                 Margin="0,10,0,10" />
 
-                        <Label Text="By Business Type" FontFamily="SemiBold" FontSize="16"/>
-                        
-                        <StackLayout BindableLayout.ItemsSource="{Binding BusinessTypeList}" Spacing="15">
+                        <Label Text="By Business Type"
+                               FontFamily="SemiBold"
+                               FontSize="16" />
+
+                        <StackLayout BindableLayout.ItemsSource="{Binding BusinessTypeList}"
+                                     Spacing="15">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid RowDefinitions="50" ColumnDefinitions="50,*" >
-                                        <Frame HasShadow="False" Padding="0" IsClippedToBounds="True" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" CornerRadius="25" BackgroundColor="{StaticResource LightBackgroundColor}">
-                                            <Image Source="{Binding Icon}" Aspect="AspectFill"/>
+                                    <Grid RowDefinitions="50"
+                                          ColumnDefinitions="50,*">
+                                        <Frame HasShadow="False"
+                                               Padding="0"
+                                               IsClippedToBounds="True"
+                                               HeightRequest="50"
+                                               WidthRequest="50"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Start"
+                                               CornerRadius="25"
+                                               BackgroundColor="{StaticResource LightBackgroundColor}">
+                                            <Image Source="{Binding Icon}"
+                                                   Aspect="AspectFill" />
                                         </Frame>
-                                        <FlexLayout Grid.Column="1" Direction="Column" JustifyContent="Center" Margin="15,0,0,0">
-                                            <Label Text="{Binding Title}" FontSize="14" FontFamily="SemiBold"/>
-                                            <Label Text="{Binding Description}" FontSize="12" TextColor="{StaticResource GreyTextColor}"/>
+                                        <FlexLayout Grid.Column="1"
+                                                    Direction="Column"
+                                                    JustifyContent="Center"
+                                                    Margin="15,0,0,0">
+                                            <Label Text="{Binding Title}"
+                                                   FontSize="14"
+                                                   FontFamily="SemiBold" />
+                                            <Label Text="{Binding Description}"
+                                                   FontSize="12"
+                                                   TextColor="{StaticResource GreyTextColor}" />
                                         </FlexLayout>
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnResult_Tapped"/>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                                  Tapped="OnResult_Tapped" />
                                         </Grid.GestureRecognizers>
                                     </Grid>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
                         </StackLayout>
-                        <BoxView HeightRequest="250"/>
+                        <BoxView HeightRequest="250" />
                     </StackLayout>
                 </ScrollView>
             </StackLayout>

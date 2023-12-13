@@ -1,3 +1,4 @@
+AlohaKit.Animations.dll
 CommunityToolkit.Maui.Core.dll
 CommunityToolkit.Maui.dll
 GoogleGson.dll
@@ -162,6 +163,7 @@ androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
 gifdecoder.aar
 glide.aar
+AlohaKit.Animations.aar
 CommunityToolkit.Maui.Core.aar
 CommunityToolkit.Maui.aar
 GoogleGson.aar

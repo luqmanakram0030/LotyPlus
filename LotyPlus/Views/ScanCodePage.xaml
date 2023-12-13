@@ -140,7 +140,7 @@
                                     <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
                                 </Image.Source>
                             </Image>
-                            <Label Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8"/>
+                            <Label  WidthRequest="300" Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8"/>
                         </StackLayout>
 
                         <Label Text="Description" FontSize="18" FontFamily="SemiBold"/>

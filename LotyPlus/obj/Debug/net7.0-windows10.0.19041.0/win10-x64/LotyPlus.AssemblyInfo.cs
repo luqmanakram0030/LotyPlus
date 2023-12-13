@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LotyPlus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e71728f221a81baa74e2bf1dc278236ccf2025ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("LotyPlus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LotyPlus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

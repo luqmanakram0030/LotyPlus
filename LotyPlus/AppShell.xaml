@@ -3,9 +3,9 @@
     x:Class="LotyPlus.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:LotyPlus.Views.TabPages"
-    
-             BackgroundColor="{StaticResource ColorOnDarkBackground}">
+       xmlns:local="clr-namespace:LotyPlus.Views.TabPages"
+       xmlns:localtab="clr-namespace:LotyPlus.Views"
+       BackgroundColor="{StaticResource ColorOnDarkBackground}">
 
     <Shell.Resources>
         <ResourceDictionary>
@@ -38,8 +38,19 @@
         </ShellContent>
     </FlyoutItem>
 
+    <!--<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Home"
+                      ContentTemplate="{DataTemplate localtab:TabViewPage}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf02dc;"
+                                 Color="{StaticResource PrimaryColor}"
+                                 Size="30"
+                                 FontFamily="FontIcons" />
+            </ShellContent.Icon>
+        </ShellContent>
+    </FlyoutItem>-->
 
-   
+
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
 
     <MenuItem ClassId="0" Text="Home" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
