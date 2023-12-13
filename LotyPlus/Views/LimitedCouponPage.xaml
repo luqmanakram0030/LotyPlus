@@ -10,9 +10,12 @@
             <ScrollView>
                 <Grid RowDefinitions="350 ,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
 
-                    <pancakeview:PancakeView CornerRadius="0,0,60,0">
+                    <Border Stroke="Transparent">
+                        <Border.StrokeShape>
+                             <RoundRectangle CornerRadius="0,0,60,0"/>
+                        </Border.StrokeShape>
                         <Image Source="limitedcouponimg.png" Aspect="AspectFill"/>
-                    </pancakeview:PancakeView>
+                    </Border>
 
                     <StackLayout Grid.Row="1" Padding="30,20,30,0" Spacing="20">
                         <Grid ColumnDefinitions="50,*,40,5,40" RowDefinitions="60">
@@ -32,7 +35,7 @@
                                 </Image.GestureRecognizers>
                             </Image>
 
-                            <BoxView Grid.Column="3" WidthRequest="1.5" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="{StaticResource GreyColor}"/>
+                            <BoxView Grid.Column="3" WidthRequest="0.3" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="{StaticResource GreyColor}"/>
 
                             <Image Grid.Column="4" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" >
                                 <Image.Source>
@@ -61,31 +64,41 @@
                         <Grid ColumnDefinitions="auto,*,40,auto,40" ColumnSpacing="0">
                             <Label Text="Quantity" FontSize="18" FontFamily="SemiBold" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
 
-                            <pancakeview:PancakeView Grid.Column="2" CornerRadius="5,0,5,0" BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                            <Border Stroke="Transparent" Grid.Column="2"  BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                                 <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5,0,5,0"/>
+                                </Border.StrokeShape>
                                 <Image HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center">
                                     <Image.Source>
                                         <FontImageSource Glyph="&#xf0374;" FontFamily="FontIcons" Size="40" Color="{StaticResource GreyColor}"/>
                                     </Image.Source>
                                 </Image>
-                                <pancakeview:PancakeView.GestureRecognizers>
+                                <Border.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Decrease_Tapped"/>
-                                </pancakeview:PancakeView.GestureRecognizers>
-                            </pancakeview:PancakeView>
+                                </Border.GestureRecognizers>
+                            </Border>
 
-                            <pancakeview:PancakeView Grid.Column="3" CornerRadius="0" BackgroundColor="#FCFCFC" WidthRequest="45">
+                            <Border Stroke="Transparent" Grid.Column="3"  BackgroundColor="#FCFCFC" WidthRequest="45">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="0"/>
+                                </Border.StrokeShape>
                                 <Label x:Name="StepperLabel" Text="01" HorizontalTextAlignment="Center" VerticalOptions="Center" FontFamily="SemiBold" FontSize="18" Margin="10,3,10,0"/>
-                            </pancakeview:PancakeView>
+                            </Border>
 
-                            <pancakeview:PancakeView Grid.Column="4" CornerRadius="0,5,0,5" BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                            <Border Stroke="Transparent" Grid.Column="4"  BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                                 <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="0,5,0,5"/>
+                                </Border.StrokeShape>
+
                                 <Image HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center">
                                     <Image.Source>
                                         <FontImageSource Glyph="&#xf0415;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
                                     </Image.Source>
                                 </Image>
-                                <pancakeview:PancakeView.GestureRecognizers>
+                                <Border.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Increase_Tapped"/>
-                                </pancakeview:PancakeView.GestureRecognizers>
-                            </pancakeview:PancakeView>
+                                </Border.GestureRecognizers>
+                            </Border>
                         </Grid>
 
                         <Frame HasShadow="False" CornerRadius="13" Padding="30,15,20,15" >
@@ -127,7 +140,7 @@
                             <Label Grid.Row="1" Grid.Column="1" Text="25" FontSize="18" TextColor="{StaticResource PrimaryColor}" FontFamily="SemiBold" HorizontalTextAlignment="End"/>
                         </Grid>
 
-                        <BoxView HeightRequest="1" BackgroundColor="{StaticResource GreyColor}" Margin="-10,0,-10,0"/>
+                        <BoxView HeightRequest="0.3" BackgroundColor="{StaticResource GreyColor}" Margin="-10,0,-10,0"/>
 
                         <StackLayout Orientation="Horizontal" Margin="-8,0,0,0">
                             <Image HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center">
@@ -135,7 +148,7 @@
                                     <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
                                 </Image.Source>
                             </Image>
-                            <Label Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8"/>
+                            <Label MaxLines="2" HorizontalOptions="StartAndExpand" Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8"/>
                         </StackLayout>
 
                         <Label Text="Description" FontSize="18" FontFamily="SemiBold"/>
@@ -161,9 +174,13 @@
                                     <Grid RowDefinitions="370">
                                         <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
                                             <Grid RowDefinitions="4.6*,5.4*">
-                                                <pancakeview:PancakeView CornerRadius="22,22,0,0" BackgroundColor="{StaticResource LightBackgroundColor}">
+                                                <Border  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+                                                    <Border.StrokeShape>
+                                                            <RoundRectangle CornerRadius="22,22,0,0"/>
+                                                     </Border.StrokeShape>
                                                     <Image x:Name="img" Source="{Binding .}" Aspect="AspectFill" Margin="-18,-5,0,0" />
-                                                </pancakeview:PancakeView>
+                                                </Border>
 
                                                 <Grid Grid.Row="1" RowDefinitions="*,auto" ColumnDefinitions="6*,4*" Padding="20,10,20,20">
                                                     <Label Grid.ColumnSpan="2" Text="Hotel Arenal Rabfer: ¡La imponente vista al volcán Arenal! 2 personas en Habitación Estándar con desayunos incluidos por sólo" FontFamily="SemiBold" FontSize="16"/>

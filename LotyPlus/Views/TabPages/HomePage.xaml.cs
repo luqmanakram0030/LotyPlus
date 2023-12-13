@@ -5,13 +5,44 @@ namespace LotyPlus.Views.TabPages;
 
 public partial class HomePage : ContentPage
 {
-    RunningCouponPageViewModel viewModel = new RunningCouponPageViewModel();
+    RunningCouponPageViewModel viewModel;
+    bool _alreadyOpen;
     public HomePage()
     {
         InitializeComponent();
-       // BindingContext = viewModel;
+        //PrimaryContentView.IsVisible = true;
+        //ResultsContentView.IsVisible = false;
+        //BindingContext = viewModel = new RunningCouponPageViewModel();
     }
+    //void Search_Focused(System.Object sender, Microsoft.Maui.Controls.FocusEventArgs e)
+    //{
+    //    PrimaryContentView.IsVisible = false;
+    //    PrimaryContentView.Opacity = 0;
+    //    ResultsContentView.IsVisible = true;
+    //    ResultsContentView.Opacity = 1;
+    //}
 
+    //void Search_Unfocused(System.Object sender, Microsoft.Maui.Controls.FocusEventArgs e)
+
+    //{
+    //    PrimaryContentView.IsVisible = true;
+    //    PrimaryContentView.Opacity = 1;
+    //    ResultsContentView.IsVisible = false;
+    //    ResultsContentView.Opacity = 0;
+
+    //}
+
+    //void CancelBtn_Clicked(System.Object sender, System.EventArgs e)
+    //{
+    //    Search.Unfocused += Unfocused();
+    //}
+
+    //private EventHandler<FocusEventArgs> Unfocused()
+    //{
+    //    PrimaryContentView.IsVisible = true;
+    //    ResultsContentView.IsVisible = false;
+    //    return null;
+    //}
     private void ViewAll_Clicked(object sender, EventArgs e)
     {
 
@@ -22,7 +53,15 @@ public partial class HomePage : ContentPage
     }
     private void Menu_Tapped(object sender, EventArgs e)
     {
-        Shell.Current.FlyoutIsPresented = true;
+#if ANDROID
+        if (!_alreadyOpen)
+        {
+            Shell.Current.FlyoutBehavior = FlyoutBehavior.Locked;
+            Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+            _alreadyOpen = true;
+        }
+#endif
+        Shell.Current.FlyoutIsPresented = !Shell.Current.FlyoutIsPresented;
     }
     private void OnResult_Tapped(object sender, EventArgs e)
     {

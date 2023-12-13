@@ -37,12 +37,12 @@
                 <StackLayout>
                     <Label Text="9 Unlocked and One More Service Needed, To Get A Reward" FontSize="20" FontFamily="SemiBold" HorizontalTextAlignment="Center" Margin="35,20,35,30"/>
 
-                    <StackLayout Orientation="Horizontal" Spacing="0" Margin="20,0">
+                    <StackLayout  Orientation="Horizontal" Spacing="0" Margin="20,0">
                         <StackLayout Orientation="Horizontal" Spacing="0" BindableLayout.ItemsSource="{Binding ServicesList}">
 
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate x:DataType="models:Service">
-                                    <Grid ColumnDefinitions="25,*" ColumnSpacing="0">
+                                    <Grid ColumnDefinitions="5,30" ColumnSpacing="0">
                                         <Ellipse WidthRequest="25" HeightRequest="25" Fill="{Binding IndicatorColor}" VerticalOptions="Start" HorizontalOptions="Start"/>
                                         <Line Grid.Column="1" X1="0" Y1="0" X2="200" Y2="0" Stroke="{Binding IndicatorColor}" StrokeDashArray="1,1" StrokeDashOffset="6" StrokeThickness="3" VerticalOptions="Center" HorizontalOptions="Start" Aspect="UniformToFill"/>
                                     </Grid>

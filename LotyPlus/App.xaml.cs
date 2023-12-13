@@ -12,8 +12,9 @@ public partial class App : Application
             MainPage = new NavigationPage(new OnBoardingPage());
         else
             MainPage = new NavigationPage(new LoginPage());
+
         // MainPage = new AppShell();
-        // MainPage = new NavigationPage(new ProfilePage());
+        // MainPage =new NavigationPage( new SearchShopPage());
     }
 }
 

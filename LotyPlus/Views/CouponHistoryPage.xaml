@@ -28,7 +28,7 @@
                 <Label Text="Promo:" FontSize="18" FontFamily="SemiBold" Margin="30,0,30,0"/>
                 <Label Text="Win two Ford Expeditions 2022 using our gas stations around the country" FontSize="16" Margin="30,0,30,0"/>
 
-                <CollectionView >
+                <CollectionView BackgroundColor="Transparent" Margin="0,30,0,0">
                     <CollectionView.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>https://www.ooredoo.com/wp-content/uploads/2015/12/ooredoo_logo_preview.jpg</x:String>
@@ -37,11 +37,11 @@
                     </CollectionView.ItemsSource>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Grid Padding="25,8,25,8">
-                                <Frame HasShadow="False" Padding="8" CornerRadius="2" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Center" >
-                                    <Grid  ColumnDefinitions="80,*,auto">
-                                        <Frame HasShadow="False" Padding="0" HeightRequest="70" WidthRequest="90" HorizontalOptions="Start" BackgroundColor="{StaticResource GreyColor}" CornerRadius="3">
-                                            <Image Source="{Binding .}" Aspect="AspectFill"/>
+                            <Grid Padding="20,5">
+                                <Frame BorderColor="Transparent" HasShadow="True" Padding="8" CornerRadius="2" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Center" >
+                                    <Grid  ColumnDefinitions="100,*,auto">
+                                        <Frame  HasShadow="False" Padding="0" HeightRequest="70" WidthRequest="90" HorizontalOptions="Start" BackgroundColor="{StaticResource GreyColor}" CornerRadius="3">
+                                            <Image Source="{Binding .}" Aspect="AspectFill" />
                                         </Frame>
 
                                         <StackLayout Grid.Column="1" Spacing="0">
@@ -58,9 +58,7 @@
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
-                    <CollectionView.Header>
-                        <BoxView HeightRequest="30"/>
-                    </CollectionView.Header>
+                    
                 </CollectionView>
             </StackLayout>
         </Grid>

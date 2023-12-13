@@ -1,12 +1,10 @@
-﻿
-
-using CommunityToolkit.Maui.Core.Platform;
+﻿using CommunityToolkit.Maui.Core.Platform;
 
 namespace LotyPlus.Views;
 
-public partial class ContactInfoPage : ContentPage
+public partial class ForgotOTPPage : ContentPage
 {
-	public ContactInfoPage()
+	public ForgotOTPPage()
 	{
 		InitializeComponent();
         Entry1.Focus();
@@ -14,19 +12,13 @@ public partial class ContactInfoPage : ContentPage
         Entry2.IsEnabled = false;
         Entry3.IsEnabled = false;
         Entry4.IsEnabled = false;
+        OTPSection.IsVisible = true;
     }
     private async void Continue_Tapped(object sender, EventArgs e)
     {
-        if (btnText.Text == "Continue")
-        {
-            InfoSection.IsVisible = false;
-            OTPSection.IsVisible = true;
-            btnText.Text = "Skip";
-        }
-        else
-        {
-            await Navigation.PushAsync(new LetsStartPage());
-        }
+        
+            await Navigation.PushAsync(new SetNewPasswordPage());
+        
     }
 
     private void BorderlessEntry_Focused(object sender, FocusEventArgs e)
@@ -47,11 +39,12 @@ public partial class ContactInfoPage : ContentPage
 
     async void Entry1_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
-        if (Entry1.Text != "") {
+        if (Entry1.Text != "")
+        {
             Entry1.IsEnabled = false;
             Entry2.IsEnabled = true;
             Entry2.Focus();
-           
+
         }
         else
         {
@@ -114,4 +107,5 @@ public partial class ContactInfoPage : ContentPage
     {
         await KeyboardExtensions.ShowKeyboardAsync(Entry2, default);
     }
+
 }

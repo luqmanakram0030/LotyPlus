@@ -1,51 +1,63 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default">
+﻿<Properties StartupConfiguration="{122961B8-EDB7-4E70-A72F-AE94400F3749}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.LotyPlus Xamarin.HotReload.DebuggerTimeoutException.LotyPlus.HideInfoBar="True" PreferredExecutionTarget="Android.pixel_6_-_api_33" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/ViewModels/SearchViewModel.cs" relfile="LotyPlus/ViewModels/SearchViewModel.cs" line="25" column="1" />
-      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml.cs" relfile="LotyPlus/Views/TabPages/HomePage.xaml.cs" line="28" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/TabPages/HomePage.xaml.cs" relfile="LotyPlus/Views/TabPages/HomePage.xaml.cs" line="58" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/SearchShopPage.xaml.cs" relfile="LotyPlus/Views/SearchShopPage.xaml.cs" line="14" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Documents/GitHub/LotyPlus/LotyPlus/Views/SearchShopPage.xaml.cs" relfile="LotyPlus/Views/SearchShopPage.xaml.cs" line="34" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/Views/ContactInfoPage.xaml">
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LotyPlus/App.xaml.cs">
     <Files>
-      <File FileName="LotyPlus/App.xaml.cs" />
-      <File FileName="LotyPlus/Views/OnBoardingPage.xaml" />
-      <File FileName="LotyPlus/Views/OnBoardingPage.xaml.cs" />
-      <File FileName="LotyPlus/ViewModels/OnBoardingViewModel.cs" />
-      <File FileName="LotyPlus/Views/LoginPage.xaml" />
-      <File FileName="LotyPlus/Views/LoginPage.xaml.cs" />
-      <File FileName="LotyPlus/Views/forgetPasswordPage.xaml" />
-      <File FileName="LotyPlus/Views/WelcomePage.xaml" />
-      <File FileName="LotyPlus/Views/SelectCountryPage.xaml" />
-      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" Line="20" Column="39" />
-      <File FileName="LotyPlus/Views/SelectCountryPage.xaml.cs" />
-      <File FileName="LotyPlus/Views/NamePage.xaml" />
-      <File FileName="LotyPlus/Views/NamePage.xaml.cs" />
-      <File FileName="LotyPlus/Views/IdNumberPage.xaml" />
-      <File FileName="LotyPlus/Views/IdNumberPage.xaml.cs" />
+      <File FileName="LotyPlus/App.xaml.cs" Line="14" Column="56" />
+      <File FileName="LotyPlus/App.xaml" Line="28" Column="14" />
+      <File FileName="LotyPlus/Views/WelcomePage.xaml.cs" Line="11" Column="49" />
+      <File FileName="LotyPlus/Views/SelectCountryPage.xaml.cs" Line="20" Column="43" />
+      <File FileName="LotyPlus/Views/NamePage.xaml.cs" Line="11" Column="46" />
+      <File FileName="LotyPlus/Views/NamePage.xaml" Line="1" Column="1" />
+      <File FileName="LotyPlus/Views/LoginPage.xaml" Line="65" Column="31" />
+      <File FileName="LotyPlus/Views/forgetPasswordPage.xaml" Line="14" Column="1" />
+      <File FileName="LotyPlus/Views/forgetPasswordPage.xaml.cs" Line="27" Column="6" />
+      <File FileName="LotyPlus/Views/LoginPage.xaml.cs" Line="23" Column="6" />
+      <File FileName="LotyPlus/Views/ForgotOTPPage.xaml" Line="62" Column="51" />
+      <File FileName="LotyPlus/Views/IdNumberPage.xaml.cs" Line="11" Column="49" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml.cs" Line="117" Column="1" />
+      <File FileName="LotyPlus/Views/ContactInfoPage.xaml" Line="132" Column="27" />
+      <File FileName="LotyPlus/Views/ForgotOTPPage.xaml.cs" Line="108" Column="28" />
+      <File FileName="LotyPlus/Views/SetNewPasswordPage.xaml" Line="8" Column="42" />
+      <File FileName="LotyPlus/Views/SetNewPasswordPage.xaml.cs" Line="26" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LotyPlus" expanded="True">
-            <Node name="LotyPlus" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="ContactInfoPage.xaml" selected="True" />
-                <Node name="IdNumberPage.xaml" expanded="True" />
-                <Node name="NamePage.xaml" expanded="True" />
-                <Node name="OnBoardingPage.xaml" expanded="True" />
-                <Node name="SelectCountryPage.xaml" expanded="True" />
+          <Node name="LotyPlus">
+            <Node name="LotyPlus">
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True" />
               </Node>
-              <Node name="App.xaml" expanded="True" />
+              <Node name="Views">
+                <Node name="ContactInfoPage.xaml" expanded="True" />
+                <Node name="forgetPasswordPage.xaml" expanded="True" />
+                <Node name="ForgotOTPPage.xaml" expanded="True" />
+                <Node name="IdNumberPage.xaml" expanded="True" />
+                <Node name="LoginPage.xaml" expanded="True" />
+                <Node name="NamePage.xaml" expanded="True" />
+                <Node name="SelectCountryPage.xaml" expanded="True" />
+                <Node name="SetNewPasswordPage.xaml" expanded="True" />
+                <Node name="WelcomePage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
   <MultiItemStartupConfigurations />
 </Properties>

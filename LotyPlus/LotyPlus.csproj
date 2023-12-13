@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-maccatalyst;net7.0-ios</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
@@ -143,9 +143,12 @@
 	  <None Remove="Views\TabPages\" />
 	  <None Remove="Converters\" />
 	  <None Remove="Resources\Images\logowhite.png" />
+	  <None Remove="CustomControls\" />
+	  <None Remove="Platforms\Android\CustomRenderers\" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AlohaKit.Animations" Version="1.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
@@ -173,6 +176,8 @@
 	<ItemGroup>
 	  <Folder Include="Views\TabPages\" />
 	  <Folder Include="Converters\" />
+	  <Folder Include="CustomControls\" />
+	  <Folder Include="Platforms\Android\CustomRenderers\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\logowhite.png" />

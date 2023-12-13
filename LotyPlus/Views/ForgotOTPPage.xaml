@@ -1,51 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat" xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="LotyPlus.Views.ContactInfoPage"
-             Title="ContactInfoPage"
-              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource ColorOnDarkBackground}">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.ForgotOTPPage"
+             Title="ForgotOTPPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout Padding="20,30,20,0" >
-            <Label Text="Your contact info?" FontSize="26" FontFamily="Bold" HorizontalOptions="Center" Margin="10,10,10,0"/>
+         <StackLayout Padding="20,30,10,0">
+                <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="70"/>
 
-            <ContentView x:Name="InfoSection">
-                <StackLayout>
-                    <toolkit:AvatarView Margin="20,20"
-                        ImageSource="https://randomuser.me/api/portraits/women/71.jpg" CornerRadius="60"
-                        HeightRequest="120"
-                        Text="CR"
-                        WidthRequest="120"
-                        BorderColor="{StaticResource PrimaryColor}"
-                        BorderWidth="5"
-                        />
-                  
-                    <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
-                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" Spacing="10">
-                            <Image Source="phone.png" HeightRequest="20" VerticalOptions="Center"/>
-                            <Image Source="costarica.png" HeightRequest="18" VerticalOptions="Center"/>
-                            <Label Text="+506" FontSize="Body" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" VerticalOptions="Center"/>
-                            <Entry PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Telephone" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
-                        </StackLayout>
-                    </Frame>
+                <Label Text="Verification" FontSize="26" FontFamily="Bold" Margin="10,30,10,0"/>
+                <Label Text="we’ve sent OTO to your mobile number at ********080. Please enter 4 digits code you receive." FontSize="Default" Margin="10,0,10,30"/>
 
-                    <Frame HasShadow="False" Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="Transparent" Margin="10,0,10,20">
-                        <StackLayout VerticalOptions="Center" Orientation="Horizontal">
-                            <Image Source="email.png" HeightRequest="18" VerticalOptions="Center"/>
-                            <Entry Placeholder="Email" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="Default" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" Keyboard="Email" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
-                        </StackLayout>
-                    </Frame>
 
-                    <Label Text="You need to confirm your email." FontSize="Body" Margin="20,0,20,0"/>
-
-                </StackLayout>
-
-            </ContentView>
+            
 
             <ContentView x:Name="OTPSection" IsVisible="False">
                 <StackLayout>
-                    <Label Text="Please, write the code we just send to you to confirm your number." FontSize="Body" HorizontalTextAlignment="Center" Margin="20,0,20,50"/>
-
+                   
                     <StackLayout Orientation="Horizontal" Spacing="10" Margin="40">
 
                      <Frame Style="{StaticResource EntryFrame}" Margin="0,0,0,0" Padding="0">
@@ -86,9 +57,10 @@
                         </Grid>
                     </Grid>-->
 
-                    <StackLayout Orientation="Horizontal" Spacing="2" Margin="20,40,0,0">
-                        <Label Text="Didn't receive?"/>
-                        <Label Text="Send again" TextColor="{StaticResource PrimaryColor}" FontFamily="SemiBold" Padding="5,0,5,0" >
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Spacing="2" Margin="20,40,0,0">
+                        <Label Text="Didn't receive?" HorizontalTextAlignment="Center"/>
+                        <Label Text="Resend in 32s" HorizontalTextAlignment="Center"/>
+                        <Label Text="Send again" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryColor}" FontFamily="SemiBold" Padding="5,0,5,0" >
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" />
                             </Label.GestureRecognizers>

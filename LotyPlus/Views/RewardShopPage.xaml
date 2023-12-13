@@ -22,7 +22,7 @@
 
                 <Label Grid.Column="1" Text="Reward Shop" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
 
-                <Frame Grid.Column="2" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                <Frame BorderColor="Transparent" Grid.Column="2" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
                     <Image Source="search.png" WidthRequest="26" VerticalOptions="Center"/>
 
                     <Frame.GestureRecognizers>

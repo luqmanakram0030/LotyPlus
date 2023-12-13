@@ -4,11 +4,11 @@ namespace LotyPlus.Views;
 
 public partial class RunningCouponPage : ContentPage
 {
-    RunningCouponPageViewModel viewModel = new RunningCouponPageViewModel();
+    RunningCouponPageViewModel viewModel ;
     public RunningCouponPage()
     {
         InitializeComponent();
-        BindingContext = viewModel;
+        BindingContext = viewModel = new RunningCouponPageViewModel();
     }
 
     private async void Back_Tapped(object sender, EventArgs e)

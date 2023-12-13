@@ -1,8 +1,8 @@
 ﻿namespace LotyPlus.Views;
 
-public partial class forgetPasswordPage : ContentPage
+public partial class SetNewPasswordPage : ContentPage
 {
-	public forgetPasswordPage()
+	public SetNewPasswordPage()
 	{
 		InitializeComponent();
 	}
@@ -23,6 +23,6 @@ public partial class forgetPasswordPage : ContentPage
     }
     async void Continue_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
     {
-       await Navigation.PushAsync(new ForgotOTPPage());
+        await Navigation.PushAsync(new LoginPage());
     }
 }
