@@ -1,7 +1,7 @@
 ﻿using System;
 using LotyPlus.Models;
 
-namespace LotyPlus.ViewModels
+namespace LotyPlus.ViewModels.TabPages
 {
     public class SearchViewModel : BaseViewModel
     {
@@ -10,7 +10,7 @@ namespace LotyPlus.ViewModels
         public List<SearchCategory> PromoTypeList
         {
             get { return promoTypeList; }
-            set { this.promoTypeList = value; }
+            set { promoTypeList = value; }
         }
 
         private List<SearchCategory> businessTypeList;
@@ -18,7 +18,7 @@ namespace LotyPlus.ViewModels
         public List<SearchCategory> BusinessTypeList
         {
             get { return businessTypeList; }
-            set { this.businessTypeList = value; }
+            set { businessTypeList = value; }
         }
 
         public SearchViewModel()

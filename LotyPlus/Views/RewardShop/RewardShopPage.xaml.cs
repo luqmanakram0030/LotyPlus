@@ -1,6 +1,6 @@
-﻿using LotyPlus.ViewModels;
+﻿using LotyPlus.ViewModels.Coupons;
 
-namespace LotyPlus.Views;
+namespace LotyPlus.Views.RewardShop;
 
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class RewardShopPage : ContentPage

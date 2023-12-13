@@ -156,7 +156,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\LoginPage.xaml">
+	  <MauiXaml Update="Views\Login\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\OnBoardingPage.xaml">
@@ -181,5 +181,10 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\logowhite.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Views\Login\ForgotPassword\forgetPasswordPage.xaml.cs">
+	    <DependentUpon>ForgetPasswordPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 </Project>

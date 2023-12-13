@@ -1,4 +1,4 @@
-﻿using LotyPlus.ViewModels;
+﻿using LotyPlus.ViewModels.Coupons;
 
 namespace LotyPlus.Views;
 

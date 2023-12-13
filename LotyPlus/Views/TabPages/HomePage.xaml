@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.TabPages.HomePage"
              Title="HomePage"
-             xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels"
+             xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels.Coupons"
+             xmlns:viewmodels2="clr-namespace:LotyPlus.ViewModels.TabPages"
              xmlns:converters="clr-namespace:LotyPlus.Converters"
              xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
              xmlns:animations="clr-namespace:AlohaKit.Animations;assembly=AlohaKit.Animations"
@@ -691,7 +692,7 @@
                          x:Name="ResultsContentView"
                          Opacity="0">
                 <StackLayout.BindingContext>
-                    <viewmodels:SearchViewModel />
+                    <viewmodels2:SearchViewModel />
                 </StackLayout.BindingContext>
 
                 <StackLayout.Triggers>

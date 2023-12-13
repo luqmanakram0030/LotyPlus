@@ -4,7 +4,7 @@ using System.Diagnostics.Metrics;
 using System.Windows.Input;
 using LotyPlus.Models;
 
-namespace LotyPlus.ViewModels
+namespace LotyPlus.ViewModels.Login.SignUp
 {
     public class RegisterViewModel : BaseViewModel
     {
