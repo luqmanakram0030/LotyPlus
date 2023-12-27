@@ -107,7 +107,7 @@
                         </Frame>
                          <StackLayout.Shadow>
 
-                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource GreyColor}"> 
                              
                         </Shadow>
                     </StackLayout.Shadow>

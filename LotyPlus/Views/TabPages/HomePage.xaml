@@ -520,7 +520,7 @@
                                                     </LinearGradientBrush>
                                                 </Frame.Background>
                                                 <Frame.GestureRecognizers>
-                                                    <TapGestureRecognizer Command="{Binding RewardShopCommand}" />
+                                                    <TapGestureRecognizer Tapped="RewardShop_Tapped" />
                                                 </Frame.GestureRecognizers>
                                             </Frame>
 
