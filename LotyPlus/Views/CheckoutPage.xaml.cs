@@ -1,4 +1,6 @@
-﻿namespace LotyPlus.Views;
+﻿using CommunityToolkit.Maui.Views;
+
+namespace LotyPlus.Views;
 
 public partial class CheckoutPage : ContentPage
 {
@@ -13,7 +15,8 @@ public partial class CheckoutPage : ContentPage
 
     private async void Payment_Tapped(object sender, EventArgs e)
     {
-       // await PopupNavigation.Instance.PushAsync(new AlertPopup("successicon.png", "Success!!!", "Payment has been completed"));
+        var popup = new Views.PopUps.AlertPopup("successicon.png", "Success!!!", "Payment has been completed");
+        this.ShowPopup(popup);
     }
 
     private void Increase_Clicked(object sender, EventArgs e)

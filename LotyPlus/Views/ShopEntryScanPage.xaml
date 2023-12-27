@@ -4,7 +4,7 @@
              x:Class="LotyPlus.Views.ShopEntryScanPage"
              Title="ShopEntryScanPage" NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
-             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls" xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI">
    <ContentPage.Content>
         <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
 
@@ -35,14 +35,15 @@
                     <ColumnDefinition x:Name="MiddleColumn"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
-                <zxing:BarcodeGeneratorView Grid.ColumnSpan="3" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+               <cv:CameraView Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="0,25" AutoStartPreview="True" x:Name="cameraView"   WidthRequest="300" HeightRequest="600"/>
+             
+                <!--<zxing:BarcodeGeneratorView Grid.ColumnSpan="3" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
                             x:Name="Camera" HeightRequest="100"
   WidthRequest="100"
   ForegroundColor="DarkBlue"
   Value="https://dotnet.microsoft.com"
   Format="QrCode"
-  Margin="3"/>
+  Margin="3"/>-->
                 <BoxView Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>
                 <BoxView Grid.Row="2" Grid.ColumnSpan="3" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>
                 <BoxView Grid.Column="0" Grid.Row="1" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>

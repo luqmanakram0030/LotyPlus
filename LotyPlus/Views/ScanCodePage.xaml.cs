@@ -1,4 +1,6 @@
-﻿namespace LotyPlus.Views;
+﻿using CommunityToolkit.Maui.Views;
+
+namespace LotyPlus.Views;
 
 public partial class ScanCodePage : ContentPage
 {
@@ -47,6 +49,8 @@ public partial class ScanCodePage : ContentPage
 
     private async void GetCoupon_Tapped(object sender, EventArgs e)
     {
-       // await PopupNavigation.Instance.PushAsync(new QRCodePopup(2));
+        // await PopupNavigation.Instance.PushAsync(new QRCodePopup(2));
+        var popup = new Views.PopUps.QRCodePopup(2);
+        this.ShowPopup(popup);
     }
 }

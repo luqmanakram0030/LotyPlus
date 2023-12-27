@@ -30,10 +30,12 @@
                     </Frame.GestureRecognizers>
                 </Frame>
             </Grid>
-        <StackLayout VerticalOptions="EndAndExpand" >
+        <Grid VerticalOptions="CenterAndExpand" >
              <cv:CameraView  AutoStartPreview="True" x:Name="cameraView"   WidthRequest="300" HeightRequest="600"/>
-    
+            
+            <!--<Image Source="qrcodeblack.png" HeightRequest="150"/>-->
+    <!--<Label Text="test" TextColor="Black" Margin="50"/>-->
 
-        </StackLayout>
+        </Grid>
       </StackLayout>
 </ContentPage>
