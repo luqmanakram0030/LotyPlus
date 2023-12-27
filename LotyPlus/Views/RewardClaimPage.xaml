@@ -96,7 +96,7 @@
                     </StackLayout>
 
                     <StackLayout >
-                        <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="20,15,20,40"  BackgroundColor="{StaticResource GreyColor}">
+                        <Frame  HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="20,15,20,40"  BackgroundColor="{StaticResource GreyColor}">
                             <Grid>
                                 <Label Text="{Binding Text, Source={x:Reference btnText2}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor3}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
                                 <Label x:Name="btnText2" Text="Claim Reward" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnLightBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
