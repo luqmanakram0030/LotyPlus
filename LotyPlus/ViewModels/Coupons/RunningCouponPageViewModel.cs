@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LotyPlus.Views.RewardShop;
+using System;
 using System.Windows.Input;
 namespace LotyPlus.ViewModels.Coupons
 {
@@ -24,7 +25,7 @@ namespace LotyPlus.ViewModels.Coupons
         {
             RewardShopCommand = new Command(execute: async () =>
             {
-                await Shell.Current.GoToAsync(nameof(Views.RewardClaimPage));
+                await Shell.Current.GoToAsync(nameof(RewardClaimPage));
             }, canExecute: () => true);
             CouponsList = new List<Coupon>()
             {

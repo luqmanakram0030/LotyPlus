@@ -1,5 +1,4 @@
-﻿using Android.Service.Controls.Templates;
-using Camera.MAUI;
+﻿using Camera.MAUI;
 
 namespace LotyPlus.Views.TabPages;
 
