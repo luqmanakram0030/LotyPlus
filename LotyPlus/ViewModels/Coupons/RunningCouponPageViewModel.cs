@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-namespace LotyPlus.ViewModels
+namespace LotyPlus.ViewModels.Coupons
 {
     public class RunningCouponPageViewModel : BaseViewModel
     {
@@ -9,7 +9,7 @@ namespace LotyPlus.ViewModels
         public List<Coupon> CouponsList
         {
             get { return couponsList; }
-            set { this.couponsList = value; }
+            set { couponsList = value; }
         }
 
         private List<RewardShop> rewardShopList;
@@ -17,7 +17,7 @@ namespace LotyPlus.ViewModels
         public List<RewardShop> RewardShopList
         {
             get { return rewardShopList; }
-            set { this.rewardShopList = value; }
+            set { rewardShopList = value; }
         }
         public ICommand RewardShopCommand { private set; get; }
         public RunningCouponPageViewModel()
@@ -65,7 +65,10 @@ namespace LotyPlus.ViewModels
 
             public RewardShop()
             {
-                
+                RewardShopCommand = new Command(execute: async () =>
+                {
+                    await Shell.Current.GoToAsync(nameof(Views.RewardShop.RewardClaimPage));
+                }, canExecute: () => true);
             }
         }
     }

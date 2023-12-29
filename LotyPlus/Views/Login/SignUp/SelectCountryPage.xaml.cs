@@ -1,4 +1,4 @@
-﻿using LotyPlus.ViewModels;
+﻿using LotyPlus.ViewModels.Login.SignUp;
 using Microsoft.Maui.Controls.Shapes;
 
 

@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using LotyPlus.Models;
 
-namespace LotyPlus.ViewModels
+namespace LotyPlus.ViewModels.Cart
 {
     public class PaymentViewModel : BaseViewModel
     {

@@ -52,6 +52,6 @@ public partial class LoginPage : ContentPage
 
     async void Button_Clicked(System.Object sender, System.EventArgs e)
     {
-        await Navigation.PushAsync(new forgetPasswordPage());
+        await Navigation.PushAsync(new ForgetPasswordPage());
     }
 }

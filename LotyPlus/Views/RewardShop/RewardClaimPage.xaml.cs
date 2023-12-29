@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Maui.Views;
 using LotyPlus.ViewModels;
+using LotyPlus.ViewModels.RewardShop;
 
-namespace LotyPlus.Views;
+namespace LotyPlus.Views.RewardShop;
+
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class RewardClaimPage : ContentPage
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace LotyPlus.ViewModels
+namespace LotyPlus.ViewModels.TabPages
 {
     public class ProfilePageViewModel : BaseViewModel
     {
@@ -8,7 +8,7 @@ namespace LotyPlus.ViewModels
         public List<ProfileItem> OptionsList
         {
             get { return optionsList; }
-            set { this.optionsList = value; }
+            set { optionsList = value; }
         }
 
         public ProfilePageViewModel()

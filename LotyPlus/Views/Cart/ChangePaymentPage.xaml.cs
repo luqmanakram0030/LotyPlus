@@ -1,4 +1,4 @@
-﻿using LotyPlus.ViewModels;
+﻿using LotyPlus.ViewModels.Cart;
 
 namespace LotyPlus.Views;
 
