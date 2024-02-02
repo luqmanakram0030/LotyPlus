@@ -1,4 +1,5 @@
 ﻿using LotyPlus.Views;
+using LotyPlus.Views.RewardShop;
 
 namespace LotyPlus;
 

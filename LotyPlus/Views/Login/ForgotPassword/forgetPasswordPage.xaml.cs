@@ -1,8 +1,8 @@
 ﻿namespace LotyPlus.Views;
 
-public partial class forgetPasswordPage : ContentPage
+public partial class ForgetPasswordPage : ContentPage
 {
-	public forgetPasswordPage()
+	public ForgetPasswordPage()
 	{
 		InitializeComponent();
 	}

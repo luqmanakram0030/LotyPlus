@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using LotyPlus.Models;
 
-namespace LotyPlus.ViewModels
+namespace LotyPlus.ViewModels.RewardShop
 {
     public class RewardClaimPageViewModel : BaseViewModel
     {
@@ -26,7 +26,7 @@ namespace LotyPlus.ViewModels
                 unlockedServices = value;
                 OnPropertyChanged();
             }
-            
+
         }
 
         bool isRewardUnlocked = false;

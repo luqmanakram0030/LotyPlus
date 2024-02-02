@@ -1,5 +1,5 @@
 ﻿using LotyPlus.Models;
-using LotyPlus.ViewModels;
+using LotyPlus.ViewModels.Coupons;
 
 namespace LotyPlus.Views.TabPages;
 
@@ -85,7 +85,7 @@ public partial class HomePage : ContentPage
     private async void RewardShop_Tapped(object sender, EventArgs e)
     {
         //await Shell.Current.GoToAsync(nameof(ShopEntryScanPage));
-        await Shell.Current.GoToAsync(nameof(RewardClaimPage));
+        await Shell.Current.GoToAsync(nameof(RewardShop.RewardClaimPage));
 
     }
 }
