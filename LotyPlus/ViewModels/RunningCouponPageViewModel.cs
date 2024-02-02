@@ -19,9 +19,13 @@ namespace LotyPlus.ViewModels
             get { return rewardShopList; }
             set { this.rewardShopList = value; }
         }
-
+        public ICommand RewardShopCommand { private set; get; }
         public RunningCouponPageViewModel()
         {
+            RewardShopCommand = new Command(execute: async () =>
+            {
+                await Shell.Current.GoToAsync(nameof(Views.RewardClaimPage));
+            }, canExecute: () => true);
             CouponsList = new List<Coupon>()
             {
                 new Coupon() { CouponName = "MACDONALDS", CouponImage = "https://www.seekpng.com/png/detail/217-2178549_mcdonalds-1992-logo-with-2003-slogan-mcdonalds-logo.png", CouponValidity = "12th Nov 2021", CouponValue = "$10", CouponType = "Coupon" },
@@ -61,10 +65,7 @@ namespace LotyPlus.ViewModels
 
             public RewardShop()
             {
-                RewardShopCommand = new Command(execute: async () =>
-                {
-                    await Shell.Current.GoToAsync(nameof(Views.RewardClaimPage));
-                }, canExecute: () => true);
+                
             }
         }
     }

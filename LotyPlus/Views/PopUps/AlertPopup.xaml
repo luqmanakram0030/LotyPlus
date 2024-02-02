@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+            
+             x:Class="LotyPlus.Views.PopUps.AlertPopup"
+             Color="Transparent" 
+            >
+    <StackLayout Padding="20">
+
+        <Frame CornerRadius="24" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="30,20,30,20">
+            <StackLayout x:Name="alreadyPurchasedView" VerticalOptions="CenterAndExpand">
+
+                <Image x:Name="popupImage" Source="successicon.png" HeightRequest="200" HorizontalOptions="Center"/>
+
+                <Label x:Name="popupTitle" Text="Title!" FontSize="29" FontFamily="SemiBold" HorizontalOptions="Center" TextColor="{StaticResource GreenColor}" Margin="0,20,0,0"/>
+                <Label x:Name="popupDescription" Text="Description goes here..." FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+
+                <Button Text="GO BACK" TextColor="{StaticResource PrimaryColor}" BackgroundColor="Transparent" FontFamily="Bold" FontSize="16" HeightRequest="50" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Clicked="Back_Clicked" Margin="0,0,0,10"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+     
+</toolkit:Popup>

@@ -136,7 +136,7 @@
                                     <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
                                 </Image.Source>
                             </Image>
-                            <Label Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8"/>
+                            <Label Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8" HorizontalOptions="Start" MaxLines="2" WidthRequest="275"/>
                         </StackLayout>
 
                         <Label Text="Description" FontSize="18" FontFamily="SemiBold"/>
@@ -219,7 +219,7 @@
                         </Image.Source>
                     </Image>
                     <Grid.GestureRecognizers>
-                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                        <TapGestureRecognizer  Tapped="Back_Tapped"/>
                     </Grid.GestureRecognizers>
                 </Grid>
             </Grid>

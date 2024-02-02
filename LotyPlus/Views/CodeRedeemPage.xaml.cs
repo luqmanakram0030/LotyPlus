@@ -1,4 +1,6 @@
-﻿namespace LotyPlus.Views;
+﻿using CommunityToolkit.Maui.Views;
+
+namespace LotyPlus.Views;
 
 public partial class CodeRedeemPage : ContentPage
 {
@@ -48,5 +50,7 @@ public partial class CodeRedeemPage : ContentPage
     private async void GetCoupon_Tapped(object sender, EventArgs e)
     {
        // await PopupNavigation.Instance.PushAsync(new QRCodePopup(0));
+        var popup = new Views.PopUps.QRCodePopup(0);
+        this.ShowPopup(popup);
     }
 }

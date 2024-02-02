@@ -1,4 +1,5 @@
-﻿using LotyPlus.ViewModels;
+﻿using CommunityToolkit.Maui.Views;
+using LotyPlus.ViewModels;
 
 namespace LotyPlus.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -41,6 +42,7 @@ public partial class RewardClaimPage : ContentPage
 
     private async void ClaimReward_Tapped(object sender, EventArgs e)
     {
-       // await PopupNavigation.Instance.PushAsync(new AlertPopup("bigwin.png", "Free Voucher", "Congratulations! You have won a free coupon for this shop. When you visit next time you will get a free service."));
+        var popup = new Views.PopUps.AlertPopup("bigwin.png", "Free Voucher", "Congratulations! You have won a free coupon for this shop. When you visit next time you will get a free service.");
+        this.ShowPopup(popup);
     }
 }

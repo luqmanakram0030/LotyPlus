@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using Camera.MAUI;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
@@ -14,6 +15,7 @@ public static class MauiProgram
 			.UseMauiApp<App>()
             .UseBarcodeReader()
             .UseMauiCommunityToolkit()
+            .UseMauiCameraView()
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
