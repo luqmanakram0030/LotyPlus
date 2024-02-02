@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/LotyPlus
+/LotyPlus/bin/Debug/net7.0-android/com.lucky.lotyplus-Signed.apk
+/LotyPlus/bin/Debug/net7.0-android/com.lucky.lotyplus.apk
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.dll
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.pdb
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.runtimeconfig.json
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.xml
+/LotyPlus/bin/Debug/net7.0-android/com.lucky.lotyplus-Signed.apk
+/LotyPlus/bin/Debug/net7.0-android/com.lucky.lotyplus.apk
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.dll
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.pdb
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.runtimeconfig.json
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.xml
+/LotyPlus/bin/Debug/net7.0-android/com.lucky.lotyplus-Signed.apk
+/LotyPlus/bin/Debug/net7.0-android/com.lucky.lotyplus.apk
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.dll
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.pdb
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.runtimeconfig.json
+/LotyPlus/bin/Debug/net7.0-android/LotyPlus.xml
