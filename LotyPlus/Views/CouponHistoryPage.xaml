@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.CouponHistoryPage" NavigationPage.HasNavigationBar="False"
+             Title="CouponHistoryPage" Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Grid>
+                        <Image x:Name="EditBtn" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                            </Image.Source>
+                        </Image>
+                        <Image x:Name="ProfilePicture" Aspect="AspectFill"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Coupon History" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+            </Grid>
+
+            <StackLayout Grid.Row="1" Spacing="10" Padding="0,25,0,0">
+                <Label Text="Promo:" FontSize="18" FontFamily="SemiBold" Margin="30,0,30,0"/>
+                <Label Text="Win two Ford Expeditions 2022 using our gas stations around the country" FontSize="16" Margin="30,0,30,0"/>
+
+                <CollectionView BackgroundColor="Transparent" Margin="0,30,0,0">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>https://www.ooredoo.com/wp-content/uploads/2015/12/ooredoo_logo_preview.jpg</x:String>
+                            <x:String>https://desinion.com/uploads/designs/3000/109c86cc5274f58c3b347fc6e65cbe16.png</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="20,5">
+                                <Frame BorderColor="Transparent" HasShadow="True" Padding="8" CornerRadius="2" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Center" >
+                                    <Grid  ColumnDefinitions="100,*,auto">
+                                        <Frame  HasShadow="False" Padding="0" HeightRequest="70" WidthRequest="90" HorizontalOptions="Start" BackgroundColor="{StaticResource GreyColor}" CornerRadius="3">
+                                            <Image Source="{Binding .}" Aspect="AspectFill" />
+                                        </Frame>
+
+                                        <StackLayout Grid.Column="1" Spacing="0">
+                                            <Label Text="Ooredoo 1000" FontSize="14" FontFamily="Bold"/>
+                                            <Label Text="#1232AD" FontSize="14" FontFamily="Medium"/>
+                                            <Label Text="12th June,2021" FontSize="12" FontFamily="Medium"/>
+                                        </StackLayout>
+
+                                        <Frame Grid.Column="2" HasShadow="False" Padding="15,0,15,0" BackgroundColor="{StaticResource GreenColor}" HeightRequest="30" CornerRadius="15" VerticalOptions="Center" Margin="0,0,10,0">
+                                            <Label Text="Claimed" FontSize="13" FontFamily="Medium" TextColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Center" Margin="{OnPlatform Android='0,4,0,0', iOS='0'}"/>
+                                        </Frame>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

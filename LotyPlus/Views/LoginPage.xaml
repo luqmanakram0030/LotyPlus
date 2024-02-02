@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.LoginPage"
+             xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource ColorOnDarkBackground}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,30,20,0">
+                <Image Source="logo.png"
+                       HorizontalOptions="Center"
+                       HeightRequest="70" />
+
+                <Label Text="Welcome back!"
+                       FontSize="26"
+                       FontFamily="Bold"
+                       Margin="10,30,10,0" />
+                <Label Text="Please login to your account"
+                       FontSize="Default"
+                       Margin="10,0,10,30" />
+
+
+                <Frame HasShadow="False"
+                       Padding="{OnPlatform Android='20,3,20,3', iOS='20,8,20,8'}"
+                       CornerRadius="12"
+                       BorderColor="{StaticResource GreyColor}"
+                       BackgroundColor="Transparent"
+                       Margin="10,0,10,20">
+                    <StackLayout VerticalOptions="Center"
+                                 Orientation="Horizontal">
+                        <Image Source="user.png"
+                               HeightRequest="20"
+                               VerticalOptions="Center" />
+                        <Entry Placeholder="Email or Phone"
+                               PlaceholderColor="{StaticResource GreyTextColor}"
+                               TextColor="{StaticResource TextColor}"
+                               FontSize="Default"
+                               FontFamily="Regular"
+                               Margin="{OnPlatform Android='10,0,0,-7', iOS='0'}"
+                               Keyboard="Email"
+                               HorizontalOptions="FillAndExpand"
+                               Focused="BorderlessEntry_Focused"
+                               Unfocused="BorderlessEntry_Unfocused" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame HasShadow="False"
+                       Padding="{OnPlatform Android='20,4,20,4', iOS='20,9,20,9'}"
+                       CornerRadius="12"
+                       BorderColor="{StaticResource GreyColor}"
+                       BackgroundColor="Transparent"
+                       Margin="10,0,10,0">
+                    <StackLayout VerticalOptions="Center"
+                                 Orientation="Horizontal">
+                        <Image Source="lock.png"
+                               HeightRequest="22"
+                               VerticalOptions="Center" />
+                        <Entry x:Name="pswrdField"
+                               IsPassword="True"
+                               Placeholder="Password"
+                               PlaceholderColor="{StaticResource GreyTextColor}"
+                               TextColor="{StaticResource TextColor}"
+                               FontSize="Default"
+                               FontFamily="Regular"
+                               Margin="{OnPlatform Android='10,0,0,-7', iOS='0'}"
+                               HorizontalOptions="FillAndExpand"
+                               Focused="BorderlessEntry_Focused"
+                               Unfocused="BorderlessEntry_Unfocused" />
+                        <Button HeightRequest="24"
+                                WidthRequest="24"
+                                Padding="0"
+                                CornerRadius="3"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"
+                                BackgroundColor="{StaticResource ColorOnDarkBackground}"
+                                Clicked="ViewPassword_Clicked">
+                            <Button.ImageSource>
+                                <FontImageSource FontFamily="FontIcons"
+                                                 Glyph="&#xf06d1;"
+                                                 Color="{StaticResource GreyColor}"
+                                                 Size="20" />
+                            </Button.ImageSource>
+                        </Button>
+                    </StackLayout>
+                </Frame>
+
+                <Button Text="Forgot password?"
+                        Padding="0"
+                        FontSize="Small"
+                        FontFamily="Regular"
+                        HorizontalOptions="End"
+                        Clicked="Button_Clicked"
+                        TextColor="Black"
+                        Margin="0,8,0,0"
+                        HeightRequest="20"
+                        BackgroundColor="Transparent" />
+                <StackLayout>
+                    <Frame HasShadow="False"
+                           Padding="0"
+                           HeightRequest="54"
+                           CornerRadius="27"
+                           Margin="10,30,10,0">
+                        <Frame.Background>
+                            <!-- StartPoint defaults to (0,0) -->
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="{StaticResource PrimaryColor}"
+                                              Offset="0.1" />
+                                <GradientStop Color="{StaticResource SecondoryColor}"
+                                              Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Frame.Background>
+
+                        <Grid>
+                            <Label Text="Login"
+                                   FontSize="36"
+                                   FontFamily="Bold"
+                                   TextColor="{StaticResource GreyColor}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="0,0,0,-5"
+                                   Opacity="0.16"
+                                   CharacterSpacing="1.5" />
+                            <Label Text="Login"
+                                   FontSize="22"
+                                   FontFamily="Bold"
+                                   TextColor="{StaticResource ColorOnDarkBackground}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="0,0,0,-12" />
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  Tapped="Login_Tapped" />
+                        </Frame.GestureRecognizers>
+                        <!--Shades="{sh:SingleShade Offset='0, 10', Opacity=0.3, Color={StaticResource SecondoryColor},BlurRadius=20}">-->
+
+
+                    </Frame>
+                    <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10"
+                                Opacity="0.3"
+                                Radius="20"
+                                Brush="{StaticResource SecondoryColor}">
+
+                        </Shadow>
+                    </StackLayout.Shadow>
+
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="2"
+                             Margin="0,20,0,0">
+                    <Label Text="Don't have an account?" />
+                    <Button Text="Sign Up"
+                            TextColor="{StaticResource PrimaryColor}"
+                            FontFamily="SemiBold"
+                            Padding="5,0,5,0"
+                            BackgroundColor="White"
+                            HeightRequest="20"
+                            Clicked="SignUp_Tapped">
+                        <!--<Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="SignUp_Tapped"/>
+                        </Label.GestureRecognizers>-->
+                    </Button>
+                </StackLayout>
+
+                <Label Text="Or Sign in with"
+                       HorizontalOptions="Center"
+                       FontSize="Caption"
+                       Margin="0,10,0,10" />
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="30"
+                             Margin="0,10,0,30">
+                    <StackLayout>
+                        <Frame Padding="0"
+                               HasShadow="False"
+                               HeightRequest="60"
+                               WidthRequest="60"
+                               CornerRadius="30"
+                               BorderColor="Transparent"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Image Source="google.png"
+                                   HeightRequest="30"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+                        </Frame>
+                        <StackLayout.Shadow>
+
+                            <Shadow Offset="0,10"
+                                    Opacity="0.3"
+                                    Radius="20"
+                                    Brush="{StaticResource SecondoryColor}">
+
+                            </Shadow>
+                        </StackLayout.Shadow>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame Padding="0"
+                               HasShadow="False"
+                               HeightRequest="60"
+                               WidthRequest="60"
+                               BorderColor="Transparent"
+                               CornerRadius="30"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Image Source="facebook.png"
+                                   HeightRequest="30"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+                        </Frame>
+                        <StackLayout.Shadow>
+
+                            <Shadow Offset="0,10"
+                                    Opacity="0.3"
+                                    Radius="20"
+                                    Brush="{StaticResource SecondoryColor}">
+
+                            </Shadow>
+                        </StackLayout.Shadow>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame Padding="0"
+                               HasShadow="False"
+                               HeightRequest="60"
+                               WidthRequest="60"
+                               CornerRadius="30"
+                               BorderColor="Transparent"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Image Source="twitter.png"
+                                   HeightRequest="30"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+                        </Frame>
+                        <StackLayout.Shadow>
+
+                            <Shadow Offset="0,10"
+                                    Opacity="0.3"
+                                    Radius="20"
+                                    Brush="{StaticResource SecondoryColor}">
+
+                            </Shadow>
+                        </StackLayout.Shadow>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <Label Text="By signing up, you are agreeing with"
+                       FontSize="Caption"
+                       HorizontalOptions="Center"
+                       VerticalOptions="{OnPlatform Android='EndAndExpand', iOS='Center'}" />
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="2"
+                             Margin="0,-0,0,30">
+                    <Label Text="our"
+                           FontSize="Caption" />
+                    <Button Text="Terms &amp; Conditions"
+                            TextColor="{StaticResource PrimaryColor}"
+                            BackgroundColor="White"
+                            HeightRequest="20"
+                            FontSize="Caption"
+                            FontFamily="SemiBold"
+                            Padding="5,0,5,0" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

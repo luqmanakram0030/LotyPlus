@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+             x:Class="LotyPlus.Views.MyWalletPage"
+             Title="MyWalletPage"
+             NavigationPage.HasNavigationBar="False">
+   <ContentPage.Content>
+        <Grid RowDefinitions="60,280,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Grid>
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="My Wallet" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+            </Grid>
+
+            <Grid RowDefinitions="auto,200,auto" Grid.Row="1">
+
+                <Label Text="My Cards" FontSize="18" FontFamily="SemiBold" TextColor="{StaticResource DarkTextColor}" Margin="30,10,0,10"/>
+
+                <CarouselView Grid.Row="1" HorizontalScrollBarVisibility="Never" Loop="False" PeekAreaInsets="30" VerticalOptions="StartAndExpand" HeightRequest="380" IndicatorView="indicatorView" PositionChanged="CarouselView_PositionChanged" CurrentItemChanged="CarouselView_CurrentItemChanged">
+                    <CarouselView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>creditcardbg1.png</x:String>
+                            <x:String>creditcardbg2.png</x:String>
+                        </x:Array>
+                    </CarouselView.ItemsSource>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowDefinitions="200" ColumnDefinitions="*">
+                                <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="10" BackgroundColor="{StaticResource GreyColor}" Margin="0,0,20,0">
+                                    <Grid>
+                                        <Image Source="{Binding .}" Aspect="AspectFill"/>
+
+                                        <Frame HasShadow="False" Padding="0" CornerRadius="5" VerticalOptions="Start" HeightRequest="30" HorizontalOptions="End" Margin="0,20,20,20">
+                                            <Image Source="https://media.designrush.com/inspiration_images/134782/conversions/_1511457479_332_visa-mobile.jpg"/>
+                                        </Frame>
+
+                                        <Label Text="SHOAIB" FontSize="16" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Start" HorizontalOptions="Start" Margin="20,20,0,0"/>
+
+                                        <Label Text="1234 **** 4567 8900" FontSize="24" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,0,20,-10"/>
+
+                                        <Label Text="12/12" FontSize="16" FontFamily="SemiBold" TextColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="End" HorizontalOptions="Start" Margin="20,0,0,20"/>
+
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <IndicatorView Grid.Row="2" x:Name="indicatorView" Margin="0,10,0,0" IndicatorColor="{StaticResource GreyColor}" SelectedIndicatorColor="{StaticResource PrimaryColor}" HorizontalOptions="Center">
+                    <IndicatorView.IndicatorTemplate>
+                        <DataTemplate>
+                              <Border HeightRequest="10" WidthRequest="10"   Padding="0"  >
+                                 <Border.StrokeShape>
+                                     <RoundRectangle CornerRadius="5,5,5,5"/>
+                                 </Border.StrokeShape>
+
+                            </Border>
+                            <!--<BoxView HeightRequest="10" WidthRequest="10" CornerRadius="5">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource GreyColor}" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
+                            </BoxView>-->
+                        </DataTemplate>
+                    </IndicatorView.IndicatorTemplate>
+                </IndicatorView>
+                
+            </Grid>
+
+            <Border Stroke="Transparent" Grid.Row="2" BackgroundColor="{StaticResource ColorOnDarkBackground}"  Margin="0,20,0,0"  >
+                <Border.StrokeShape>
+                   <RoundRectangle CornerRadius="30,30,0,0"/>
+                </Border.StrokeShape>
+                <ScrollView>
+                    <StackLayout Padding="30" Spacing="-6">
+                        <Label Text="Add Cart" TextColor="{StaticResource DarkTextColor}" FontSize="18" FontFamily="SemiBold" Margin="0,0,0,20"/>
+
+                        <Frame HasShadow="False" Padding="20,5,20,5" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                            <StackLayout Orientation="Horizontal">
+                                <Entry x:Name="typePickerEntry" ClassId="5" Placeholder="Select Card Type" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                                <Picker x:Name="typePicker" IsVisible="False" SelectedIndexChanged="TypePicker_SelectedIndexChanged">
+                                    <Picker.Items>
+                                        <x:String>Credit</x:String>
+                                        <x:String>Debit</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                                <Image VerticalOptions="Center" HorizontalOptions="End" HeightRequest="28">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xf0140;" FontFamily="FontIcons" Size="28" Color="{StaticResource PrimaryColor}"/>
+                                    </Image.Source>
+                                </Image>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame HasShadow="False" Padding="20,5,20,5" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                            <StackLayout>
+                                <Entry ClassId="2" Placeholder="Card Holder Name" Keyboard="Text" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame HasShadow="False" Padding="20,5,20,5" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                            <StackLayout>
+                                <Entry ClassId="2" Placeholder="Card Number" Keyboard="Numeric" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Grid ColumnDefinitions="5.5*,4.5*">
+                            <Frame HasShadow="False" Padding="20,5,20,5" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                                <StackLayout>
+                                    <Entry ClassId="2" Placeholder="Expiration Date" Keyboard="Numeric" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Column="1" HasShadow="False" Padding="20,5,20,5" CornerRadius="12" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}" Margin="10,0,10,20">
+                                <StackLayout>
+                                    <Entry ClassId="2" Placeholder="CVV" Keyboard="Numeric" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,20,10,20" >
+                                <Frame.Background>
+                                    <!-- StartPoint defaults to (0,0) -->
+                                    <LinearGradientBrush EndPoint="1,0">
+                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                                <Grid>
+                                    <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                                    <Label x:Name="btnText" Text="ADD CARD" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="AddCart_Tapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

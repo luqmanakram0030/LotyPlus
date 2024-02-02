@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.RunningCouponPage"
+             Title="RunningCouponPage" NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="True"
+              BackgroundColor="{StaticResource ColorOnDarkBackground}">
+   <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Grid>
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Running Coupons" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+            </Grid>
+
+            <CollectionView Margin="0,30,0,0" Grid.Row="1" ItemsSource="{Binding CouponsList, Mode=TwoWay}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="80,*,auto" Padding="20,4,20,4">
+                            <Image Grid.ColumnSpan="3" Source="couponshape.png"/>
+
+                            <Border Stroke="Transparent" Padding="0"  BackgroundColor="{StaticResource ColorOnDarkBackground}" HeightRequest="55" VerticalOptions="Center" Margin="15,0,0,0">
+                                <Image Source="{Binding CouponImage, Mode=TwoWay}" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFill"/>
+                            </Border>
+
+                            <StackLayout Grid.Column="1" VerticalOptions="Center" Padding="0,14,0,14">
+                                <Label Text="{Binding CouponName}" FontSize="14" FontFamily="Bold"/>
+                                <Label Text="{Binding CouponValidity, StringFormat='Value: {0}'}" FontSize="12" FontFamily="Medium" TextColor="{StaticResource GreyColor3}"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="2" VerticalOptions="Center" Padding="0,14,22,14">
+                                <Label Text="{Binding CouponValue}" FontSize="16" FontFamily="SemiBold" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryColor}"/>
+                                <Label Text="{Binding CouponType}" FontSize="14" FontFamily="Medium" HorizontalTextAlignment="Center" TextColor="{StaticResource GreyColor3}"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

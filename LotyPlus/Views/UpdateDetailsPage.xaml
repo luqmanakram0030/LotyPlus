@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.UpdateDetailsPage" NavigationPage.HasNavigationBar="False"
+             Title="UpdateDetailsPage">
+     <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Update Details" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+            </Grid>
+
+            <ScrollView Grid.Row="1" Padding="30,30,30,20">
+                <StackLayout Spacing="15">
+
+                    <StackLayout Margin="0,0,0,30">
+                        <Label Text="Email" FontSize="12"/>
+                        <Frame HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="shoaibopu@gmail.com" Keyboard="Email" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout >
+                        <Label Text="Full Name" FontSize="12"/>
+                        <Frame HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="Shoaib Opu" Keyboard="Text" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout >
+                        <Label Text="Street Address" FontSize="12"/>
+                        <Frame HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="1060 W Addison St" Keyboard="Text" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout >
+                        <Label Text="Apt, Suite, Bidg (optional)" FontSize="12"/>
+                        <Frame HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="Unit 13" Keyboard="Text" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,0,0,30">
+                        <Label Text="Zip Code" FontSize="12"/>
+                        <Frame HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="60613" Keyboard="Numeric" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Spacing="10">
+                        <Label Text="Phone Number" FontSize="12"/>
+                        <Frame HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="(+506) 456 - 7890" Keyboard="Telephone" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+
+                        <Frame x:Name="anotherNumField" IsVisible="False" HasShadow="False" Padding="15,3,15,3" CornerRadius="8" BorderColor="{StaticResource GreyColor}" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+                            <Entry ClassId="2" Text="" Keyboard="Telephone" PlaceholderColor="{StaticResource GreyTextColor}" TextColor="{StaticResource TextColor}" FontSize="15" FontFamily="Regular" Margin="{OnPlatform Android='0,0,0,-7', iOS='0'}" HorizontalOptions="FillAndExpand" Focused="BorderlessEntry_Focused" Unfocused="BorderlessEntry_Unfocused"/>
+                        </Frame>
+
+                        <Label Text="Another number" TextColor="{StaticResource PrimaryColor}" FontSize="16" Padding="5,0,5,0" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="AnotherNum_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="EndAndExpand">
+                        <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="5,20,5,20" >
+                            <Frame.Background>
+                                <!-- StartPoint defaults to (0,0) -->
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                                    <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <Grid>
+                                <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                                <Label x:Name="btnText" Text="UPDATE" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Update_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                         <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

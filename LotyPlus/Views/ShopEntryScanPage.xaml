@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.ShopEntryScanPage"
+             Title="ShopEntryScanPage" NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls" xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI">
+   <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Search Shop" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+
+            </Grid>
+
+            <Grid Grid.Row="1" RowSpacing="0" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="4*" x:Name="MiddleRow"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition x:Name="MiddleColumn"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+               <cv:CameraView Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="0,25" AutoStartPreview="True" x:Name="cameraView"   WidthRequest="300" HeightRequest="600"/>
+             
+                <!--<zxing:BarcodeGeneratorView Grid.ColumnSpan="3" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                            x:Name="Camera" HeightRequest="100"
+  WidthRequest="100"
+  ForegroundColor="DarkBlue"
+  Value="https://dotnet.microsoft.com"
+  Format="QrCode"
+  Margin="3"/>-->
+                <BoxView Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="3" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>
+                <BoxView Grid.Column="0" Grid.Row="1" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>
+                <BoxView Grid.Column="2" Grid.Row="1" BackgroundColor="{StaticResource ColorOnDarkBackground}" Opacity="0.5"/>
+                <Image x:Name="ScanIndicatorImg" Grid.Row="1" Grid.Column="1" Source="cameralayoutimg.png" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFill" SizeChanged="ScanIndicatorImg_SizeChanged" />
+
+                <Label WidthRequest="250" Grid.Row="2" Grid.Column="1" Text="Scan shop barcode to find your favorite barber shop in the town" HorizontalTextAlignment="Center" FontSize="18" TextColor="{StaticResource ColorOnDarkBackground}" BackgroundColor="{StaticResource GreyColor3}" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,30,0,0" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

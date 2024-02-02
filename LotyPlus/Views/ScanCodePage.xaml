@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.ScanCodePage"
+             Title="ScanCodePage"
+             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+     <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource LightBackgroundColor}">
+            <ScrollView>
+                <Grid RowDefinitions="350 ,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+                    <Border Stroke="Transparent">
+                         <Border.StrokeShape>
+                                     <RoundRectangle CornerRadius="0,0,60,0"/>
+                                 </Border.StrokeShape>
+                        <Image Source="scancodeimg.png" Aspect="AspectFill"/>
+                    </Border>
+
+                    <StackLayout Grid.Row="1" Padding="30,20,30,0" Spacing="20">
+                        <Grid ColumnDefinitions="50,*,40,5,40" RowDefinitions="60">
+                            <Image Grid.RowSpan="2" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Start" Source="https://upload.wikimedia.org/wikipedia/commons/0/00/Drivezy-brand-logo.png" />
+
+                            <FlexLayout Direction="Column" Grid.Column="1" JustifyContent="SpaceAround" Padding="5,8,0,3">
+                                <Label Text="Drivezy" FontSize="18" FontFamily="SemiBold" LineBreakMode="TailTruncation"/>
+                                <Label Text="Retailers" FontSize="15" TextColor="{StaticResource PrimaryColor}"/>
+                            </FlexLayout>
+
+                            <Image Grid.Column="2" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" >
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xf02d5;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
+                                </Image.Source>
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Like_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <BoxView Grid.Column="3" WidthRequest="0.3" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="{StaticResource GreyColor}"/>
+
+                            <Image Grid.Column="4" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" >
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xf0497;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+
+                        <Frame HasShadow="False" Padding="15,12" BackgroundColor="{StaticResource LightPrimaryColor}" CornerRadius="13">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Image Source="costarica.png" HeightRequest="20" VerticalOptions="Center"/>
+                                <Label Text="Offer valid only in Costa Rica" FontSize="12" Margin="0,5,0,0"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Win two Ford Expeditions 2022 using our gas stations around the country" FontSize="16"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Grid ColumnDefinitions="auto,*,40,auto,40" ColumnSpacing="0">
+                            <Label Text="Quantity" FontSize="18" FontFamily="SemiBold" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+
+                            <Border Stroke="Transparent" Grid.Column="2"  BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                                <Border.StrokeShape>
+                                     <RoundRectangle CornerRadius="5,0,5,0"/>
+                                 </Border.StrokeShape>
+
+                                <Image HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xf0374;" FontFamily="FontIcons" Size="40" Color="{StaticResource GreyColor}"/>
+                                    </Image.Source>
+                                </Image>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Decrease_Tapped"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+
+                            <Border Stroke="Transparent" Grid.Column="3"  BackgroundColor="#FCFCFC" WidthRequest="45">
+
+                                <Border.StrokeShape>
+                                     <RoundRectangle CornerRadius="0"/>
+                                 </Border.StrokeShape>
+                                <Label x:Name="StepperLabel" Text="01" HorizontalTextAlignment="Center" VerticalOptions="Center" FontFamily="SemiBold" FontSize="18" Margin="10,3,10,0"/>
+                            </Border>
+
+                            <Border Stroke="Transparent" Grid.Column="4"  BackgroundColor="{StaticResource ColorOnDarkBackground}" >
+                                <Border.StrokeShape>
+                                     <RoundRectangle CornerRadius="0,5,0,5"/>
+                                 </Border.StrokeShape>
+
+                                <Image HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xf0415;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
+                                    </Image.Source>
+                                </Image>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Increase_Tapped"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                        </Grid>
+
+                        <Frame HasShadow="False" CornerRadius="13" Padding="30,15,20,15" >
+                            <Frame.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                                    <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Frame.Background>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Grid HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="-10,0,0,-10" Opacity="0.16" CharacterSpacing="1" LineHeight="0.65"/>
+                                    <Label x:Name="btnText" Text="Get&#x0a;Coupon" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="-40,0,0,-10"/>
+                                </Grid>
+                                <Image Source="qrcodewhite.png" HeightRequest="60" VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GetCoupon_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="You have used this coupon: " FontSize="16"/>
+                                    <Span Text="3" FontFamily="SemiBold" TextColor="{StaticResource PrimaryColor}" FontSize="16"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <BoxView HeightRequest="0.3" BackgroundColor="{StaticResource GreyColor}" Margin="-10,0,-10,0"/>
+
+                        <StackLayout Orientation="Horizontal" Margin="-8,0,0,0">
+                            <Image HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center">
+                                <Image.Source>
+                                    <FontImageSource Glyph="&#xf07d9;" FontFamily="FontIcons" Size="40" Color="{StaticResource PrimaryColor}"/>
+                                </Image.Source>
+                            </Image>
+                            <Label  WidthRequest="300" Text="You need to show this code on the store so they can scan it." FontSize="16" LineHeight="0.8"/>
+                        </StackLayout>
+
+                        <Label Text="Description" FontSize="18" FontFamily="SemiBold"/>
+                        <Label Text="Here goes all the description about this promo. This can be as long as the client needs." FontSize="16" Margin="0,-12,0,5"/>
+
+                        <Label Text="Terms and conditions" FontSize="18" FontFamily="SemiBold"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi." FontSize="16" Margin="0,-12,0,50"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+
+            <!--Back Button-->
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0" VerticalOptions="Start">
+                <Grid RowDefinitions="40" ColumnDefinitions="48">
+
+                    <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20"  Opacity="0.5"/>
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34" Margin="0,0,-6,0">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

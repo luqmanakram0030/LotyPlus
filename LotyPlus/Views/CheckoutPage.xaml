@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="LotyPlus.Views.CheckoutPage" Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             Title="CheckoutPage" BackgroundColor="{StaticResource ColorOnDarkBackground}">
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Grid.Column="1" Text="Checkout" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+            </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout>
+                    <Frame HasShadow="False" BackgroundColor="{StaticResource ColorOnDarkBackground}" Padding="15,15,15,5" Margin="25,10,25,0" CornerRadius="6">
+                        <Grid ColumnDefinitions="50,*,80" RowDefinitions="auto,auto,50" >
+                            <Image Grid.RowSpan="2" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Start" Source="https://assets.stickpng.com/images/5842eff2a6515b1e0ad75b0e.png" />
+                            <Label Grid.Column="1" Text="{Binding .}" FontSize="14" FontFamily="Medium" Margin="10,0,0,0"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="RETAILERS" FontSize="14" TextColor="{StaticResource PrimaryColor}" Margin="10,-5,0,0"/>
+
+                            <!--Delete btn-->
+                            <Frame BorderColor="Transparent" Grid.Column="2" HasShadow="False" HeightRequest="30" WidthRequest="30" Padding="0" VerticalOptions="Center" HorizontalOptions="End" Margin="8,0,-5,0" CornerRadius="15" >
+                                <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="25">
+                                    <Image.Source>
+                                        <FontImageSource Glyph="&#xf09e7;" FontFamily="FontIcons" Size="30" Color="{StaticResource SecondoryColor}"/>
+                                    </Image.Source>
+                                </Image>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                            <Label Grid.Row="2" Text="Qty" FontSize="16" FontFamily="Bold" VerticalOptions="Center"/>
+
+                            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                <Button BackgroundColor="#F7F9F9" HeightRequest="35" Padding="0" VerticalOptions="Center" WidthRequest="45" Clicked="Decrease_Clicked">
+                                    <Button.ImageSource>
+                                        <FontImageSource Glyph="&#xf0374;" FontFamily="FontIcons" Size="34" Color="{StaticResource GreyColor}"/>
+                                    </Button.ImageSource>
+                                </Button>
+                                <Label Text="1" FontSize="22" FontFamily="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="40"/>
+                                <Button BackgroundColor="{StaticResource GreyColor}" HeightRequest="35" Padding="0" VerticalOptions="Center" WidthRequest="45" Clicked="Increase_Clicked">
+                                    <Button.ImageSource>
+                                        <FontImageSource Glyph="&#xf0415;" FontFamily="FontIcons" Size="30" Color="{StaticResource ColorOnLightBackground}"/>
+                                    </Button.ImageSource>
+                                </Button>
+                            </StackLayout>
+
+                            <Label Grid.Row="2" Grid.Column="2" Text="$16.5" FontSize="16" FontFamily="Bold" VerticalOptions="Center" HorizontalTextAlignment="End"/>
+                        </Grid>
+                    </Frame>
+
+                    <BoxView  BackgroundColor="{StaticResource GreyColor2}" HeightRequest="0.5" VerticalOptions="Center" Margin="30,20,30,20"/>
+
+                    <Grid RowDefinitions="auto,auto,30,auto,auto,30,auto,auto,30,auto,auto" ColumnDefinitions="*,60" RowSpacing="2" Margin="30,0,30,10">
+                        <Label Text="Order confirmation sent to" FontSize="14" FontFamily="Bold"/>
+                        <Label Grid.Column="1" Text="EDIT" FontSize="14" FontFamily="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="End" Padding="10,2,10,2" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Edit_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Grid.Row="1" Text="shoaibopu@gmail.com" FontSize="14" />
+
+                        <Label Grid.Row="3" Text="Shipping to:" FontSize="14" FontFamily="Bold"/>
+                        <Label Grid.Row="3" Grid.Column="1" Text="EDIT" FontSize="14" FontFamily="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="End" Padding="10,2,10,2" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Edit_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Grid.Row="4" Text="Shoaib Opu&#x0a;1060 W Addison St #13&#x0a;Chicago, IL 60613&#x0a;(123) 456-7890" FontSize="14" LineHeight="1.1"/>
+
+                        <Label Grid.Row="6" Text="Payment Method:" FontSize="14" FontFamily="Bold"/>
+                        <Label Grid.Row="6" Grid.Column="1" Text="EDIT" FontSize="14" FontFamily="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="End" Padding="10,2,10,2" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="PaymentMethod_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <StackLayout Grid.Row="7" Orientation="Horizontal">
+                            <Image Source="https://media.designrush.com/inspiration_images/134782/conversions/_1511457479_332_visa-mobile.jpg" HeightRequest="25" VerticalOptions="Center"/>
+                            <Label Text="ending in 8765" FontSize="14" LineHeight="1.1"/>
+                        </StackLayout>
+
+                        <Label Grid.Row="9" Text="Billing Address" FontSize="14" FontFamily="Bold"/>
+                        <Label Grid.Row="9" Grid.Column="1" Text="EDIT" FontSize="14" FontFamily="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="End" Padding="10,2,10,2" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Edit_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Grid.Row="10" Text="Same as shipping address" FontSize="14" LineHeight="1.1"/>
+                    </Grid>
+
+                    <Border Stroke="Transparent" VerticalOptions="EndAndExpand" BackgroundColor="{StaticResource ColorOnDarkBackground}"  Margin="0,20,0,0" >
+                         <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30,30,0,0"/>
+            </Border.StrokeShape>
+                        <StackLayout Padding="30,30,30,20" Spacing="-6">
+
+                            <Frame HasShadow="False" BackgroundColor="#F7F9F9" Margin="10">
+                                <Grid RowDefinitions="auto,auto,auto,auto" ColumnDefinitions="*,auto">
+                                    <Label Text="Subtotal" FontSize="14" />
+                                    <Label Grid.Column="1" Text="$16.5" FontSize="14" FontFamily="Bold" HorizontalTextAlignment="End"/>
+
+                                    <Label Grid.Row="1" Text="Shipping" FontSize="14" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="--" FontSize="14" FontFamily="Bold" HorizontalTextAlignment="End"/>
+
+                                    <Label Grid.Row="2" Text="Taxes" FontSize="14" />
+                                    <Label Grid.Row="2" Grid.Column="1" Text="--" FontSize="14" FontFamily="Bold" HorizontalTextAlignment="End"/>
+
+                                    <Label Grid.Row="3" Text="Total" FontSize="16" FontFamily="Bold"/>
+                                    <Label Grid.Row="3" Grid.Column="1" Text="$16.5" FontSize="16" FontFamily="Bold" HorizontalTextAlignment="End"/>
+                                </Grid>
+                            </Frame>
+
+                            <StackLayout VerticalOptions="EndAndExpand">
+                                <Frame HasShadow="False" Padding="0" HeightRequest="54" CornerRadius="27" Margin="10,20,10,20" >
+                                    <Frame.Background>
+                                        <!-- StartPoint defaults to (0,0) -->
+                                        <LinearGradientBrush EndPoint="1,0">
+                                            <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.1" />
+                                            <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Frame.Background>
+                                    <Grid>
+                                        <Label Text="{Binding Text, Source={x:Reference btnText}}" FontSize="36" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-5" Opacity="0.16" CharacterSpacing="1.5"/>
+                                        <Label x:Name="btnText" Text="PAYMENT" FontSize="22" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,-12"/>
+                                    </Grid>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Payment_Tapped"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                                 <StackLayout.Shadow>
+
+                        <Shadow Offset="0,10" Opacity="0.3" Radius="20" Brush="{StaticResource SecondoryColor}"> 
+                             
+                        </Shadow>
+                    </StackLayout.Shadow>
+                            </StackLayout>
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

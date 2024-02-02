@@ -26,7 +26,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses camera for...</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs access to the microphone for record videos</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses barcode scanning to...</string>
 </dict>
 </plist>
