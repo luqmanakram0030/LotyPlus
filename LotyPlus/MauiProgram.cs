@@ -1,6 +1,8 @@
 ﻿using Camera.MAUI;
 using CommunityToolkit.Maui;
+using Maui.GoogleMaps.Hosting;
 using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 
@@ -16,6 +18,7 @@ public static class MauiProgram
             .UseBarcodeReader()
             .UseMauiCommunityToolkit()
             .UseMauiCameraView()
+            .ConfigureSyncfusionCore()
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -31,8 +34,12 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-
-		return builder.Build();
+#if ANDROID
+        builder.UseGoogleMaps();
+#elif IOS
+        builder.UseGoogleMaps("AIzaSyBNKHUtgXr6zS0rJlKLSpDLBk8mpCWIwqg");
+#endif
+        return builder.Build();
 	}
 }
 

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.NotificationPage"
+             Title="NotificationPage"
+             xmlns:Helper="clr-namespace:LotyPlus.Helpers"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*" >
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0" Margin="0,8,0,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                             Grid.Column="1"
+                             Spacing="0"
+                             Margin="0,8">
+
+                    <Label Text="Notifications" FontFamily="SemiBold" TextColor="Black" FontSize="20"  HorizontalTextAlignment="Center" />
+                    <Label HorizontalTextAlignment="Center" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="You have " TextColor="Gray" FontSize="12"/>
+                                <Span Text="3" TextColor="{StaticResource SecondoryColor}" FontSize="12"/>
+                                <Span Text=" notifications " TextColor="{StaticResource SecondoryColor}" FontSize="12"/>
+                                <Span Text="today" TextColor="Gray" FontSize="12"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+            </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Spacing="15">
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          Margin="20,0">
+                        
+                        <Label Text="Today" FontFamily="Medium" TextColor="Black" FontSize="16" Grid.Column="0"/>
+
+                        <BoxView HeightRequest="0.5"
+                                 Grid.Column="1"
+                                 Color="LightGray"
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="FillAndExpand"/>
+
+                    </Grid>
+
+                    <CollectionView ItemsSource="{Binding notify1,Mode=TwoWay}"
+                                    x:Name="nList">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                                         VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Frame BackgroundColor="White"
+                                       BorderColor="{StaticResource LightBackgroundColor}"
+                                       Padding="15,10"
+                                       Margin="20,0"
+                                       HasShadow="True"
+                                       CornerRadius="5">
+                                    <!--<Frame.Shadow>
+                                          <Shadow Brush="Black"
+                                                    Offset="5,5"
+                                                    Radius="5"
+                                                    Opacity="0.7" />
+                                    </Frame.Shadow>-->
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.notiSelCmd, Source={x:Reference nList}}" 
+                                                 CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid ColumnDefinitions="46,*,Auto"
+                                            ColumnSpacing="15">
+
+                                        <Image Source="{Binding Image,Mode=TwoWay}"
+                                               Aspect="AspectFit"
+                                               HeightRequest="46"
+                                               VerticalOptions="CenterAndExpand"/>
+                                        
+                                        <StackLayout Grid.Column="1"
+                                                     VerticalOptions="CenterAndExpand">
+
+                                            <Label Text="{Binding Title , Mode=TwoWay}"
+                                                     TextColor="{Binding TextColor, Mode=TwoWay}"
+                                                     FontSize="12"
+                                                     FontFamily="Bold"/>
+
+                                            <Label Text="{Binding Detail , Mode=TwoWay}"
+                                                     TextColor="Gray"
+                                                     FontSize="12"
+                                                     FontFamily="Medium"
+                                                   LineBreakMode="TailTruncation"
+                                                   MaxLines="1"/>
+
+                                            <Label Text="{Binding Time , Mode=TwoWay}"
+                                                     TextColor="Gray"
+                                                     FontSize="10"
+                                                     FontFamily="Regular"/>
+
+                                        </StackLayout>
+
+                                        <Image Source="{FontImage FontFamily=FontIcons,
+                                                Glyph={x:Static Helper:IconFonts.CircleSmall} , Color={StaticResource SecondoryColor},Size=30}"
+                                               Grid.Column="2"
+                                               VerticalOptions="CenterAndExpand"/>
+
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          ColumnSpacing="15"
+                          Margin="20,0">
+                        
+                        <Label Text="Yesterday" FontFamily="Medium" TextColor="Black" FontSize="16" Grid.Column="0"/>
+
+                        <BoxView HeightRequest="0.5"
+                                 Grid.Column="1"
+                                 Color="LightGray"
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="FillAndExpand"/>
+
+                    </Grid>
+
+                    <CollectionView ItemsSource="{Binding notify2,Mode=TwoWay}"
+                                    x:Name="npList">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                                         VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Frame BackgroundColor="{StaticResource LightBackgroundColor}"
+                                       BorderColor="{StaticResource LightBackgroundColor}"
+                                       Padding="15,10"
+                                       Margin="20,0"
+                                       HasShadow="True"
+                                       CornerRadius="5">
+                                    <Frame.Shadow>
+                                          <Shadow Brush="Black"
+                                                    Offset="0,0"
+                                                    Radius="10"
+                                                    Opacity="0.2" />
+                                    </Frame.Shadow>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.notiSelCmd, Source={x:Reference npList}}" 
+                                                 CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid ColumnDefinitions="46,*,Auto"
+                                            ColumnSpacing="15">
+
+                                        <Image Source="{Binding Image,Mode=TwoWay}"
+                                               Aspect="AspectFit"
+                                               HeightRequest="46"
+                                               VerticalOptions="CenterAndExpand"/>
+                                        
+                                        <StackLayout Grid.Column="1"
+                                                     VerticalOptions="CenterAndExpand">
+
+                                            <Label Text="{Binding Title , Mode=TwoWay}"
+                                                     TextColor="{Binding TextColor, Mode=TwoWay}"
+                                                     FontSize="12"
+                                                     FontFamily="Bold"/>
+
+                                            <Label Text="{Binding Detail , Mode=TwoWay}"
+                                                     TextColor="Gray"
+                                                     FontSize="12"
+                                                     FontFamily="Medium"
+                                                   LineBreakMode="TailTruncation"
+                                                   MaxLines="1"/>
+
+                                            <Label Text="{Binding Time , Mode=TwoWay}"
+                                                     TextColor="Gray"
+                                                     FontSize="10"
+                                                     FontFamily="Regular"/>
+
+                                        </StackLayout>
+
+                                        <Image Source="{FontImage FontFamily=FontIcons,
+                                                Glyph={x:Static Helper:IconFonts.CircleSmall} , Color=#00ffffff,Size=30}"
+                                               Grid.Column="2"
+                                               VerticalOptions="CenterAndExpand"/>
+
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          ColumnSpacing="15"
+                          Margin="20,0">
+                        
+                        <Label Text="3rd May, 23" FontFamily="Medium" TextColor="Black" FontSize="16" Grid.Column="0"/>
+
+                        <BoxView HeightRequest="0.5"
+                                 Grid.Column="1"
+                                 Color="LightGray"
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="FillAndExpand"/>
+
+                    </Grid>
+
+                    <CollectionView ItemsSource="{Binding notify3,Mode=TwoWay}"
+                                    x:Name="nppList">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                                         VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Frame BackgroundColor="{StaticResource LightBackgroundColor}"
+                                       BorderColor="{StaticResource LightBackgroundColor}"
+                                       Padding="15,10"
+                                       Margin="20,0"
+                                       HasShadow="True"
+                                       VerticalOptions="StartAndExpand"
+                                       CornerRadius="5">
+                                    <Frame.Shadow>
+                                          <Shadow Brush="Black"
+                                                    Offset="0,0"
+                                                    Radius="10"
+                                                    Opacity="0.2" />
+                                    </Frame.Shadow>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.notiSelCmd, Source={x:Reference nppList}}" 
+                                                                CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid 
+                                            ColumnDefinitions="46,*,Auto"
+                                            ColumnSpacing="15">
+
+                                        <Image Source="{Binding Image,Mode=TwoWay}"
+                                               Aspect="AspectFit"
+                                               HeightRequest="46"
+                                               VerticalOptions="CenterAndExpand"/>
+                                        
+                                        <StackLayout Grid.Column="1"
+                                                     VerticalOptions="CenterAndExpand">
+
+                                            <Label Text="{Binding Title , Mode=TwoWay}"
+                                                     TextColor="{Binding TextColor, Mode=TwoWay}"
+                                                     FontSize="14"
+                                                     FontFamily="Bold"/>
+
+                                            <Label Text="{Binding Detail , Mode=TwoWay}"
+                                                     TextColor="Gray"
+                                                     FontSize="12"
+                                                     FontFamily="Medium"
+                                                   LineBreakMode="TailTruncation"
+                                                   MaxLines="1"/>
+
+                                            <Label Text="{Binding Time , Mode=TwoWay}"
+                                                     TextColor="Gray"
+                                                     FontSize="10"
+                                                     FontFamily="Regular"/>
+
+                                        </StackLayout>
+                                        
+                                        <Image Source="{FontImage FontFamily=FontIcons,
+                                                Glyph={x:Static Helper:IconFonts.CircleSmall} , Color=#00ffffff,Size=30}"
+                                               Grid.Column="2"
+                                               VerticalOptions="CenterAndExpand"/>
+
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -9,6 +9,10 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <LinearGradientBrush x:Key="Gradient"  StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#81248A" Offset="0.1" />
+                <GradientStop Color="#E70B89" Offset="1.0" />
+            </LinearGradientBrush>
             <!--Global Styles-->
              <Style x:Key="EntryFrame" TargetType="Frame">
                 <Setter  Property="CornerRadius" Value="5"/>
@@ -31,7 +35,7 @@
                             <Setter  Property="ClearButtonVisibility" Value="Never"/>
                             <Setter  Property="PlaceholderColor" Value="{StaticResource Primary}"/>
 
-                        </Style>
+               </Style>
             <Color x:Key="PrimaryColor">#81248A</Color>
             <Color x:Key="SecondoryColor">#E70B89</Color>
             <Color x:Key="LightPrimaryColor">#C9A4CD</Color>
@@ -93,6 +97,76 @@
                 <Setter Property="FontFamily" Value="Regular"/>
                 <Setter Property="TextColor" Value="{StaticResource ColorOnLightBackground}"/>
             </Style>
+            <ControlTemplate x:Key="FrameRadioTemplate">
+
+                <Border Stroke="Transparent"
+                        StrokeThickness="1"
+                       Background="White"
+                       Padding="0"
+                       VerticalOptions="StartAndExpand">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <!--<Border.Shadow>
+                        <Shadow Brush="Black"
+                                  Offset="5,5"
+                                  Radius="5"
+                                  Opacity="0.7" />
+                    </Border.Shadow>-->
+
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Border.GestureRecognizers>
+
+                    <ContentPresenter>
+                        <ContentPresenter.Resources>
+
+                            <Style TargetType="Grid">
+
+                                <Style.Triggers>
+
+                                    <DataTrigger TargetType="Grid"
+                                             Binding="{Binding Path=IsChecked,
+                                                   Source={x:RelativeSource AncestorType={x:Type RadioButton}}}"
+                                             Value="True">
+                                    </DataTrigger>
+
+                                </Style.Triggers>
+
+                            </Style>
+                        </ContentPresenter.Resources>
+                    </ContentPresenter>
+
+                    <VisualStateManager.VisualStateGroups>
+
+                        <VisualStateGroup x:Name="CheckedStates">
+
+                            <VisualState x:Name="Checked">
+
+                                <VisualState.Setters>
+                                    <Setter Property="Stroke" Value="Transparent"/>
+                                    <Setter Property="Background" Value="{StaticResource Gradient}"/>
+                                </VisualState.Setters>
+
+                            </VisualState>
+
+                            <VisualState x:Name="Unchecked">
+
+                                <VisualState.Setters>
+                                    <Setter Property="Stroke" Value="Transparent"/>
+                                    <Setter Property="Background" Value="White"/>
+                                </VisualState.Setters>
+
+                            </VisualState>
+
+                        </VisualStateGroup>
+
+                    </VisualStateManager.VisualStateGroups>
+
+                </Border>
+
+            </ControlTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

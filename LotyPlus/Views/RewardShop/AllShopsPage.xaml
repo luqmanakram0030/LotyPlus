@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.RewardShop.AllShopsPage"
+             Title="AllShopsPage"
+             xmlns:Helper="clr-namespace:LotyPlus.Helpers"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*" >
+
+            <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0" Margin="0,8,0,0">
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                        </Image.Source>
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Label Text="All Shops" Grid.Column="1" FontFamily="SemiBold" TextColor="Black" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+            </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Spacing="15">
+                    <CollectionView ItemsSource="{Binding shopTags,Mode=TwoWay}"
+                                     x:Name="CList"
+                                    Margin="20,30,20,0"
+                                     Grid.Column="1"
+                                     VerticalOptions="CenterAndExpand">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal"
+                                             HorizontalItemSpacing="5"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <!--<Grid>-->
+                                <Frame BackgroundColor="{Binding BackgroundColor,Mode=TwoWay}"
+                                        BorderColor="{StaticResource LightBackgroundColor}"
+                                        CornerRadius="20"
+                                        Padding="15,3"
+                                        HasShadow="False"
+                                        HorizontalOptions="CenterAndExpand">
+                                    <Frame.Shadow>
+                                        <Shadow Brush="Black"
+                                                 Offset="5,5"
+                                                 Radius="5"
+                                                 Opacity="0.7" />
+                                    </Frame.Shadow>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.selTagCmd, Source={x:Reference CList}}" 
+                                                                CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Label Text="{Binding ShopName,Mode=TwoWay}"
+                                            TextColor="{Binding TextColor,Mode=TwoWay}"
+                                            FontSize="12"/>
+                                </Frame>
+                                <!--</Grid>-->
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                    <BoxView HeightRequest="0.5"
+                         Color="LightGray"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="20,0"/>
+
+                    <CollectionView ItemsSource="{Binding products,Mode=TwoWay}"
+                                    x:Name="pList">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                                         VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <SwipeView BackgroundColor="White">
+
+                                    <SwipeView.RightItems>
+                                        <SwipeItems>
+                                            <SwipeItemView BackgroundColor="White" Margin="0,0,20,0"
+                                                           Command="{Binding Path=BindingContext.FavCmd, Source={x:Reference pList}}"
+                                                           CommandParameter="{Binding}">
+                                                <Border BackgroundColor="{Binding BackgroundColor2}"
+                                                        Padding="0"
+                                                        WidthRequest="65"
+                                                        HeightRequest="65"
+                                                        VerticalOptions="StartAndExpand"
+                                                        Stroke="{Binding BackgroundColor2}"
+                                                        StrokeThickness="-2">
+                                                    <Border.StrokeShape>
+                                                        <RoundRectangle CornerRadius="10"/>
+                                                    </Border.StrokeShape>
+                                                    <StackLayout HorizontalOptions="CenterAndExpand"
+                                                                 VerticalOptions="CenterAndExpand">
+                                                        <Image Source="{Binding image, Mode=TwoWay}"
+                                                               Aspect="AspectFit"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               HeightRequest="20"/>
+                                                        <Label Text="{Binding Text,Mode=TwoWay}"
+                                                               HorizontalTextAlignment="Center"
+                                                                TextColor="{Binding TextColor,Mode=TwoWay}"
+                                                                FontSize="9"/>
+                                                    </StackLayout>
+                                                </Border>
+                                            </SwipeItemView>
+
+                                        </SwipeItems>
+                                    </SwipeView.RightItems>
+                                    <StackLayout Spacing="10">
+
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.SelCmd, Source={x:Reference pList}}" 
+                                                                 CommandParameter="{Binding .}"/>
+                                        </StackLayout.GestureRecognizers>
+                                                <Grid Margin="20,0"
+                                      ColumnDefinitions="66,*,Auto"
+                                      ColumnSpacing="10">
+
+                                            <Frame Padding="0"
+                                               BorderColor="Transparent"
+                                               BackgroundColor="Transparent"
+                                               CornerRadius="5"
+                                               VerticalOptions="CenterAndExpand"
+                                               HeightRequest="66"
+                                               Grid.Column="0">
+                                                <Image Source="{Binding PImage,Mode=TwoWay}"
+                                                   Aspect="Fill"
+                                                   VerticalOptions="FillAndExpand"
+                                                   HorizontalOptions="FillAndExpand"/>
+                                            </Frame>
+                                            <StackLayout Grid.Column="1"
+                                                 VerticalOptions="CenterAndExpand">
+
+                                                <Label Text="{Binding PName , Mode=TwoWay}"
+                                                   TextColor="Black"
+                                                   FontSize="14"
+                                                   FontFamily="Regular"/>
+
+                                                <StackLayout Orientation="Horizontal"
+                                                         Spacing="5">
+
+                                                    <Image Source="clock.png"
+                                                       Aspect="AspectFit"
+                                                       HeightRequest="10"
+                                                       VerticalOptions="CenterAndExpand"/>
+
+                                                    <Label FontFamily="Regular"
+                                                       FontSize="10"
+                                                       TextColor="Gray"
+                                                       VerticalTextAlignment="Center">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="{Binding Distance}"/>
+                                                                <Span Text=" min distance"/>
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+
+                                                </StackLayout>
+
+                                                <Frame BackgroundColor="White"
+                                                         BorderColor="{StaticResource LightBackgroundColor}"
+                                                         CornerRadius="20"
+                                                         Padding="15,1"
+                                                         HasShadow="False"
+                                                         HorizontalOptions="StartAndExpand"
+                                                       Margin="0,5,0,0">
+                                                    <Label FontFamily="Regular"
+                                                    FontSize="10"
+                                                   VerticalTextAlignment="Center"
+                                                    TextColor="Black">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="{Binding Coupons}"/>
+                                                                <Span Text=" Coupons Available"/>
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                </Frame>
+
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal"
+                                                     Grid.Column="2"
+                                                     Spacing="3"
+                                                     VerticalOptions="StartAndExpand">
+                                                <Image Source="{FontImage FontFamily=FontIcons,
+                                                            Glyph={x:Static Helper:IconFonts.Star} , Color=#FFA700,Size=15}"/>
+                                                <Label Text="{Binding Rating,Mode=TwoWay}"
+                                                   TextColor="Black"
+                                                   FontSize="12"
+                                                   Margin="0,0,0,-3"
+                                                   VerticalTextAlignment="Center"/>
+                                            </StackLayout>
+
+                                        </Grid>
+                                        <BoxView HeightRequest="0.5"
+                                         Color="LightGray"
+                                             Margin="20,0"
+                                         HorizontalOptions="FillAndExpand"/>
+                                    </StackLayout>
+                                </SwipeView>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
