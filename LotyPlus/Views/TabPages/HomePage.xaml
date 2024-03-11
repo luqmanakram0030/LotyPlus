@@ -6,12 +6,12 @@
              xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels.Coupons"
              xmlns:viewmodels2="clr-namespace:LotyPlus.ViewModels.TabPages"
              xmlns:converters="clr-namespace:LotyPlus.Converters"
-             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+            
              xmlns:animations="clr-namespace:AlohaKit.Animations;assembly=AlohaKit.Animations"
              NavigationPage.HasNavigationBar="False"
              Shell.TabBarIsVisible="True"
              Shell.NavBarIsVisible="False"             
-             BackgroundColor="{StaticResource LightBackgroundColor}">
+              BackgroundColor="{StaticResource ColorOnDarkBackground}">
 
 
     <ContentPage.BindingContext>

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.TabPages.ProfilePage"
              Title="ProfilePage" Shell.NavBarIsVisible="False"
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="False"  BackgroundColor="{StaticResource ColorOnDarkBackground}"
                >
    <ContentPage.Content>
         <StackLayout>

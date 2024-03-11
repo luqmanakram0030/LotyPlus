@@ -7,7 +7,7 @@
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
              xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps"
-             BackgroundColor="White">
+              BackgroundColor="{StaticResource ColorOnDarkBackground}">
     <ContentPage.Content>
         <Grid RowDefinitions="Auto,*,Auto" 
               RowSpacing="0">
