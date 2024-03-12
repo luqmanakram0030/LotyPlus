@@ -106,7 +106,7 @@
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Frame Padding="0" BorderColor="{StaticResource PrimaryColor}" BackgroundColor="{StaticResource PrimaryColor}" HasShadow="False" HeightRequest="300" CornerRadius="0">
+            <Border Padding="0" Stroke="transparent"  StrokeThickness="-1"  BackgroundColor="{StaticResource PrimaryColor}"  HeightRequest="300" >
                 <Grid RowDefinitions="*,40,30,70" RowSpacing="0">
 
                     <Image Source="logowhite.png" HorizontalOptions="Center" HeightRequest="80" />
@@ -125,7 +125,7 @@
                         <Image Source="https://as1.ftcdn.net/v2/jpg/01/68/80/20/1000_F_168802075_Il6LeUG0NCK4JOELmkC7Ki81g0CiLpxU.jpg" Aspect="AspectFill" />
                     </Frame>
                 </Grid>
-            </Frame>
+            </Border>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
