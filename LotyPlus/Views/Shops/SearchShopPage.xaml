@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:customcontrols="clr-namespace:LotyPlus.CustomControls"
             Shell.NavBarIsVisible="False"
              x:Class="LotyPlus.Views.SearchShopPage" xmlns:converters="clr-namespace:LotyPlus.Converters" xmlns:viewmodels="clr-namespace:LotyPlus.ViewModels" xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             Title="SearchShopPage"
+             Title="SearchShopPage"  BackgroundColor="{StaticResource ColorOnDarkBackground}"
              > 
       
    <ContentPage.Resources>

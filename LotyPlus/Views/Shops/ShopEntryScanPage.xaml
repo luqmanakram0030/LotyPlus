@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.ShopEntryScanPage"
              Title="ShopEntryScanPage" NavigationPage.HasNavigationBar="False"
-             Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="False"  BackgroundColor="{StaticResource ColorOnDarkBackground}"
              xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls" xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI">
    <ContentPage.Content>
         <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">

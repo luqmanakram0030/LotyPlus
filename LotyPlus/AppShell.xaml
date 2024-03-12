@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:LotyPlus.Views.TabPages"
-       xmlns:localtab="clr-namespace:LotyPlus.Views"
+       xmlns:localtab="clr-namespace:LotyPlus.Views" FlyoutBackgroundColor="{StaticResource ColorOnDarkBackground}"
        BackgroundColor="{StaticResource ColorOnDarkBackground}">
 
     <Shell.Resources>
@@ -106,7 +106,7 @@
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Frame Padding="0" BorderColor="{StaticResource PrimaryColor}" BackgroundColor="{StaticResource PrimaryColor}" HasShadow="False" HeightRequest="300" CornerRadius="0">
+            <Border Padding="0" Stroke="transparent"  StrokeThickness="-1"  BackgroundColor="{StaticResource PrimaryColor}"  HeightRequest="300" >
                 <Grid RowDefinitions="*,40,30,70" RowSpacing="0">
 
                     <Image Source="logowhite.png" HorizontalOptions="Center" HeightRequest="80" />
@@ -125,7 +125,7 @@
                         <Image Source="https://as1.ftcdn.net/v2/jpg/01/68/80/20/1000_F_168802075_Il6LeUG0NCK4JOELmkC7Ki81g0CiLpxU.jpg" Aspect="AspectFill" />
                     </Frame>
                 </Grid>
-            </Frame>
+            </Border>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
@@ -139,9 +139,9 @@
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-flyoutitem-appearance-->
     <Shell.ItemTemplate>
         <DataTemplate>
-            <ContentView >
+            <ContentView  HeightRequest="0" MaximumHeightRequest="0">
                 <!--Bindable Properties: Title, Icon-->
-                <Grid RowDefinitions="auto,1" ColumnDefinitions="30,*" Padding="60,25,0,2">
+                <Grid RowDefinitions="auto,1" ColumnDefinitions="30,*" Padding="60,5,0,2" RowSpacing="0">
                     <Image HeightRequest="28" Source="{Binding Icon}" VerticalOptions="Center"/>
                     <Label Grid.Column="1" Text="{Binding Title}" TextColor="{StaticResource ColorOnLightBackground}" FontSize="16" FontFamily="SemiBold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10,5,0,0"/>
                 </Grid>
@@ -156,7 +156,7 @@
         <DataTemplate>
             <ContentView BackgroundColor="White">
                 <!--Bindable Properties: Text, Icon-->
-                <Grid RowDefinitions="auto,10" ColumnDefinitions="30,*" Padding="60,10,0,0" RowSpacing="0">
+                <Grid RowDefinitions="auto,10" ColumnDefinitions="30,*" Padding="60,05,0,0" RowSpacing="0">
                     <Image HeightRequest="28" Source="{Binding Icon}" VerticalOptions="Center"/>
                     <Label Grid.Column="1" Text="{Binding Title}" TextColor="{StaticResource ColorOnLightBackground}" FontSize="16" FontFamily="SemiBold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10,5,0,0"/>
                     <BoxView Grid.Row="1"  HeightRequest="0.1" VerticalOptions="EndAndExpand" Grid.ColumnSpan="2" BackgroundColor="{StaticResource GreyColor}" Margin="-60,0,0,0" Opacity="0.8"/>

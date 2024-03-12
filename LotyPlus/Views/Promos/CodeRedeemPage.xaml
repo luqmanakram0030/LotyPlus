@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.CodeRedeemPage" NavigationPage.HasNavigationBar="False" Shell.NavBarIsVisible="False"
-             Title="CodeRedeemPage" >
+             Title="CodeRedeemPage"  BackgroundColor="{StaticResource ColorOnDarkBackground}">
    <ContentPage.Content>
         <Grid BackgroundColor="{StaticResource LightBackgroundColor}">
             <ScrollView>
@@ -160,9 +160,11 @@
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid RowDefinitions="370">
-                                        <Frame BorderColor="Transparent" HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
+                                        <Border Padding="0" 
+                                                Stroke="Transparent"
+                                                BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
                                             <Grid RowDefinitions="4.6*,5.4*">
-                                                <Border  BackgroundColor="{StaticResource LightBackgroundColor}">
+                                                <Border BackgroundColor="{StaticResource LightBackgroundColor}">
                                                      <Border.StrokeShape>
                                                         <RoundRectangle CornerRadius="22,22,0,0"/>
                                                     </Border.StrokeShape>
@@ -199,7 +201,7 @@
                                                     </Frame>
                                                 </Grid>
                                             </Grid>
-                                        </Frame>
+                                        </Border>
                                     </Grid>
                                 </DataTemplate>
                             </CarouselView.ItemTemplate>
@@ -213,11 +215,11 @@
                 <Grid RowDefinitions="40" ColumnDefinitions="48">
 
                     <Frame BorderColor="Transparent" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20"  Opacity="0.5"/>
-                    <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34" Margin="0,0,-6,0">
-                        <Image.Source>
+                    <ImageButton Clicked="Back_Tapped" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34" Margin="0,0,-6,0">
+                        <ImageButton.Source>
                             <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
-                        </Image.Source>
-                    </Image>
+                        </ImageButton.Source>
+                    </ImageButton>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer  Tapped="Back_Tapped"/>
                     </Grid.GestureRecognizers>
