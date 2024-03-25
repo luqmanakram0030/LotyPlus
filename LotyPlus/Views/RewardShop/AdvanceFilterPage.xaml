@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.RewardShop.AdvanceFilterPage"
+             Title="AdvanceFilterPage"
+             xmlns:Helper="clr-namespace:LotyPlus.Helpers"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*,Auto" 
+              RowSpacing="15">
+
+            <StackLayout Grid.Row="0"
+                         Spacing="20"
+                         Margin="0,8,0,0">
+
+                <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                    <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                            </Image.Source>
+                        </Image>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Label Text="Advanced Filter" Grid.Column="1" FontFamily="SemiBold" TextColor="Black" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                </Grid>
+
+                <BoxView HeightRequest="0.5"
+                            Color="LightGray"
+                            HorizontalOptions="FillAndExpand"
+                            Margin="20,0"/>
+
+            </StackLayout>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Spacing="15">
+
+                    <Label Text="Search by location"
+                          Margin="20,0"
+                           TextColor="Black"
+                           FontSize="16"
+                           FontFamily="Regular"/>
+
+                    <ScrollView Orientation="Horizontal">
+                        <Grid ColumnDefinitions="Auto,Auto"
+                              RowDefinitions="Auto,Auto"
+                                 ColumnSpacing="5"
+                                 RowSpacing="5"
+                                 Margin="20,0">
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}"
+                                        IsChecked="True"
+                                         Grid.Column="0"
+                                         Grid.Row="0">
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+                                    <Grid Padding="15,3">
+                                        <Label Text="2 - 4 km area"
+                                            FontFamily="Regular"
+                                            FontSize="16">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                         Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                         Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}"
+                                         Grid.Column="1"
+                                         Grid.Row="0">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+                                    <Grid Padding="15,3">
+                                        <Label Text="5 - 10 km area"
+                                            FontFamily="Regular"
+                                            FontSize="16">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                         Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                         Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}"
+                                         Grid.Column="0"
+                                         Grid.Row="1">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+                                    <Grid Padding="15,3">
+                                        <Label Text="Above 10 km"
+                                            FontFamily="Regular"
+                                            FontSize="16">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                         Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                         Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                        </Grid>
+                    </ScrollView>
+
+                    <BoxView HeightRequest="0.5"
+                              Color="LightGray"
+                              HorizontalOptions="FillAndExpand"
+                              Margin="20,0"/>
+
+                    <Label Text="Coupon Type"
+                          Margin="20,0"
+                           TextColor="Black"
+                           FontSize="16"
+                           FontFamily="Regular"/>
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal"
+                                 Spacing="5"
+                                 Margin="20,0">
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}"
+                                     IsChecked="True">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+                                    <Grid Padding="15,3">
+                                        <Label Text="Popular"
+                                        FontFamily="Regular"
+                                        FontSize="16">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                     Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+                                    <Grid Padding="15,3">
+                                        <Label Text="This Week"
+                                        FontFamily="Regular"
+                                        FontSize="16">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                     Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+                                    <Grid Padding="15,3">
+                                        <Label Text="This Month"
+                                        FontFamily="Regular"
+                                        FontSize="16">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                     Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                        </StackLayout>
+                    </ScrollView>
+
+                    <BoxView HeightRequest="0.5"
+                              Color="LightGray"
+                              HorizontalOptions="FillAndExpand"
+                              Margin="20,0"/>
+
+                    <Label Text="Shop Rating"
+                          Margin="20,0"
+                           TextColor="Black"
+                           FontSize="16"
+                           FontFamily="Regular"/>
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal"
+                                 Spacing="5"
+                                 Margin="20,0">
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}"
+                                     IsChecked="True">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+
+                                    <Grid ColumnDefinitions="Auto,10"
+                                           Grid.Column="2"
+                                           ColumnSpacing="3"
+                                          HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                      Padding="10,5">
+                                        <Image Grid.Row="0" Source="{FontImage FontFamily=FontIcons,
+                                                 Glyph={x:Static Helper:IconFonts.Star} , Color=#FFA700,Size=15}"/>
+                                        <Label Text="5"
+                                               Grid.Column="1"
+                                               FontFamily="Regular"
+                                               FontSize="16"
+                                               Margin="0,0,0,-3"
+                                               VerticalTextAlignment="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                          Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                          Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+
+                                    <Grid ColumnDefinitions="Auto,10"
+                                           Grid.Column="2"
+                                           ColumnSpacing="3"
+                                          HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                      Padding="10,5">
+                                        <Image Grid.Row="0" Source="{FontImage FontFamily=FontIcons,
+                                                 Glyph={x:Static Helper:IconFonts.Star} , Color=#FFA700,Size=15}"/>
+                                        <Label Text="4"
+                                           Grid.Column="1"
+                                               FontFamily="Regular"
+                                               FontSize="16"
+                                             Margin="0,0,0,-3"
+                                             VerticalTextAlignment="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                          Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                          Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+
+                                    <Grid ColumnDefinitions="Auto,10"
+                                           Grid.Column="2"
+                                           ColumnSpacing="3"
+                                          HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                      Padding="10,5">
+                                        <Image Grid.Row="0" Source="{FontImage FontFamily=FontIcons,
+                                                 Glyph={x:Static Helper:IconFonts.Star} , Color=#FFA700,Size=15}"/>
+                                        <Label Text="3"
+                                           Grid.Column="1"
+                                               FontFamily="Regular"
+                                               FontSize="16"
+                                             Margin="0,0,0,-3"
+                                             VerticalTextAlignment="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                          Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                          Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+
+                                    <Grid ColumnDefinitions="Auto,10"
+                                           Grid.Column="2"
+                                           ColumnSpacing="3"
+                                          HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                      Padding="10,5">
+                                        <Image Grid.Row="0" Source="{FontImage FontFamily=FontIcons,
+                                                 Glyph={x:Static Helper:IconFonts.Star} , Color=#FFA700,Size=15}"/>
+                                        <Label Text="2"
+                                           Grid.Column="1"
+                                               FontFamily="Regular"
+                                               FontSize="16"
+                                             Margin="0,0,0,-3"
+                                             VerticalTextAlignment="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                          Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                          Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                            <RadioButton ControlTemplate="{StaticResource FrameRadioTemplate}">
+
+                                <RadioButton.Shadow>
+                                    <Shadow Brush="Black"
+                                          Offset="1,5"
+                                          Radius="5"
+                                          Opacity="0.2" />
+                                </RadioButton.Shadow>
+                                <RadioButton.Content>
+
+                                    <Grid ColumnDefinitions="Auto,10"
+                                           Grid.Column="2"
+                                           ColumnSpacing="3"
+                                          HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                      Padding="10,5">
+                                        <Image Grid.Row="0" Source="{FontImage FontFamily=FontIcons,
+                                                 Glyph={x:Static Helper:IconFonts.Star} , Color=#FFA700,Size=15}"/>
+                                        <Label Text="1"
+                                           Grid.Column="1"
+                                               FontFamily="Regular"
+                                               FontSize="16"
+                                             Margin="0,0,0,-3"
+                                             VerticalTextAlignment="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                          Binding="{Binding Source={RelativeSource AncestorType={x:Type RadioButton}}, Path=IsChecked}"
+                                                          Value="True">
+
+                                                    <Setter Property="TextColor" Value="White"/>
+
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                </RadioButton.Content>
+                            </RadioButton>
+
+                        </StackLayout>
+                    </ScrollView>
+                    <BoxView HeightRequest="0.5"
+                              Color="LightGray"
+                              HorizontalOptions="FillAndExpand"
+                              Margin="20,0"/>
+
+                    <Label Text="Price Range (USD)"
+                          Margin="20,0"
+                            TextColor="Black"
+                            FontSize="16"
+                            FontFamily="Regular"/>
+
+                    <sliders:SfRangeSlider Minimum="0"
+                                           Maximum="250"
+                                           RangeStart="10" 
+                                           RangeEnd="100" 
+                                           LabelsPlacement="OnTicks"
+                                           ShowLabels="True" >
+                        <sliders:SfRangeSlider.TrackStyle>
+                            <sliders:SliderTrackStyle ActiveFill="{StaticResource PrimaryColor}"
+                                                      InactiveFill="{StaticResource GreyTextColor}"
+                                                      />
+                        </sliders:SfRangeSlider.TrackStyle>
+                        <sliders:SfRangeSlider.ThumbStyle>
+                            <sliders:SliderThumbStyle Fill="{StaticResource SecondoryColor}" 
+                                                      StrokeThickness="2"
+                                                      Stroke="{StaticResource LightBackgroundColor}"/>
+                        </sliders:SfRangeSlider.ThumbStyle>
+                        <sliders:SfRangeSlider.Tooltip>
+                            <sliders:SliderTooltip Fill="Transparent"
+                                                   Stroke="Transparent"
+                                                   StrokeThickness="-1"
+                                                   TextColor="{StaticResource SecondoryColor}"
+                                                   FontSize="12"
+                                                   FontFamily="Regular"
+                                                   Padding="0" />
+                        </sliders:SfRangeSlider.Tooltip>
+                    </sliders:SfRangeSlider>
+
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout Grid.Row="2">
+                <Frame HasShadow="False"
+                        Padding="0"
+                        HeightRequest="54"
+                        CornerRadius="27"
+                        Margin="10,10,10,20">
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}"
+                               Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}"
+                               Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+
+                    <Grid>
+                        <Label Text="Apply"
+                    FontSize="36"
+                    FontFamily="Bold"
+                    TextColor="{StaticResource GreyColor}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0,0,0,-5"
+                    Opacity="0.16"
+                    CharacterSpacing="1.5" />
+                        <Label Text="Apply"
+                    FontSize="22"
+                    FontFamily="Bold"
+                    TextColor="{StaticResource ColorOnDarkBackground}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0,0,0,-12" />
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                   />
+                    </Frame.GestureRecognizers>
+                    <!--Shades="{sh:SingleShade Offset='0, 10', Opacity=0.3, Color={StaticResource SecondoryColor},BlurRadius=20}">-->
+
+
+                </Frame>
+                <StackLayout.Shadow>
+
+                    <Shadow Offset="0,10"
+                 Opacity="0.3"
+                 Radius="20"
+                 Brush="{StaticResource SecondoryColor}">
+
+                    </Shadow>
+                </StackLayout.Shadow>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

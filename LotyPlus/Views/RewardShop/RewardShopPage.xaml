@@ -3,13 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.RewardShop.RewardShopPage"
              Title="RewardShopPage"
+             xmlns:Helper="clr-namespace:LotyPlus.Helpers"
              NavigationPage.HasNavigationBar="False"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             BackgroundColor="White">
      <ContentPage.Content>
-        <Grid RowDefinitions="60,*"  BackgroundColor="{StaticResource LightBackgroundColor}">
+        <Grid RowDefinitions="Auto,*" >
 
             <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
-                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
                     <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
                         <Image.Source>
                             <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
@@ -20,187 +23,398 @@
                     </Frame.GestureRecognizers>
                 </Frame>
 
-                <Label Grid.Column="1" Text="Reward Shop" FontFamily="SemiBold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,8,0,0"/>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                             Grid.Column="1"
+                             Spacing="0"
+                             Margin="0,8">
 
-                <Frame BorderColor="Transparent" Grid.Column="2" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightBackgroundColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
-                    <Image Source="search.png" WidthRequest="26" VerticalOptions="Center"/>
+                    <Label Text="Reward Shop" FontFamily="SemiBold" TextColor="Black" FontSize="20"  HorizontalTextAlignment="Center" />
+                    <StackLayout HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 Spacing="5"
+                                 Orientation="Horizontal">
+                        <Image Source="radar.png"
+                               Aspect="AspectFit"
+                               HeightRequest="15"
+                               WidthRequest="15"
+                               />
+                        <Label x:Name="currentLoc"  TextDecorations="Underline" TextColor="Gray" FontSize="12" HorizontalOptions="Center" />
+
+                    </StackLayout>
+                </StackLayout>
+                <Frame BorderColor="Transparent" Grid.Column="2" HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="8,0,0,0" CornerRadius="20" >
+                    <Image Source="radar.png" WidthRequest="26" VerticalOptions="Center"/>
 
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Search_Tapped"/>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Location_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
+
             </Grid>
 
             <ScrollView Grid.Row="1">
-                <StackLayout>
-                    <Grid RowDefinitions="30,70" RowSpacing="0" Margin="25,20,25,0" >
-                        <Frame Grid.Row="1" HasShadow="False" Padding="0" CornerRadius="15" BackgroundColor="{StaticResource PrimaryColor}">
-                            <Grid ColumnDefinitions="70,*" Margin="10,8,10,8" ColumnSpacing="15">
-                                <Ellipse Fill="{StaticResource SecondoryColor}" WidthRequest="70" HeightRequest="50" HorizontalOptions="Start"/>
-                                <Label Grid.Column="1" Text="You have a free Barber Shop coupon. Let's use this." VerticalOptions="Center" FontSize="16" TextColor="{StaticResource ColorOnDarkBackground}" Margin="0,3,0,0"/>
-                            </Grid>
-                        </Frame>
-                        <Image Source="barbershopflip.png" Grid.RowSpan="2" HorizontalOptions="Start" Margin="12,-10,0,8" />
+                <StackLayout Spacing="15">
 
+                    <Grid ColumnDefinitions="*,Auto"
+                          ColumnSpacing="10"
+                          Margin="20,0">
+                        <Grid ColumnDefinitions="*,100"
+                              ColumnSpacing="0.5">
+                            <Border BackgroundColor="#D8D8D8"
+                                    x:Name="entryFrame"
+                                    Stroke="#D8D8D8"
+                                    HeightRequest="40"
+                                    StrokeThickness="0"
+                                    Grid.Column="0"
+                                    Padding="10,0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="20,0,20,0"/>
+                                </Border.StrokeShape>
+                                <Grid ColumnDefinitions="Auto,*"
+                                      ColumnSpacing="5">
+                                    <Image Source="search_icon.png"
+                                           Grid.Column="0"/>
+                                    <Entry Grid.Column="1"
+                                           x:Name="search"
+                                           TextColor="Black"
+                                           PlaceholderColor="Black"
+                                           Margin="0,0,0,-5"
+                                           FontFamily="OpenSansRegular"
+                                           Placeholder="Search for Shops"/>
+                                </Grid>
+                            </Border>
+                            <Border BackgroundColor="#D8D8D8"
+                                    Stroke="#D8D8D8"
+                                    HeightRequest="40"
+                                    StrokeThickness="0"
+                                    Grid.Column="1">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="0,20,0,20"/>
+                                </Border.StrokeShape>
+
+                                <editors:SfComboBox x:Name="comboBox"  
+                                                    Placeholder="Category"
+                                                    PlaceholderColor="Black"
+                                                    FontSize="10"
+                                                    Text="Category"
+                                                    TextColor="Black"
+                                                    Stroke="Transparent"
+                                                    IsClearButtonVisible="False"
+                                                    FontFamily="Regular"
+                                                    WidthRequest="100"
+                                                    BackgroundColor="Transparent"
+                                                    ItemsSource="{Binding categories, Mode=TwoWay}" />
+                            </Border>
+                        </Grid>
+                        <ImageButton Source="equalizer.png"
+                                     Aspect="AspectFit"
+                                     BackgroundColor="Transparent"
+                                     Grid.Column="1"
+                                     HeightRequest="25"
+                                     Command="{Binding FilerCmd,Mode=TwoWay}"/>
                     </Grid>
 
-                    <Label Text="Find Anything You Need For" FontFamily="SemiBold" TextColor="{StaticResource ColorOnLightBackground}" HorizontalTextAlignment="Center" FontSize="34" Margin="50,30,50,10"/>
+                    <Grid ColumnDefinitions="Auto,*"
+                          Margin="20,0"
+                          ColumnSpacing="10">
+                        <Label Text="Suggestion:" FontFamily="Medium" TextColor="Black" FontSize="12" VerticalTextAlignment="Center"/>
+                        <CollectionView ItemsSource="{Binding suggestions,Mode=TwoWay}"
+                                        x:Name="sList"
+                                        Grid.Column="1"
+                                        VerticalOptions="CenterAndExpand">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Horizontal"
+                                                HorizontalItemSpacing="5"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <!--<Grid>-->
+                                    <Frame BackgroundColor="White"
+                                           BorderColor="{StaticResource LightBackgroundColor}"
+                                           CornerRadius="20"
+                                           Padding="15,3"
+                                           HasShadow="False"
+                                           HorizontalOptions="CenterAndExpand">
+                                        <Frame.Shadow>
+                                            <Shadow Brush="Black"
+                                                    Offset="5,5"
+                                                    Radius="5"
+                                                    Opacity="0.7" />
+                                        </Frame.Shadow>
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.selCmd, Source={x:Reference sList}}" 
+                                                                  CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="{Binding .,Mode=TwoWay}"
+                                               TextColor="Black"
+                                               FontSize="12"/>
+                                    </Frame>
+                                    <!--</Grid>-->
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
 
-                    <CollectionView Margin="0,0,25,0" ItemsSource="{Binding RewardShopList}" HeightRequest="480">
+                        </CollectionView>
+                    </Grid>
+                    
+                    <BoxView HeightRequest="0.5"
+                             Color="LightGray"
+                             HorizontalOptions="FillAndExpand"
+                             Margin="20,0"/>
+
+                    <CollectionView ItemsSource="{Binding shopCategories, Mode=TwoWay}"
+                                    x:Name="shopCatList"
+                                    Margin="20,0">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                                             HorizontalItemSpacing="10"
+                                             VerticalItemSpacing="10"
+                                             Span="4"/>
+                        </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid RowDefinitions="130">
-                                    <Grid RowDefinitions="105" ColumnDefinitions="6.5*,3.5*"  VerticalOptions="End" Margin="25,0,0,0">
-                                        <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                            <Frame.Background>
-                                                <LinearGradientBrush EndPoint="0,1">
-                                                    <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                                    <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                                </LinearGradientBrush>
-                                            </Frame.Background>
-                                        </Frame>
-
-                                        <Image Grid.Column="1" Source="{Binding ShopImg}" HorizontalOptions="End" VerticalOptions="End" Margin="-45,-30,0,0" />
-
-                                        <Grid>
-                                            <Label Text="{Binding ShopName}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                            <Label Text="{Binding ShopName}" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
-                                        </Grid>
-
-                                    </Grid>
+                                <Grid RowDefinitions="70,Auto">
+                                    <Frame HasShadow="False" Padding="20" BackgroundColor="{StaticResource LightBackgroundColor}" BorderColor="{StaticResource LightBackgroundColor}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="60" HeightRequest="70" WidthRequest="70">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer  Command="{Binding Path=BindingContext.ViewShopCmd, Source={x:Reference shopCatList}}" 
+                                                                    CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <Image Source="{Binding ShopImage, Mode=TwoWay}"
+                                               VerticalOptions="CenterAndExpand" 
+                                               HorizontalOptions="CenterAndExpand" 
+                                               HeightRequest="30"/>
+                                    </Frame>
+                                    <Label Text="{Binding ShopName ,Mode=TwoWay}"
+                                           Grid.Row="1"
+                                           TextColor="Black"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="12"
+                                           LineBreakMode="WordWrap"/>
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
-                        <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="0" VerticalItemSpacing="20"/>
-                        </CollectionView.ItemsLayout>
                     </CollectionView>
 
-                    <!--<Grid ColumnDefinitions="*,*" RowDefinitions="105,105,105" ColumnSpacing="25" RowSpacing="40" Margin="25,0,25,0" Padding="0,0,0,60">
+                    <CollectionView ItemsSource="{Binding serviceCategories,Mode=TwoWay}"
+                                    x:Name="serviceList"
+                                    Margin="0,10">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal"
+                                             HorizontalItemSpacing="5"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Frame BackgroundColor="White"
+                                           HeightRequest="157"
+                                           WidthRequest="120"
+                                           BorderColor="{StaticResource LightBackgroundColor}"
+                                           CornerRadius="5"
+                                           Padding="0"
+                                           HasShadow="False"
+                                           HorizontalOptions="CenterAndExpand">
+                                        <Grid Margin="0">
+                                            <Image Source="{Binding ShopImage,Mode=TwoWay}"
+                                                   Aspect="Fill"
+                                                   Margin="-15,-18,-15,-10"/>
+                                            <Frame HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand"
+                                                   BorderColor="Transparent"
+                                                     Background="{StaticResource Gradient}"
+                                                     Opacity="0.6"/>
+                                            <Label Text="{Binding ShopName,Mode=TwoWay}"
+                                                   TextColor="White"
+                                                   FontFamily="Bold"
+                                                   FontSize="25"
+                                                   Opacity="0.4"
+                                                   LineHeight="0.7"
+                                                   VerticalTextAlignment="End"
+                                                   HorizontalTextAlignment="Center"
+                                                   Margin="0,0,0,5"/>
+                                            <Label Text="{Binding ShopName,Mode=TwoWay}"
+                                                   TextColor="White"
+                                                   FontFamily="Bold"
+                                                   FontSize="18"
+                                                   LineHeight="0.7"
+                                                   VerticalTextAlignment="End"
+                                                   HorizontalTextAlignment="Center"
+                                                   Margin="15"/>
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
 
-                        <Grid ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
-                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                <Frame.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </Frame.Background>
-                            </Frame>
+                    <Grid ColumnDefinitions="Auto,*"
+                           Margin="20,0"
+                           ColumnSpacing="10">
+                        <Label Text="Near You" FontFamily="OpenSansRegular" TextColor="Black" FontSize="18" VerticalTextAlignment="Center"/>
+                        <CollectionView ItemsSource="{Binding shopTags,Mode=TwoWay}"
+                                         x:Name="CList"
+                                         Grid.Column="1"
+                                        HorizontalOptions="EndAndExpand"
+                                         VerticalOptions="CenterAndExpand">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Horizontal"
+                             HorizontalItemSpacing="5"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <!--<Grid>-->
+                                    <Frame BackgroundColor="{Binding BackgroundColor,Mode=TwoWay}"
+                                            BorderColor="{StaticResource LightBackgroundColor}"
+                                            CornerRadius="20"
+                                            Padding="15,3"
+                                            HasShadow="False"
+                                            HorizontalOptions="CenterAndExpand">
+                                        <Frame.Shadow>
+                                            <Shadow Brush="Black"
+                                                     Offset="5,5"
+                                                     Radius="5"
+                                                     Opacity="0.7" />
+                                        </Frame.Shadow>
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.selTagCmd, Source={x:Reference CList}}" 
+                                               CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="{Binding ShopName,Mode=TwoWay}"
+                                                TextColor="{Binding TextColor,Mode=TwoWay}"
+                                                FontSize="12"/>
+                                    </Frame>
+                                    <!--</Grid>-->
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
 
-                            <Grid>
-                                <Label Text="{Binding Text, Source={x:Reference btnText1}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/> --><!--Margin="0,0,60,-10"--><!--
-                                <Label x:Name="btnText1" Text="Barber&#x0a;Shop" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/> --><!--Margin="0,0,0,-12"--><!--
-                            </Grid>
-                            <Image Grid.Column="1" Source="barbershop.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+                        </CollectionView>
+                    </Grid>
 
-                        </Grid>
+                    <BoxView HeightRequest="0.5"
+                             Color="LightGray"
+                             HorizontalOptions="FillAndExpand"
+                             Margin="20,0"/>
 
-                        <Grid Grid.Column="1" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
-                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                <Frame.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </Frame.Background>
-                            </Frame>
+                    <CollectionView ItemsSource="{Binding products,Mode=TwoWay}"
+                                    x:Name="pList">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                                             VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Spacing="10">
+                                    <Grid Margin="20,0"
+                                          ColumnDefinitions="66,*,55"
+                                          ColumnSpacing="10">
 
-                            <Image Grid.Column="1" Source="carservicing.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+                                        <Frame Padding="0"
+                                               BorderColor="Transparent"
+                                               BackgroundColor="Transparent"
+                                               CornerRadius="5"
+                                               VerticalOptions="CenterAndExpand"
+                                               HeightRequest="66"
+                                               Grid.Column="0">
+                                            <Image Source="{Binding PImage,Mode=TwoWay}"
+                                                   Aspect="Fill"
+                                                   VerticalOptions="FillAndExpand"
+                                                   HorizontalOptions="FillAndExpand"/>
+                                        </Frame>
+                                        <StackLayout Grid.Column="1"
+                                                     VerticalOptions="CenterAndExpand">
+                                            
+                                            <Label Text="{Binding PName , Mode=TwoWay}"
+                                                   TextColor="Black"
+                                                   FontSize="14"
+                                                   FontFamily="Medium"/>
 
-                            <Grid>
-                                <Label Text="{Binding Text, Source={x:Reference btnText2}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                --><!--Margin="0,0,60,-10"--><!--
-                                <Label x:Name="btnText2" Text="Car&#x0a;Servicing" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
-                                --><!--Margin="0,0,0,-12"--><!--
-                            </Grid>
+                                            <StackLayout Orientation="Horizontal"
+                                                         Spacing="10">
 
-                        </Grid>
+                                                <Label FontFamily="Medium"
+                                                       FontSize="12"
+                                                       TextColor="{StaticResource SecondoryColor}">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="$ "/>
+                                                            <Span Text="{Binding Price}"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                                <Label FontFamily="Regular"
+                                                       FontSize="10"
+                                                       TextColor="Gray"
+                                                       TextDecorations="Strikethrough"
+                                                       VerticalTextAlignment="Center">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="$"/>
+                                                            <Span Text="{Binding PriceOff}"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                                <Label FontFamily="Regular"
+                                                       FontSize="10"
+                                                       TextColor="#27AE00"
+                                                       VerticalTextAlignment="Center">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="(Save "/>
+                                                            <Span Text="$"/>
+                                                            <Span Text="{Binding Save}"/>
+                                                            <Span Text=")"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
 
-                        --><!--<Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
-                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                <Frame.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </Frame.Background>
-                            </Frame>
+                                            </StackLayout>
 
-                            <Image Grid.Column="1" Source="pumpstations.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
+                                            <Frame BackgroundColor="{Binding BackgroundColor,Mode=TwoWay}"
+                                                     BorderColor="{StaticResource LightBackgroundColor}"
+                                                     CornerRadius="20"
+                                                     Padding="15,1"
+                                                     HasShadow="False"
+                                                     HorizontalOptions="StartAndExpand"
+                                                   Margin="0,2,0,0">
+                                                <Label FontFamily="Regular"
+                                                        FontSize="10"
+                                                       VerticalTextAlignment="Center"
+                                                        TextColor="Black">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="Ends In: "/>
+                                                            <Span Text="{Binding EndIN}"/>
+                                                            <Span Text=" Days"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </Frame>
 
-                            <Grid>
-                                <Label Text="{Binding Text, Source={x:Reference btnText3}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                --><!--Margin="0,0,60,-10"--><!--
-                                <Label x:Name="btnText3" Text="Pump&#x0a;Stations" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
-                                --><!--Margin="0,0,0,-12"--><!--
-                            </Grid>
+                                        </StackLayout>
+                                        <Frame Grid.Column="2"
+                                               Padding="0"
+                                               VerticalOptions="StartAndExpand"
+                                               HeightRequest="18"
+                                               BackgroundColor="{StaticResource LightBackgroundColor}"
+                                               BorderColor="LightGray"
+                                               HasShadow="False"
+                                               CornerRadius="2">
+                                            <Label Text="{Binding Category,Mode=TwoWay}"
+                                                   TextColor="Black"
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="Center"
+                                                   FontSize="8"/>
+                                        </Frame>
 
-                        </Grid>
+                                    </Grid>
+                                    <BoxView HeightRequest="0.5"
+                                             Color="LightGray"
+                                             Margin="20,0"
+                                             HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
 
-                        <Grid Grid.Row="1" Grid.Column="1" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
-                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                <Frame.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </Frame.Background>
-                            </Frame>
-
-                            <Image Grid.Column="1" Source="petshop.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
-
-                            <Grid>
-                                <Label Text="{Binding Text, Source={x:Reference btnText4}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                --><!--Margin="0,0,60,-10"--><!--
-                                <Label x:Name="btnText4" Text="Pet&#x0a;Shop" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
-                                --><!--Margin="0,0,0,-12"--><!--
-                            </Grid>
-
-                        </Grid>
-
-                        <Grid Grid.Row="2" Grid.Column="0" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
-                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                <Frame.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </Frame.Background>
-                            </Frame>
-
-                            <Image Grid.Column="1" Source="clothstore.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
-
-                            <Grid>
-                                <Label Text="{Binding Text, Source={x:Reference btnText5}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                --><!--Margin="0,0,60,-10"--><!--
-                                <Label x:Name="btnText5" Text="Cloth&#x0a;Store" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
-                                --><!--Margin="0,0,0,-12"--><!--
-                            </Grid>
-
-                        </Grid>
-
-                        <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="6.5*,3.5*" xct:TouchEffect.PressedScale="0.98">
-                            <Frame Grid.ColumnSpan="2" HasShadow="False" CornerRadius="15" Padding="0" HeightRequest="105">
-                                <Frame.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.4" />
-                                        <GradientStop Color="{StaticResource SecondoryColor}" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </Frame.Background>
-                            </Frame>
-
-                            <Image Grid.Column="1" Source="homeservices.png" HorizontalOptions="Start" VerticalOptions="End" Margin="-45,-30,0,0" />
-
-                            <Grid>
-                                <Label Text="{Binding Text, Source={x:Reference btnText6}}" FontSize="23" FontFamily="Bold" TextColor="{StaticResource GreyColor}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0" Opacity="0.16" LineHeight="1.2"/>
-                                --><!--Margin="0,0,60,-10"--><!--
-                                <Label x:Name="btnText6" Text="Home&#x0a;Services" FontSize="15" FontFamily="Bold" TextColor="{StaticResource ColorOnDarkBackground}" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,0,0"/>
-                                --><!--Margin="0,0,0,-12"--><!--
-                            </Grid>
-
-                        </Grid>--><!--
-                    </Grid>-->
                 </StackLayout>
             </ScrollView>
         </Grid>

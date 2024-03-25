@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.RewardShop.FeedbackPage"
+             Title="FeedbackPage"
+             xmlns:Helper="clr-namespace:LotyPlus.Helpers"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             xmlns:rating="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*,Auto" 
+           RowSpacing="15">
+
+            <StackLayout Grid.Row="0"
+                      Spacing="20"
+                      Margin="0,8,0,0">
+
+                <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                    <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                        <Image Source="home_icon.png" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="20">
+                            
+                        </Image>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Label Text="Feedback" Grid.Column="1" FontFamily="SemiBold" TextColor="Black" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                </Grid>
+
+            </StackLayout>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Spacing="15"
+                             Margin="20,0">
+
+                    <Label FontSize="18"
+                           FontFamily="Medium"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="How was your experience&#x0a;with" TextColor="Black"/>
+                                <Span Text=" #" TextColor="{StaticResource SecondoryColor}"/>
+                                <Span Text="{Binding model.PName,Mode=TwoWay}" TextColor="{StaticResource SecondoryColor}"/>
+                                <Span Text="?" TextColor="Black"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label Text="Your feedback matters"
+                             FontSize="14"
+                           TextColor="Black"
+                             FontFamily="Regular"
+                             HorizontalTextAlignment="Center"/>
+
+                    <rating:SfRating Margin="0,30,0,0" Precision="Standard" HorizontalOptions="CenterAndExpand" ItemSize="35" ItemSpacing="10">
+                        <rating:SfRating.RatingSettings>
+                            <rating:RatingSettings RatedStrokeThickness="2" UnratedStrokeThickness="2"  RatedFill="#FFA700" UnratedFill="LightGray" RatedStroke="#FFA700" UnratedStroke="LightGray"/>
+                        </rating:SfRating.RatingSettings>
+                    </rating:SfRating>
+
+                    <Grid ColumnDefinitions="*,*"
+                          Margin="100,-10,100,0">
+                        <Label Text="Not Satisfied"
+                               TextColor="LightGray"
+                               FontFamily="Regular"
+                               FontSize="8"
+                               Grid.Column="0"
+                               HorizontalTextAlignment="Start"/>
+                        
+                        <Label Text="Very Satisfied"
+                               TextColor="LightGray"
+                               FontFamily="Regular"
+                               FontSize="8"
+                               Grid.Column="1"
+                               HorizontalTextAlignment="End"/>
+                    </Grid>
+                    <Label Text="(Tap a star to rate it)"
+                           FontSize="14"
+                           TextColor="Black"
+                           FontFamily="Regular"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Grid ColumnDefinitions="*,*"
+                          Margin="0,20,0,0">
+                        <Label Text="Write a comment"
+                               TextColor="Black"
+                               FontFamily="Medium"
+                               FontSize="16"
+                               Grid.Column="0"
+                               HorizontalTextAlignment="Start"/>
+
+                        <Label Grid.Column="1"
+                               HorizontalTextAlignment="End">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding remaining , Mode=TwoWay}" FontFamily="Regular" FontSize="12"  TextColor="LightGray"/>
+                                    <Span Text="/450" FontFamily="Regular" FontSize="12" TextColor="LightGray"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+
+                    <Frame CornerRadius="5"
+                           HasShadow="False"
+                           HeightRequest="215"
+                           Padding="10,5"
+                           Margin="0,-10,0,0"
+                           BackgroundColor="Transparent"
+                           BorderColor="#F8F8F8">
+
+                        <Editor Placeholder="Write some comment"
+                                x:Name="editer"
+                                MaxLength="450"
+                                TextColor="Black"
+                                FontSize="12"
+                                FontFamily="Regular"
+                                TextChanged="editer_TextChanged"/>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout Grid.Row="2">
+                <Frame HasShadow="False"
+                     Padding="0"
+                     HeightRequest="54"
+                     CornerRadius="27"
+                     Margin="10,10,10,20">
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}"
+                            Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}"
+                            Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+
+                    <Grid>
+                        <Label Text="Submit"
+                                 FontSize="36"
+                                 FontFamily="Bold"
+                                 TextColor="{StaticResource GreyColor}"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"
+                                 Margin="0,0,0,-5"
+                                 Opacity="0.16"
+                                 CharacterSpacing="1.5" />
+                        <Label Text="Submit"
+                                 FontSize="22"
+                                 FontFamily="Bold"
+                                 TextColor="{StaticResource ColorOnDarkBackground}"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"
+                                 Margin="0,0,0,-12" />
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                />
+                    </Frame.GestureRecognizers>
+                    <!--Shades="{sh:SingleShade Offset='0, 10', Opacity=0.3, Color={StaticResource SecondoryColor},BlurRadius=20}">-->
+
+
+                </Frame>
+                <StackLayout.Shadow>
+
+                    <Shadow Offset="0,10"
+              Opacity="0.3"
+              Radius="20"
+              Brush="{StaticResource SecondoryColor}">
+
+                    </Shadow>
+                </StackLayout.Shadow>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

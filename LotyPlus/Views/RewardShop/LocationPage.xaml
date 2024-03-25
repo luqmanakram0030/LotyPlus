@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotyPlus.Views.RewardShop.LocationPage"
+             Title="LocationPage"
+             xmlns:Helper="clr-namespace:LotyPlus.Helpers"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*,Auto" 
+              RowSpacing="0">
+
+            <StackLayout Grid.Row="0"
+                         Spacing="0"
+                         Margin="0,8,0,0">
+
+                <Grid ColumnDefinitions="50,*,50" Padding="20,10,20,0">
+                    <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource LightPrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20" >
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34">
+                            <Image.Source>
+                                <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
+                            </Image.Source>
+                        </Image>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Label Text="Select Location" Grid.Column="1" FontFamily="SemiBold" TextColor="Black" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                </Grid>
+
+                <CollectionView ItemsSource="{Binding shopTags,Mode=TwoWay}"
+                                 x:Name="CList"
+                                Margin="20,20,20,0"
+                                 Grid.Column="1"
+                                 VerticalOptions="CenterAndExpand">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal"
+                                        HorizontalItemSpacing="5"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<Grid>-->
+                            <Frame BackgroundColor="{Binding BackgroundColor,Mode=TwoWay}"
+                                    BorderColor="{StaticResource LightBackgroundColor}"
+                                    CornerRadius="20"
+                                    Padding="15,3"
+                                    HasShadow="False"
+                                    HorizontalOptions="CenterAndExpand">
+                                <Frame.Shadow>
+                                    <Shadow Brush="Black"
+                                             Offset="5,5"
+                                             Radius="5"
+                                             Opacity="0.7" />
+                                </Frame.Shadow>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.selTagCmd, Source={x:Reference CList}}" 
+                                            CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <Label Text="{Binding ShopName,Mode=TwoWay}"
+                                        TextColor="{Binding TextColor,Mode=TwoWay}"
+                                        FontSize="12"/>
+                            </Frame>
+                            <!--</Grid>-->
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <BoxView HeightRequest="0.5"
+                            Color="LightGray"
+                            HorizontalOptions="FillAndExpand"
+                            Margin="20,10,20,5"/>
+
+            </StackLayout>
+
+            <Grid Grid.Row="1">
+
+                <maps:Map VerticalOptions="FillAndExpand"
+                          HorizontalOptions="FillAndExpand"
+                          x:Name="myMap"
+                          MapType="Street"
+                          IsShowingUser="True"/>
+
+                <Frame BackgroundColor="{StaticResource LightBackgroundColor}"
+                        BorderColor="{StaticResource LightBackgroundColor}"
+                        Padding="15,10"
+                        Margin="20,10,20,0"
+                        HasShadow="True"
+                        CornerRadius="5"
+                        VerticalOptions="StartAndExpand">
+                    <StackLayout Spacing="0">
+                        <Label Text="Current Location"
+                                 TextColor="Black"
+                                 FontSize="16"
+                                 FontFamily="Regular"/>
+                        <Label TextColor="Gray"
+                                 FontSize="14"
+                                 FontFamily="Regular">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Title,Mode=TwoWay}"/>
+                                    <Span Text=": "/>
+                                    <Span x:Name="currentLoc"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+
+            <StackLayout Grid.Row="2"
+                         Spacing="10">
+                <Grid ColumnDefinitions="Auto,*"
+                      ColumnSpacing="10"
+                      Margin="20,10,20,10">
+                    <Image Source="location.png"
+                           Aspect="AspectFit"
+                           HeightRequest="35"
+                           Grid.Column="0"
+                           HorizontalOptions="StartAndExpand"/>
+
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Is this your location?"
+                               FontSize="16"
+                               TextColor="Black"
+                               FontFamily="Medium"/>
+                        <Label Text="See all coupon shops in this area &amp; get your coupon here"
+                               FontSize="12"
+                               TextColor="Black"
+                               FontFamily="Regular"/>
+                    </StackLayout>
+                </Grid>
+                <BoxView HeightRequest="0.5"
+                         Color="LightGray"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="20,0"/>
+                <Frame HasShadow="False"
+                        Padding="0"
+                        HeightRequest="54"
+                        CornerRadius="27"
+                        Margin="20,0,20,20">
+                    <Frame.Background>
+                        <!-- StartPoint defaults to (0,0) -->
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource PrimaryColor}"
+                               Offset="0.1" />
+                            <GradientStop Color="{StaticResource SecondoryColor}"
+                               Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+
+                    <Grid>
+                        <Label Text="Confirm Location"
+                                FontSize="36"
+                                FontFamily="Bold"
+                                TextColor="{StaticResource GreyColor}"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Margin="0,0,0,-5"
+                                Opacity="0.16"
+                                CharacterSpacing="1.5" />
+                        <Label Text="Confirm Location"
+                                FontSize="22"
+                                FontFamily="Bold"
+                                TextColor="{StaticResource ColorOnDarkBackground}"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Margin="0,0,0,-12" />
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                   />
+                    </Frame.GestureRecognizers>
+                    <!--Shades="{sh:SingleShade Offset='0, 10', Opacity=0.3, Color={StaticResource SecondoryColor},BlurRadius=20}">-->
+
+
+                </Frame>
+                <StackLayout.Shadow>
+
+                    <Shadow Offset="0,10"
+                 Opacity="0.3"
+                 Radius="20"
+                 Brush="{StaticResource SecondoryColor}">
+
+                    </Shadow>
+                </StackLayout.Shadow>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

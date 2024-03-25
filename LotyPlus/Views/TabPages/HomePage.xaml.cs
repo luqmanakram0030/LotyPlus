@@ -49,7 +49,8 @@ public partial class HomePage : ContentPage
     }
     private async void Cart_Tapped(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(CartPage));
+        await Application.Current.MainPage.Navigation.PushAsync(new NotificationPage());
+        //await Shell.Current.GoToAsync(nameof(CartPage));
     }
     private void Menu_Tapped(object sender, EventArgs e)
     {

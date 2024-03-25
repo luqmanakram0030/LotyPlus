@@ -34,5 +34,7 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app uses barcode scanning to...</string>
+	<string>Allow Location Access</string>
+	<key>NSLocationAlwaysUsageDescription</key>
 </dict>
 </plist>
