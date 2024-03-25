@@ -13,7 +13,8 @@ public partial class CodeRedeemPage : ContentPage
 
     private async void Back_Tapped(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("..");
+      //  await Shell.Current.GoToAsync("..");
+      await Navigation.PopAsync();
     }
 
     private void Like_Tapped(object sender, EventArgs e)

@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotyPlus.Views.LimitedCouponPage" Shell.NavBarIsVisible="False"
-             Title="LimitedCouponPage" NavigationPage.HasNavigationBar="False"
-             xmlns:pancakeview="clr-namespace:Maui.PancakeView;assembly=PancakeViewCompat"
+             Title="LimitedCouponPage" NavigationPage.HasNavigationBar="False"  BackgroundColor="{StaticResource ColorOnDarkBackground}"
+             
              >
      <ContentPage.Content>
         <Grid BackgroundColor="{StaticResource LightBackgroundColor}">
@@ -172,7 +172,7 @@
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid RowDefinitions="370">
-                                        <Frame HasShadow="False" IsClippedToBounds="True" Padding="0" CornerRadius="22" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
+                                        <Border Padding="0" Stroke="Transparent" BackgroundColor="{StaticResource ColorOnDarkBackground}" VerticalOptions="Fill" Margin="0,0,20,0">
                                             <Grid RowDefinitions="4.6*,5.4*">
                                                 <Border  BackgroundColor="{StaticResource LightBackgroundColor}">
 
@@ -212,7 +212,7 @@
                                                     </Frame>
                                                 </Grid>
                                             </Grid>
-                                        </Frame>
+                                        </Border>
                                     </Grid>
                                 </DataTemplate>
                             </CarouselView.ItemTemplate>
@@ -226,11 +226,11 @@
                 <Grid RowDefinitions="40" ColumnDefinitions="48">
 
                     <Frame HasShadow="False" HeightRequest="40" WidthRequest="40" Padding="0" BackgroundColor="{StaticResource PrimaryColor}" VerticalOptions="Center" HorizontalOptions="Start" Margin="8,0,0,0" CornerRadius="20"  Opacity="0.5"/>
-                    <Image x:Name="EditBtn" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34" Margin="0,0,-6,0">
-                        <Image.Source>
+                    <ImageButton Clicked="Back_Tapped" x:Name="EditBtn" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="34" Margin="0,0,-6,0">
+                        <ImageButton.Source>
                             <FontImageSource Glyph="&#xf0141;" FontFamily="FontIcons" Size="34" Color="{StaticResource ColorOnDarkBackground}"/>
-                        </Image.Source>
-                    </Image>
+                        </ImageButton.Source>
+                    </ImageButton>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Back_Tapped"/>
                     </Grid.GestureRecognizers>
